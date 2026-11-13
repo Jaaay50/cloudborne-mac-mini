@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Mac mini 租赁 · 新加坡 · 整机独享 | Cloudborne</title>
-<meta name="description" content="Cloudborne 新加坡 M4 Mac mini 整机出租：独立出口 IP 长期不变，不限流量，远程即用，一天内开通，$99/月。">
+<meta name="description" content="Cloudborne 新加坡 M4 Mac mini 整机出租：独立出口 IP 长期不变，不限流量，远程即用，一天内开通，月付 $99，年付 $79/月。">
 <meta name="theme-color" content="#eaecf0">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Cloudborne">
 <meta property="og:url" content="https://mac.cloudborne.cn/">
 <meta property="og:title" content="Mac mini 租赁 · 新加坡 · 整机独享 | Cloudborne">
-<meta property="og:description" content="M4 · 16GB · 256GB，独立出口 IP，不限流量，一天内开通，$99/月。">
+<meta property="og:description" content="M4 · 16GB · 256GB，独立出口 IP，不限流量，一天内开通，月付 $99，年付 $79/月。">
 <meta property="og:image" content="https://mac.cloudborne.cn/assets/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -278,6 +278,25 @@ section{scroll-margin-top:var(--nav)}
 .feat li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--blue);flex:none;transform:translateY(-2px)}
 .plan .pill{width:100%;margin-top:auto}
 .pay{font-size:13px;color:var(--ink2);text-align:center;margin-top:12px}
+.cyc{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:20px;padding:3px;border-radius:999px;background:var(--inset);border:1px solid var(--hair)}
+.cyc button{border:0;background:none;height:36px;border-radius:999px;cursor:pointer;font-size:14px;color:var(--ink2);white-space:nowrap;transition:background .25s var(--ease),color .2s,box-shadow .25s}
+.cyc button:hover{color:var(--ink)}
+.cyc button[aria-checked="true"]{background:#fff;color:var(--ink);font-weight:600;box-shadow:0 1px 3px rgba(22,34,56,.14)}
+.cyc button i{font-style:normal;font-size:11.5px;font-weight:600;color:#137a3f;margin-left:5px}
+.plan .amt{margin-top:18px}
+.amt .n{display:inline-block}
+.amt .n.flip{animation:flip .35s var(--ease)}
+@keyframes flip{from{opacity:.2;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.amt .n.flip{animation:none}}
+.bill{font-size:13.5px;color:var(--ink);margin-top:10px;min-height:20px}
+.bill b{color:#137a3f;font-weight:600}
+.plan .tax{margin-top:4px}
+.more{max-width:1100px;margin:18px auto 0;background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--sh);padding:6px 32px}
+.more h3{font-size:13px;font-weight:600;color:var(--ink3);letter-spacing:.04em;padding:18px 0 4px}
+.svc{display:grid;grid-template-columns:200px 1fr auto;gap:20px;align-items:baseline;padding:18px 0;border-top:1px solid var(--hair)}
+.more h3+.svc{border-top:0}
+.svc b{font-size:16px;font-weight:600}
+.svc span{font-size:14.5px;color:var(--ink2)}
 .cmp{padding:30px 32px 26px;display:flex;flex-direction:column}
 .cmp h3{font-size:21px}
 .cmp .s{font-size:13px;color:var(--ink2);margin-top:6px}
@@ -409,6 +428,10 @@ footer{border-top:1px solid var(--line);padding:52px 0 34px;font-size:13px;color
   .row{grid-template-columns:96px 1fr 58px;gap:10px}
   .row .n,.row .p{font-size:13.5px}
   .row .n em{display:none}
+  .more{padding:4px 20px}
+  .svc{grid-template-columns:1fr auto;gap:4px 16px}
+  .svc span{grid-column:1;grid-row:2}
+  .svc .lnk{grid-column:2;grid-row:1/3;align-self:center}
   .steps{grid-template-columns:1fr;gap:36px;margin-top:48px}
   .faq{padding:2px 20px;margin-top:44px}
   .faq summary{font-size:16px}
@@ -460,7 +483,7 @@ footer{border-top:1px solid var(--line);padding:52px 0 34px;font-size:13px;color
     <h1 data-i18n-html="hero.title">一台 <span class="nw">Mac mini</span><br class="br-m"> 只给你用</h1>
     <div class="cta">
       <a class="pill js-mail" href="mailto:contact@cloudborne.cn" data-i18n="hero.cta">联系开通</a>
-      <span class="note" data-i18n-html="hero.note"><b>$99</b> / 月 · 不含税 · 一天内开通</span>
+      <span class="note" data-i18n-html="hero.note"><b>$99</b> / 月 · 年付 $79 / 月 · 一天内开通</span>
     </div>
   </div>
   <div class="stage">
@@ -606,7 +629,7 @@ arm64
         <div class="vis">
           <div class="tl"><em>≤ 24h</em><span data-i18n="f5.a">来信</span><span data-i18n="f5.b">付款</span><span data-i18n="f5.c">开通</span></div>
         </div>
-        <div class="tx"><div class="e" data-i18n="f5.e">一天内开通</div><h3 data-i18n="f5.t">按月起租 开通才计费</h3><p data-i18n="f5.d">确认付款后 24 小时内交付，开通后才开始计租。最短一个月，按月续。</p></div>
+        <div class="tx"><div class="e" data-i18n="f5.e">一天内开通</div><h3 data-i18n="f5.t">按月起租 开通才计费</h3><p data-i18n="f5.d">确认付款后 24 小时内交付，开通后才开始计租。月付、季付、年付任选。</p></div>
       </article>
     </div>
   </div>
@@ -615,7 +638,7 @@ arm64
 <section class="sec" id="pricing" style="padding-top:0">
   <div class="wrap">
     <div class="head rv">
-      <h2 class="hl"><span class="ln"><span data-i18n="pricing.l1">一台一个价</span></span><span class="ln mut"><span data-i18n="pricing.l2">按月租，不续就停</span></span></h2>
+      <h2 class="hl"><span class="ln"><span data-i18n="pricing.l1">一台一个价</span></span><span class="ln mut"><span data-i18n="pricing.l2">租得越久越省</span></span></h2>
     </div>
     <div class="prices">
       <article class="plan rv">
@@ -623,7 +646,13 @@ arm64
         <div class="bd">
           <h3>Mac mini M4</h3>
           <div class="spec" data-i18n="plan.spec">10 核 CPU · 10 核 GPU · 16GB · 256GB</div>
-          <div class="amt"><span class="cy">$</span><span class="n">99</span><span class="per" data-i18n="plan.per">/ 月</span></div>
+          <div class="cyc" role="radiogroup" aria-label="付款周期" id="cyc">
+            <button type="button" role="radio" aria-checked="true" data-c="m"><span data-i18n="cyc.m">月付</span></button>
+            <button type="button" role="radio" aria-checked="false" data-c="q"><span data-i18n="cyc.q">季付</span><i>−10%</i></button>
+            <button type="button" role="radio" aria-checked="false" data-c="y"><span data-i18n="cyc.y">年付</span><i>−20%</i></button>
+          </div>
+          <div class="amt"><span class="cy">$</span><span class="n" id="amt">99</span><span class="per" data-i18n="plan.per">/ 月</span></div>
+          <div class="bill" id="bill">每月支付</div>
           <div class="tax" data-i18n="plan.tax">不含税 · 美元结算</div>
           <ul class="feat">
             <li data-i18n="plan.i1">整机独享，不是虚拟机</li>
@@ -632,7 +661,7 @@ arm64
             <li data-i18n="plan.i4">完整管理员权限</li>
             <li data-i18n="plan.i5">屏幕共享 · SSH · RustDesk</li>
             <li data-i18n="plan.i6">24 小时内开通，开通后起租</li>
-            <li data-i18n="plan.i7">最短一个月，按月续费</li>
+            <li data-i18n="plan.i7">到期前说一声，不续就停</li>
           </ul>
           <a class="pill js-mail" href="mailto:contact@cloudborne.cn" data-i18n="plan.cta">联系开通</a>
           <div class="pay" data-i18n="plan.pay">付款方式联系后确认</div>
@@ -643,6 +672,11 @@ arm64
         <div class="s" data-i18n="cmp.sub">M4 · 16GB · 256GB 整机独享 · 各家官网标价 · 2026 年 11 月</div>
         <div id="cmpRows"></div>
       </article>
+    </div>
+    <div class="more rv">
+      <h3 data-i18n="svc.title">其他服务</h3>
+      <div class="svc"><b data-i18n="svc.biz.t">多台 / 企业租用</b><span data-i18n="svc.biz.d">批量租用，可开发票、签合同</span><a class="lnk js-mail" data-mail="biz" href="mailto:contact@cloudborne.cn" data-i18n="svc.ask">来信咨询</a></div>
+      <div class="svc"><b data-i18n="svc.host.t">自带 Mac 托管</b><span data-i18n="svc.host.d">$29 / 月 · 寄送、机位和网络来信确认</span><a class="lnk js-mail" data-mail="host" href="mailto:contact@cloudborne.cn" data-i18n="svc.ask">来信咨询</a></div>
     </div>
   </div>
 </section>
@@ -687,10 +721,12 @@ arm64
       <details><summary data-i18n="faq.q2">IP 会和别人共用吗？</summary><p data-i18n="faq.a2">不会。每台机器有自己的出口 IP，只给这台机器用，租期内不会变。</p></details>
       <details><summary data-i18n="faq.q8">流量有限制吗？</summary><p data-i18n="faq.a8">没有，不限流量，上传下载都不计量。</p></details>
       <details><summary data-i18n="faq.q3">怎么连接？</summary><p data-i18n="faq.a3">支持 macOS 屏幕共享（VNC）、SSH 和 RustDesk。开通后我们把连接信息发到你的邮箱。</p></details>
-      <details><summary data-i18n="faq.q4">最短租多久？怎么退租？</summary><p data-i18n="faq.a4">最短一个月，按月续费。不想续了，到期前告诉我们就行。</p></details>
+      <details><summary data-i18n="faq.q4">最短租多久？怎么退租？</summary><p data-i18n="faq.a4">月付最短一个月；季付一次付 3 个月（月均 $89），年付一次付 12 个月（月均 $79）。不想续了，到期前告诉我们就行。</p></details>
       <details><summary data-i18n="faq.q5">怎么付款？</summary><p data-i18n="faq.a5">来信后我们和你确认付款方式，按美元结算。</p></details>
+      <details><summary data-i18n="faq.q10">写信咨询会扣款吗？</summary><p data-i18n="faq.a10">不会。写信只是咨询：我们先回信确认配置和金额，你付款后我们才准备机器，交付后才开始计租。</p></details>
       <details><summary data-i18n="faq.q6">退租后数据怎么处理？</summary><p data-i18n="faq.a6">退租后整机抹盘、重装系统，你的数据不会留给下一位。</p></details>
-      <details><summary data-i18n="faq.q7">可以一次租多台吗？</summary><p data-i18n="faq.a7">可以，邮件里写上台数就行。</p></details>
+      <details><summary data-i18n="faq.q7">可以一次租多台吗？</summary><p data-i18n="faq.a7">可以，邮件里写上台数就行。需要发票或合同也一并说明。</p></details>
+      <details><summary data-i18n="faq.q9">我的 Claude 等第三方账号被封怎么办？</summary><p data-i18n="faq.a9">我们只出租机器，不提供、也不代管任何第三方账号。账号风控由各平台自己决定，实体机和独立 IP 也不能保证不被封。账号出了问题，机器照常可用，租金不因此退还。</p></details>
     </div>
   </div>
 </section>
@@ -792,7 +828,7 @@ arm64
       "nav.machine": "机器", "nav.why": "亮点", "nav.pricing": "价格", "nav.steps": "开通", "nav.faq": "问答", "nav.cta": "联系开通",
       "hero.e1": "新加坡独享 Mac mini", "hero.e2": "独立出口 IP，长期不变", "hero.e3": "不限流量",
       "hero.title": "一台 <span class=\"nw\">Mac mini</span><br class=\"br-m\"> 只给你用",
-      "hero.cta": "联系开通", "hero.note": "<b>$99</b> / 月 · 不含税 · 一天内开通", "hero.tag": "在线 · 新加坡",
+      "hero.cta": "联系开通", "hero.note": "<b>$99</b> / 月 · 年付 $79 / 月 · 一天内开通", "hero.tag": "在线 · 新加坡",
       "stmt.a1": "<span class=\"nw\">共用的机器</span>　<span class=\"nw\">跳来跳去的 IP</span>　<span class=\"nw\">按量计费的流量</span>", "stmt.a2": "每一样都在拖慢你的工作",
       "stmt.b1": "我们把这些全部拿掉", "stmt.b2": "只留一台在新加坡、只属于你的 Mac mini",
       "stmt.bad": "不稳定", "stmt.good": "稳定", "stmt.n1": "种机器", "stmt.n2": "个出口 IP", "stmt.n3": "次异常",
@@ -811,12 +847,17 @@ arm64
       "f2.e": "原生 macOS", "f2.t": "完整权限 想装就装", "f2.d": "管理员权限交给你，屏幕共享、SSH、RustDesk 都能连。",
       "f3.same": "租期内不变", "f3.you": "你", "f3.sg": "新加坡", "f3.e": "独立出口 IP", "f3.t": "一个 IP 用到底", "f3.d": "每台机器一个出口 IP，只给你用，租期内长期不变。离东南亚、东亚都近。",
       "f4.up": "上传", "f4.down": "下载", "f4.badge": "∞ 不计量", "f4.e": "不限流量", "f4.t": "流量不计量", "f4.d": "上传下载都不计量，不用盯着用量，也没有超额账单。",
-      "f5.a": "来信", "f5.b": "付款", "f5.c": "开通", "f5.e": "一天内开通", "f5.t": "按月起租 开通才计费", "f5.d": "确认付款后 24 小时内交付，开通后才开始计租。最短一个月，按月续。",
-      "pricing.l1": "一台一个价", "pricing.l2": "按月租，不续就停",
+      "f5.a": "来信", "f5.b": "付款", "f5.c": "开通", "f5.e": "一天内开通", "f5.t": "按月起租 开通才计费", "f5.d": "确认付款后 24 小时内交付，开通后才开始计租。月付、季付、年付任选。",
+      "pricing.l1": "一台一个价", "pricing.l2": "租得越久越省",
       "plan.spec": "10 核 CPU · 10 核 GPU · 16GB · 256GB", "plan.per": "/ 月", "plan.tax": "不含税 · 美元结算",
       "plan.i1": "整机独享，不是虚拟机", "plan.i2": "独立出口 IP，长期不变", "plan.i3": "不限流量", "plan.i4": "完整管理员权限",
-      "plan.i5": "屏幕共享 · SSH · RustDesk", "plan.i6": "24 小时内开通，开通后起租", "plan.i7": "最短一个月，按月续费",
+      "plan.i5": "屏幕共享 · SSH · RustDesk", "plan.i6": "24 小时内开通，开通后起租", "plan.i7": "到期前说一声，不续就停",
       "plan.cta": "联系开通", "plan.pay": "付款方式联系后确认",
+      "cyc.label": "付款周期", "cyc.m": "月付", "cyc.q": "季付", "cyc.y": "年付",
+      "bill.m": "每月支付", "bill.q": "每 3 个月付 {total} · <b>省 {save}</b>", "bill.y": "每年付 {total} · <b>省 {save}</b>",
+      "svc.title": "其他服务", "svc.ask": "来信咨询",
+      "svc.biz.t": "多台 / 企业租用", "svc.biz.d": "批量租用，可开发票、签合同",
+      "svc.host.t": "自带 Mac 托管", "svc.host.d": "$29 / 月 · 寄送、机位和网络来信确认",
       "cmp.title": "同样的配置，各家月租", "cmp.sub": "M4 · 16GB · 256GB 整机独享 · 各家官网标价 · 2026 年 11 月",
       "cmp.us": "我们", "cmp.sg": "新加坡", "cmp.mo": "/月", "cmp.same": "与我们同价", "cmp.more": "比我们贵",
       "steps.l1": "四步开通", "steps.l2": "你只需要写信和连上", "steps.you": "你", "steps.us": "我们",
@@ -829,16 +870,22 @@ arm64
       "faq.q2": "IP 会和别人共用吗？", "faq.a2": "不会。每台机器有自己的出口 IP，只给这台机器用，租期内不会变。",
       "faq.q8": "流量有限制吗？", "faq.a8": "没有，不限流量，上传下载都不计量。",
       "faq.q3": "怎么连接？", "faq.a3": "支持 macOS 屏幕共享（VNC）、SSH 和 RustDesk。开通后我们把连接信息发到你的邮箱。",
-      "faq.q4": "最短租多久？怎么退租？", "faq.a4": "最短一个月，按月续费。不想续了，到期前告诉我们就行。",
+      "faq.q4": "最短租多久？怎么退租？", "faq.a4": "月付最短一个月；季付一次付 3 个月（月均 $89），年付一次付 12 个月（月均 $79）。不想续了，到期前告诉我们就行。",
       "faq.q5": "怎么付款？", "faq.a5": "来信后我们和你确认付款方式，按美元结算。",
       "faq.q6": "退租后数据怎么处理？", "faq.a6": "退租后整机抹盘、重装系统，你的数据不会留给下一位。",
-      "faq.q7": "可以一次租多台吗？", "faq.a7": "可以，邮件里写上台数就行。",
+      "faq.q7": "可以一次租多台吗？", "faq.a7": "可以，邮件里写上台数就行。需要发票或合同也一并说明。",
+      "faq.q9": "我的 Claude 等第三方账号被封怎么办？", "faq.a9": "我们只出租机器，不提供、也不代管任何第三方账号。账号风控由各平台自己决定，实体机和独立 IP 也不能保证不被封。账号出了问题，机器照常可用，租金不因此退还。",
+      "faq.q10": "写信咨询会扣款吗？", "faq.a10": "不会。写信只是咨询：我们先回信确认配置和金额，你付款后我们才准备机器，交付后才开始计租。",
       "final.l1": "写封邮件", "final.l2": "明天就能用", "final.sub": "写信到 contact@cloudborne.cn，告诉我们要几台、租多久。",
       "final.cta": "联系开通", "final.copy": "复制邮箱地址", "final.copied": "已复制",
       "foot.tag": "新加坡 M4 Mac mini 整机出租，按月租用。", "foot.c1": "了解", "foot.c2": "联系",
       "foot.tm": "Mac 和 Mac mini 是 Apple Inc. 的商标，本服务与 Apple 无关联。其他商标归各自所有者。",
       "mail.subject": "Mac mini 租赁咨询",
-      "mail.body": "你好，我想租新加坡的 Mac mini。\n\n台数：\n租期（月）：\n用途：\n希望开通日期：\n其他联系方式（微信 / Telegram，可选）：\n",
+      "mail.body": "你好，我想租新加坡的 Mac mini。\n\n台数：\n付款周期：{cycle}\n用途：\n希望开通日期：\n其他联系方式（微信 / Telegram，可选）：\n",
+      "mail.biz.subject": "Mac mini 多台 / 企业租用咨询",
+      "mail.biz.body": "你好，我们想批量租用新加坡的 Mac mini。\n\n公司 / 团队：\n台数：\n付款周期（月付 / 季付 / 年付）：\n是否需要发票或合同：\n用途：\n其他联系方式（微信 / Telegram，可选）：\n",
+      "mail.host.subject": "自带 Mac 托管咨询",
+      "mail.host.body": "你好，我想把自己的 Mac 托管在新加坡。\n\n机型和配置：\n台数：\n预计寄送时间：\n用途：\n其他联系方式（微信 / Telegram，可选）：\n",
     },
     en: {
       "meta.title": "Mac mini Rental · Singapore · Dedicated M4 | Cloudborne",
@@ -846,7 +893,7 @@ arm64
       "nav.machine": "Machine", "nav.why": "Highlights", "nav.pricing": "Pricing", "nav.steps": "How it works", "nav.faq": "FAQ", "nav.cta": "Get one",
       "hero.e1": "Dedicated Mac mini in Singapore", "hero.e2": "A dedicated IP that stays put", "hero.e3": "Unmetered traffic",
       "hero.title": "One <span class=\"nw\">Mac mini.</span><br> Yours alone.",
-      "hero.cta": "Get one", "hero.note": "<b>$99</b> / month · excl. tax · ready in a day", "hero.tag": "Online · Singapore",
+      "hero.cta": "Get one", "hero.note": "<b>$99</b> / month · $79 / month yearly · ready in a day", "hero.tag": "Online · Singapore",
       "stmt.a1": "<span class=\"nw\">Shared machines.</span> <span class=\"nw\">IPs that keep changing.</span> <span class=\"nw\">Metered traffic.</span>", "stmt.a2": "Each one gets in your way.",
       "stmt.b1": "We took all of that away.", "stmt.b2": "One Mac mini in Singapore. Yours alone.",
       "stmt.bad": "Unstable", "stmt.good": "Stable", "stmt.n1": "machines", "stmt.n2": "exit IPs", "stmt.n3": "issues",
@@ -865,12 +912,17 @@ arm64
       "f2.e": "Native macOS", "f2.t": "Full admin rights", "f2.d": "You get admin. Connect with Screen Sharing, SSH or RustDesk.",
       "f3.same": "never changes", "f3.you": "You", "f3.sg": "Singapore", "f3.e": "Dedicated IP", "f3.t": "One IP, start to finish", "f3.d": "Each machine has its own exit IP, used only by you and unchanged for your whole rental. Close to Southeast and East Asia.",
       "f4.up": "Upload", "f4.down": "Download", "f4.badge": "∞ Unmetered", "f4.e": "Unmetered", "f4.t": "Traffic isn't counted", "f4.d": "Uploads and downloads aren't metered. No usage to watch, no overage bill.",
-      "f5.a": "Email", "f5.b": "Pay", "f5.c": "Ready", "f5.e": "Ready in a day", "f5.t": "Monthly, billed from delivery", "f5.d": "Delivered within 24 hours of payment, and billing starts at delivery. One month minimum, renewed monthly.",
-      "pricing.l1": "One machine.", "pricing.l2": "One monthly price.",
+      "f5.a": "Email", "f5.b": "Pay", "f5.c": "Ready", "f5.e": "Ready in a day", "f5.t": "Monthly, billed from delivery", "f5.d": "Delivered within 24 hours of payment, and billing starts at delivery. Pay monthly, quarterly or yearly.",
+      "pricing.l1": "One machine.", "pricing.l2": "Longer terms cost less.",
       "plan.spec": "10-core CPU · 10-core GPU · 16GB · 256GB", "plan.per": "/ month", "plan.tax": "excl. tax · billed in USD",
       "plan.i1": "The whole machine, not a VM", "plan.i2": "Dedicated exit IP that never changes", "plan.i3": "Unmetered traffic", "plan.i4": "Full admin access",
-      "plan.i5": "Screen Sharing · SSH · RustDesk", "plan.i6": "Ready within 24 hours, billed from delivery", "plan.i7": "One month minimum, renewed monthly",
+      "plan.i5": "Screen Sharing · SSH · RustDesk", "plan.i6": "Ready within 24 hours, billed from delivery", "plan.i7": "Not renewing? Just tell us before it ends",
       "plan.cta": "Get one", "plan.pay": "Payment method confirmed by email",
+      "cyc.label": "Billing period", "cyc.m": "Monthly", "cyc.q": "Quarterly", "cyc.y": "Yearly",
+      "bill.m": "Billed every month", "bill.q": "{total} every 3 months · <b>save {save}</b>", "bill.y": "{total} a year · <b>save {save}</b>",
+      "svc.title": "Other services", "svc.ask": "Ask us",
+      "svc.biz.t": "Teams & several machines", "svc.biz.d": "Bulk rental, with invoices and contracts",
+      "svc.host.t": "Host your own Mac", "svc.host.d": "$29 / month · shipping, rack and network by email",
       "cmp.title": "Same machine, side by side", "cmp.sub": "Dedicated M4 · 16GB · 256GB · list price per month · November 2026",
       "cmp.us": "Us", "cmp.sg": "Singapore", "cmp.mo": "/mo", "cmp.same": "same as ours", "cmp.more": "more than ours",
       "steps.l1": "Four steps.", "steps.l2": "You just email and connect.", "steps.you": "You", "steps.us": "Us",
@@ -883,16 +935,22 @@ arm64
       "faq.q2": "Is the IP shared?", "faq.a2": "No. Each machine has its own outbound IP, used by that machine only, and it does not change during your rental.",
       "faq.q8": "Is traffic capped?", "faq.a8": "No. Traffic is unmetered, upload and download.",
       "faq.q3": "How do I connect?", "faq.a3": "macOS Screen Sharing (VNC), SSH or RustDesk. We email your connection details once it's ready.",
-      "faq.q4": "Minimum term? How do I cancel?", "faq.a4": "One month minimum, renewed monthly. Just tell us before the period ends.",
+      "faq.q4": "Minimum term? How do I cancel?", "faq.a4": "Monthly is one month minimum. Quarterly is paid 3 months at a time ($89 / month), yearly 12 months at a time ($79 / month). To stop, just tell us before the period ends.",
       "faq.q5": "How do I pay?", "faq.a5": "Once you email us, we agree on how you pay. Charged in USD.",
       "faq.q6": "What happens to my data when I leave?", "faq.a6": "The disk is wiped and macOS reinstalled. Nothing of yours is passed on.",
-      "faq.q7": "Can I rent several?", "faq.a7": "Yes. Just tell us how many in your email.",
+      "faq.q7": "Can I rent several?", "faq.a7": "Yes. Just tell us how many in your email, and whether you need an invoice or contract.",
+      "faq.q9": "What if my Claude or other third-party account gets banned?", "faq.a9": "We rent out machines only. We don't provide or manage any third-party accounts. Each platform makes its own risk decisions, and a real machine with its own IP can't guarantee you won't be banned. If an account runs into trouble, your machine keeps working and the rent isn't refunded.",
+      "faq.q10": "Does emailing you charge me anything?", "faq.a10": "No. An email is just an inquiry: we reply to confirm the setup and amount, prepare the machine after you pay, and start billing at delivery.",
       "final.l1": "Send an email.", "final.l2": "Connect tomorrow.", "final.sub": "Write to contact@cloudborne.cn and tell us how many and for how long.",
       "final.cta": "Get one", "final.copy": "Copy email address", "final.copied": "Copied",
       "foot.tag": "Dedicated M4 Mac minis in Singapore, rented by the month.", "foot.c1": "Explore", "foot.c2": "Contact",
       "foot.tm": "Mac and Mac mini are trademarks of Apple Inc. This service is not affiliated with Apple. Other trademarks belong to their owners.",
       "mail.subject": "Mac mini rental inquiry",
-      "mail.body": "Hi, I'd like to rent a Mac mini in Singapore.\n\nHow many:\nMonths:\nUse case:\nPreferred start date:\nOther contact (WeChat / Telegram, optional):\n",
+      "mail.body": "Hi, I'd like to rent a Mac mini in Singapore.\n\nHow many:\nBilling period: {cycle}\nUse case:\nPreferred start date:\nOther contact (WeChat / Telegram, optional):\n",
+      "mail.biz.subject": "Mac mini rental for a team",
+      "mail.biz.body": "Hi, we'd like to rent several Mac minis in Singapore.\n\nCompany / team:\nHow many:\nBilling period (monthly / quarterly / yearly):\nInvoice or contract needed:\nUse case:\nOther contact (WeChat / Telegram, optional):\n",
+      "mail.host.subject": "Hosting my own Mac",
+      "mail.host.body": "Hi, I'd like to host my own Mac in Singapore.\n\nModel and specs:\nHow many:\nWhen I can ship it:\nUse case:\nOther contact (WeChat / Telegram, optional):\n",
     },
   };
 
@@ -958,7 +1016,30 @@ arm64
   addEventListener("resize", updateStmt);
 
   /* ---------- language ---------- */
-  const mailHref = (t) => `mailto:${EMAIL}?subject=${encodeURIComponent(t["mail.subject"])}&body=${encodeURIComponent(t["mail.body"])}`;
+  /* ---------- billing period ---------- */
+  const PLANS = { m: { mo: 99, n: 1 }, q: { mo: 89, n: 3 }, y: { mo: 79, n: 12 } };
+  let cycle = "m";
+  const amt = $("amt"), bill = $("bill"), cyc = $("cyc");
+  const cycleText = (t) => `${t["cyc." + cycle]} · $${PLANS[cycle].mo} ${t["plan.per"]}`;
+  const mailHref = (t, kind) => {
+    const k = kind ? `mail.${kind}.` : "mail.";
+    return `mailto:${EMAIL}?subject=${encodeURIComponent(t[k + "subject"])}&body=${encodeURIComponent(t[k + "body"].replace("{cycle}", cycleText(t)))}`;
+  };
+  const setMail = (t) => document.querySelectorAll(".js-mail").forEach((a) => { a.href = mailHref(t, a.dataset.mail); });
+  function renderPlan(t, animate) {
+    const P = PLANS[cycle];
+    if (animate && !reduce) { amt.classList.remove("flip"); void amt.offsetWidth; amt.classList.add("flip"); }
+    amt.textContent = P.mo;
+    bill.innerHTML = t["bill." + cycle].replace("{total}", "$" + (P.mo * P.n).toLocaleString("en-US")).replace("{save}", "$" + (PLANS.m.mo - P.mo) * P.n);
+    cyc.setAttribute("aria-label", t["cyc.label"]);
+    cyc.querySelectorAll("button").forEach((b) => b.setAttribute("aria-checked", String(b.dataset.c === cycle)));
+  }
+  cyc.querySelectorAll("button").forEach((b) => b.addEventListener("click", () => {
+    if (b.dataset.c === cycle) return;
+    cycle = b.dataset.c;
+    renderPlan(T[lang], true);
+    setMail(T[lang]);
+  }));
   function apply(next) {
     lang = next;
     const t = T[lang];
@@ -967,7 +1048,8 @@ arm64
     document.querySelectorAll("[data-i18n]").forEach((el) => { const v = t[el.dataset.i18n]; if (v != null) el.textContent = v; });
     document.querySelectorAll("[data-i18n-html]").forEach((el) => { const v = t[el.dataset.i18nHtml]; if (v != null) el.innerHTML = v; });
     document.querySelectorAll(".lang button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
-    document.querySelectorAll(".js-mail").forEach((a) => { a.href = mailHref(t); });
+    setMail(t);
+    renderPlan(t, false);
     renderCompare(t);
     renderLog();
     if (typeof drawWires === "function" && hub) drawWires();
