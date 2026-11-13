@@ -22,6 +22,6 @@ with a prefilled inquiry template.
 - Preview: open `index.html` in a browser, or `python3 -m http.server` in this folder.
 - Deploy: public repo `Jaaay50/cloudborne-mac-mini`, GitHub Pages from `main` / root
   (`.nojekyll` is present); a push to `main` is live in about a minute at
-  https://jaaay50.github.io/cloudborne-mac-mini/ . Planned custom domain: `mac.cloudborne.cn`
-  (add the `CNAME` file only after DNS resolves). When the domain changes, update `og:url` and
-  `og:image` in `index.html`.
+  https://mac.cloudborne.cn/ (custom domain from the `CNAME` file; DNSPod `mac` CNAME →
+  `jaaay50.github.io.`, HTTPS enforced). The github.io address redirects there. If the domain
+  changes, update `CNAME` plus `og:url` and `og:image` in `index.html`.
