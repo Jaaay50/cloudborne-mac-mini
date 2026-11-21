@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>新加坡独享 Mac，可选 Team 高级席位 | Cloudborne</title>
-<meta name="description" content="Cloudborne 新加坡 Mac mini M4 整机独享租赁（月付 $99/月、季付一次付 $267/季折合 $89/月、年付一次付 $948/年折合 $79/月，不含税），可选 Claude Team 高级席位（$299/席/月，机器租金另计），统一美元标价，支持美元或等值人民币结算。">
+<meta name="description" content="Cloudborne 新加坡 Mac mini M4 整机独享租赁（月付 $99/月、季付一次付 $267/季折合 $89/月、年付一次付 $948/年折合 $79/月，不含税，单租机器免押金），可选 Claude Team 高级席位（$299/席/月，机器租金另计；带订阅套餐收当期总额 30% 可退押金），支持美元或等值人民币结算。">
 <meta name="theme-color" content="#eaecf0">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Cloudborne">
 <meta property="og:url" content="https://mac.cloudborne.cn/">
 <meta property="og:title" content="新加坡独享 Mac，可选 Team 高级席位 | Cloudborne">
-<meta property="og:description" content="M4 · 16GB · 256GB 整机独享，独立出口 IP，机器网络不限流量；可选 Claude Team 高级席位 $299/席/月，支持季付 9 折、年付 8 折（适用于 Mac 机器）。">
+<meta property="og:description" content="M4 · 16GB · 256GB 整机独享，纯机器免押金；可选 Claude Team 高级席位 $299/席/月（带订阅套餐按当期实付总额收 30% 可退押金），支持美元或人民币结算。">
 <meta property="og:image" content="https://mac.cloudborne.cn/assets/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -300,6 +300,7 @@ section{scroll-margin-top:var(--nav)}
 .bill{font-size:13.5px;color:var(--ink);margin-top:9px;line-height:1.5}
 .bill b{color:var(--green);font-weight:600}
 .sub-bill{font-size:12.5px;color:var(--ink2);margin-top:4px;line-height:1.45}
+.sub-bill b{color:var(--ink);font-weight:600}
 .tax{font-size:12.5px;color:var(--ink3);margin-top:10px;padding-bottom:14px;border-bottom:1px solid var(--hair);line-height:1.5}
 .feat{list-style:none;margin:14px 0 22px;padding:0}
 .feat li{display:flex;gap:10px;align-items:baseline;font-size:14px;padding:4px 0;line-height:1.5}
@@ -511,7 +512,7 @@ footer{border-top:1px solid var(--line);padding:52px 0 34px;font-size:13px;color
       <a class="pill alt" href="#pricing" data-i18n="hero.cta1">查看机器价格</a>
       <a class="pill js-mail" data-mail="bundle" href="mailto:contact@cloudborne.cn" data-i18n="hero.cta2">咨询组合方案</a>
     </div>
-    <div class="hero-note" data-i18n-html="hero.note">纯机器 <b>$99</b>/月（季付 $267 · 年付 $948）· Team 席位 <b>$299</b>/席/月 · 支持美元或人民币结算</div>
+    <div class="hero-note" data-i18n-html="hero.note">纯机器 <b>$99</b>/月（免押金）· 组合 <b>$398</b>/月起（另收 30% 可退押金）· 美元或人民币结算</div>
   </div>
   <div class="stage">
     <div class="glow"></div>
@@ -684,13 +685,13 @@ arm64
           </div>
           <div class="amt"><span class="cy">$</span><span class="n" id="amt">99</span><span class="per" id="amtPer" data-i18n="plan.per">/ 月</span></div>
           <div class="bill" id="bill">按月支付 · 每次实付 $99</div>
-          <div class="sub-bill" data-i18n="plan.allcycles">季付一次付 $267 · 年付一次付 $948</div>
+          <div class="sub-bill" data-i18n="plan.allcycles">单租机器免押金（$0）· 季付 $267 / 年付 $948</div>
           <div class="tax" data-i18n="plan.tax">不含税 · 支持美元或等值人民币结算</div>
           <ul class="feat">
             <li data-i18n="plan.i1">新加坡实体整机独享，非虚拟机</li>
             <li data-i18n="plan.i2">独立出口 IP · 机器网络不限流量</li>
             <li data-i18n="plan.i3">完整管理员权限（屏幕共享 · SSH · RustDesk）</li>
-            <li data-i18n="plan.i4">付款后 24 小时内开通 · 退租整机抹盘</li>
+            <li data-i18n="plan.i4">免押金 · 24h 内开通 · 退租整机抹盘</li>
           </ul>
           <div class="plan-foot">
             <a class="pill alt js-mail" href="mailto:contact@cloudborne.cn" data-i18n="plan.cta">咨询纯机器租赁</a>
@@ -714,13 +715,13 @@ arm64
           <div class="slot-note" data-i18n="seat.slot">按席按月计价 · 仅随机器配套</div>
           <div class="amt"><span class="cy">$</span><span class="n" id="seatPrice">299</span><span class="per" data-i18n="seat.per">/ 席 / 月</span></div>
           <div class="bill" data-i18n="seat.excl">此价格不含 Mac 租金，机器需另付</div>
-          <div class="sub-bill" data-i18n="seat.noStandalone">暂不开放不配机器单独购买</div>
+          <div class="sub-bill" data-i18n="seat.noStandalone">不开放单买 · 组合另收 30% 可退押金</div>
           <div class="tax" data-i18n="seat.tax">Cloudborne 服务售价 · 非官方标价</div>
           <ul class="feat">
             <li data-i18n="seat.i1">邮件邀请加入 Cloudborne 团队组织</li>
             <li data-i18n="seat.i2">一人一席具名独享，严禁多人共用</li>
             <li data-i18n="seat.i3">Cloudborne 持 Owner，客户为成员身份</li>
-            <li data-i18n="seat.i4">与机器租金分列 · 支持美元或人民币结算</li>
+            <li data-i18n="seat.i4">正常退订或停租，押金原路全额退还</li>
           </ul>
           <div class="plan-foot">
             <a class="pill alt" href="#plan-bundle" data-i18n="seat.cta">查看组合方案</a>
@@ -741,21 +742,21 @@ arm64
         <div class="bd">
           <div class="kicker" data-i18n="bnd.kicker">03 · 组合方案</div>
           <h3 data-i18n="bnd.title">独享 Mac ＋ 高级席位</h3>
-          <div class="spec" data-i18n="bnd.spec">分项计价 · 机器享季付 9 折 / 年付 8 折</div>
+          <div class="spec" data-i18n="bnd.spec">机器享季 9 折 / 年 8 折 · 另收 30% 押金</div>
           <div class="cyc" role="radiogroup" aria-label="付款周期" id="cycB">
             <button type="button" role="radio" aria-checked="true" data-c="m"><span data-i18n="cyc.m">月付</span></button>
             <button type="button" role="radio" aria-checked="false" data-c="q"><span data-i18n="cyc.q">季付</span><i>−10%</i></button>
             <button type="button" role="radio" aria-checked="false" data-c="y"><span data-i18n="cyc.y">年付</span><i>−20%</i></button>
           </div>
           <div class="amt"><span class="cy">$</span><span class="n" id="bundleAmt">398</span><span class="per" id="bundlePer" data-i18n="plan.per">/ 月</span></div>
-          <div class="bill" id="bundleBill">按月实付 <b>$398</b>（机器 $99 ＋ 席位 $299）</div>
-          <div class="sub-bill" data-i18n="bnd.note">仅 Mac 享季付/年付折扣 · 席位 $299/月</div>
+          <div class="bill" id="bundleBill">当期租金 <b>$398</b>（机器 $99 ＋ 席位 $299）</div>
+          <div class="sub-bill" id="bundleDeposit">可退押金 $119（30%）· 首次实付 <b>$517</b></div>
           <div class="tax" data-i18n="bnd.tax">不含税 · 支持美元或等值人民币结算</div>
           <ul class="feat">
-            <li data-i18n="bnd.i1">机器租金与席位费用逐项透明列明</li>
-            <li data-i18n="bnd.i2">仅 Mac 享季付 9 折、年付 8 折</li>
-            <li data-i18n="bnd.i3">硬件/IP 故障与席位问题分别核查处理</li>
-            <li data-i18n="bnd.i4">支持单独退订席位并继续保留 Mac 机器</li>
+            <li data-i18n="bnd.i1">仅 Mac 享季/年折扣，席位固定 $299/月</li>
+            <li data-i18n="bnd.i2">按当期租金另收 30% 押金（取整到美元）</li>
+            <li data-i18n="bnd.i3">正常退订全额退押；违规共用不退押金</li>
+            <li data-i18n="bnd.i4">硬件与席位分别售后 · 可单独退席位</li>
           </ul>
           <div class="plan-foot">
             <a class="pill js-mail" data-mail="bundle" href="mailto:contact@cloudborne.cn" data-i18n="bnd.cta">咨询组合方案</a>
@@ -773,7 +774,7 @@ arm64
 
     <div class="more rv">
       <h3 data-i18n="svc.title">其他服务</h3>
-      <div class="svc"><b data-i18n="svc.biz.t">多台 / 企业租用</b><span data-i18n="svc.biz.d">批量租用，可开发票、签合同</span><a class="lnk js-mail" data-mail="biz" href="mailto:contact@cloudborne.cn" data-i18n="svc.ask">来信咨询</a></div>
+      <div class="svc"><b data-i18n="svc.biz.t">多台 / 企业租用</b><span data-i18n="svc.biz.d">批量租用，可开发票、签合同；搭配席位同样适用 30% 押金规则</span><a class="lnk js-mail" data-mail="biz" href="mailto:contact@cloudborne.cn" data-i18n="svc.ask">来信咨询</a></div>
       <div class="svc"><b data-i18n="svc.host.t">自带 Mac 托管</b><span data-i18n="svc.host.d">$29 / 月 · 寄送、机位和网络来信确认</span><a class="lnk js-mail" data-mail="host" href="mailto:contact@cloudborne.cn" data-i18n="svc.ask">来信咨询</a></div>
     </div>
   </div>
@@ -793,7 +794,7 @@ arm64
       <div class="step" style="--i:1">
         <svg viewBox="0 0 72 44"><rect x="10" y="10" width="40" height="26" rx="4"/><path d="M10 18h40M16 29h10"/><circle cx="54" cy="30" r="9"/><path d="M50 30l3 3 5-6"/></svg>
         <div class="who">02 · <span data-i18n="steps.us">我们</span></div>
-        <h3 data-i18n="s2.t">确认方案与结算</h3><p data-i18n="s2.d">我们回信确认配置与金额，支持美元或等值人民币结算。</p>
+        <h3 data-i18n="s2.t">确认方案与结算</h3><p data-i18n="s2.d">回信确认配置、当期租金与押金（仅带席位套餐收 30%），支持美元或人民币。</p>
       </div>
       <div class="step" style="--i:2">
         <svg viewBox="0 0 72 44"><rect x="10" y="16" width="52" height="16" rx="5"/><path d="M14 36h44"/><circle cx="54" cy="24" r="1.6"/><path d="M18 22v4M23 22v4"/></svg>
@@ -818,11 +819,12 @@ arm64
       <details><summary data-i18n="faq.q1">真的是一整台吗？</summary><p data-i18n="faq.a1">是。每台对应一台新加坡实体 Mac mini M4（10 核 CPU/GPU · 16GB · 256GB），不是虚拟机，也不共用。</p></details>
       <details><summary data-i18n="faq.q2">IP 和流量有限制吗？</summary><p data-i18n="faq.a2">每台机器配有独立出口 IP，租期内不变；机器网络不限流量（不含第三方 AI 工具的使用额度）。</p></details>
       <details><summary data-i18n="faq.q3">怎么连接？退租后数据怎么处理？</summary><p data-i18n="faq.a3">提供完整管理员权限，支持屏幕共享（VNC）、SSH 和 RustDesk；退租后整机抹盘重装。</p></details>
-      <details><summary data-i18n="faq.q4">纯机器最短租多久？季付、年付怎么付？</summary><p data-i18n="faq.a4">最短 1 个月（$99/月）。季付一次实付 $267/季（折合 $89/月），年付一次实付 $948/年（折合 $79/月），均非按月扣费；标价不含税。</p></details>
+      <details><summary data-i18n="faq.q4">纯机器最短租多久？季付、年付怎么付？需要押金吗？</summary><p data-i18n="faq.a4">最短 1 个月（$99/月）。季付一次实付 $267/季（折合 $89/月），年付一次实付 $948/年（折合 $79/月），均非按月扣费；标价不含税。单租纯机器无需支付押金。</p></details>
       <details><summary data-i18n="faq.q5">Team 高级席位怎么收费？能单独买吗？</summary><p data-i18n="faq.a5">Cloudborne 服务售价 $299/席/月（非 Anthropic 官方标价），不含 Mac 租金，仅随独享 Mac 配套提供，暂不单买；季付 9 折与年付 8 折仅适用于 Mac 机器。</p></details>
       <details><summary data-i18n="faq.q6">席位怎么交付？谁管理权限？</summary><p data-i18n="faq.a6">通过邮件邀请加入 Cloudborne 管理的 Team 组织（Cloudborne 持 Owner 管席位与账单，客户为成员身份），一人一席具名独享，严禁多人共用。</p></details>
-      <details><summary data-i18n="faq.q7">第三方账号风控、机器故障和组合售后怎么处理？</summary><p data-i18n="faq.a7">纯机器客户自备账号由平台自行风控，机器可用则租金不退；组合客户将机器硬件/IP 故障与席位异常分别处理——非用户违规导致的席位失效可按剩余天数退席位费并保留 Mac。</p></details>
-      <details><summary data-i18n="faq.q8">怎么付款？写信会扣款吗？地区或账号有保证吗？</summary><p data-i18n="faq.a8">写信只是咨询，确认方案后再付款（支持美元或等值人民币）；实体机与独立 IP 不保证第三方平台的地区资格、账号审核结果或长期状态，需合规使用。</p></details>
+      <details><summary data-i18n="faq.q7">带订阅的套餐怎么收 30% 押金？什么时候退还？</summary><p data-i18n="faq.a7">单租纯机器免押金（$0）；选择 Mac＋Team 高级席位或含席位方案时，按当期套餐实付总额加收 30% 押金并四舍五入取整到美元（月付 $119、季付 $349、年付 $1,361）。正常退订席位或到期停租后原路全额退还；因多人共用或违规导致席位/组织连带受影响的，押金不予退还。</p></details>
+      <details><summary data-i18n="faq.q8">第三方账号风控、机器故障和组合售后怎么处理？</summary><p data-i18n="faq.a8">纯机器客户自备账号由平台自行风控，机器可用则租金不退；组合客户将机器硬件/IP 故障与席位异常分别处理——非用户违规导致的席位失效可按剩余天数退席位费并保留 Mac。</p></details>
+      <details><summary data-i18n="faq.q9">怎么付款？写信会扣款吗？地区或账号有保证吗？</summary><p data-i18n="faq.a9">写信只是咨询，确认方案后再付款（支持美元或等值人民币）；实体机与独立 IP 不保证第三方平台的地区资格、账号审核结果或长期状态，需合规使用。</p></details>
     </div>
   </div>
 </section>
@@ -886,8 +888,10 @@ arm64
 
   // Optional Claude Team Premium seat (Cloudborne service price, USD excl. tax).
   // Bundled with a dedicated Mac only; quarterly/yearly discounts apply to Mac hardware only.
+  // Subscription bundles require a refundable 30% deposit on period total (rounded to whole USD); hardware-only is $0 deposit.
   const SEAT = {
     mo: 299,
+    depositPct: 30,
     standaloneAllowed: false,
     discountMatchesMachineOnly: true,
   };
@@ -942,7 +946,7 @@ arm64
       "hero.title": "新加坡独享 Mac，<br>可选 Team 高级席位",
       "hero.sub": "Mac mini M4 整机独享，支持远程开发与构建。机器与席位分项定价，机器享季付 9 折、年付 8 折。",
       "hero.cta1": "查看机器价格", "hero.cta2": "咨询组合方案",
-      "hero.note": "纯机器 <b>$99</b>/月（季付 $267 · 年付 $948）· Team 席位 <b>$299</b>/席/月 · 支持美元或人民币结算",
+      "hero.note": "纯机器 <b>$99</b>/月（免押金）· 组合 <b>$398</b>/月起（另收 30% 可退押金）· 美元或人民币结算",
       "hero.tag": "在线 · 新加坡",
       "stmt.a1": "<span class=\"nw\">共用的机器</span>　<span class=\"nw\">跳来跳去的 IP</span>　<span class=\"nw\">按量计费的流量</span>", "stmt.a2": "每一样都在拖慢你的工作",
       "stmt.b1": "我们把这些全部拿掉", "stmt.b2": "只留一台在新加坡、只属于你的 Mac mini",
@@ -967,12 +971,12 @@ arm64
       "pricing.sub": "机器与 Team 高级席位分别计价，统一美元标价。由 Cloudborne 独立提供，与 Anthropic 无官方隶属或代理关系。",
       "plan.kicker": "01 · 纯 Mac 租赁",
       "plan.spec": "10 核 CPU · 10 核 GPU · 16GB · 256GB", "plan.per": "/ 月", "plan.perEq": "/ 月（折合）",
-      "plan.allcycles": "季付一次付 $267 · 年付一次付 $948",
+      "plan.allcycles": "单租机器免押金（$0）· 季付 $267 / 年付 $948",
       "plan.tax": "不含税 · 支持美元或等值人民币结算",
       "plan.i1": "新加坡实体整机独享，非虚拟机",
       "plan.i2": "独立出口 IP · 机器网络不限流量",
       "plan.i3": "完整管理员权限（屏幕共享 · SSH · RustDesk）",
-      "plan.i4": "付款后 24 小时内开通 · 退租整机抹盘",
+      "plan.i4": "免押金 · 24h 内开通 · 退租整机抹盘",
       "plan.cta": "咨询纯机器租赁", "plan.pay": "交付后起租 · 付款方式联系后确认",
       "cyc.label": "付款周期", "cyc.m": "月付", "cyc.q": "季付", "cyc.y": "年付",
       "bill.m": "按月支付 · 每次实付 $99",
@@ -983,56 +987,57 @@ arm64
       "seat.title": "Claude Team 高级席位", "seat.spec": "可选配套 · 机器租金另计",
       "seat.slot": "按席按月计价 · 仅随机器配套", "seat.per": "/ 席 / 月",
       "seat.excl": "此价格不含 Mac 租金，机器需另付",
-      "seat.noStandalone": "暂不开放不配机器单独购买",
+      "seat.noStandalone": "不开放单买 · 组合另收 30% 可退押金",
       "seat.tax": "Cloudborne 服务售价 · 非官方标价",
       "seat.i1": "邮件邀请加入 Cloudborne 团队组织",
       "seat.i2": "一人一席具名独享，严禁多人共用",
       "seat.i3": "Cloudborne 持 Owner，客户为成员身份",
-      "seat.i4": "与机器租金分列 · 支持美元或人民币结算",
+      "seat.i4": "正常退订或停租，押金原路全额退还",
       "seat.cta": "查看组合方案", "seat.pay": "仅随独享 Mac 配套提供",
       "bnd.kicker": "03 · 组合方案",
       "bnd.n1": "Mac mini M4", "bnd.n1s": "$99 起 / 月",
       "bnd.n2": "Team 高级席位", "bnd.n2s": "$299 / 月",
-      "bnd.title": "独享 Mac ＋ 高级席位", "bnd.spec": "分项计价 · 机器享季付 9 折 / 年付 8 折",
-      "bnd.bill.m": "按月实付 <b>{total}</b>（机器 {mac} ＋ 席位 {seat}）",
-      "bnd.bill.q": "每季一次实付 <b>{total}</b>（机器 {mac} ＋ 席位 {seat} · 省 {save}）",
-      "bnd.bill.y": "每年一次实付 <b>{total}</b>（机器 {mac} ＋ 席位 {seat} · 省 {save}）",
-      "bnd.note": "仅 Mac 享季付/年付折扣 · 席位 $299/月",
+      "bnd.title": "独享 Mac ＋ 高级席位", "bnd.spec": "机器享季 9 折 / 年 8 折 · 另收 30% 押金",
+      "bnd.bill.m": "当期租金 <b>{total}</b>（机器 {mac} ＋ 席位 {seat}）",
+      "bnd.bill.q": "季付租金 <b>{total}</b>（机器 {mac} ＋ 席位 {seat} · 省 {save}）",
+      "bnd.bill.y": "年付租金 <b>{total}</b>（机器 {mac} ＋ 席位 {seat} · 省 {save}）",
+      "bnd.dep": "可退押金 {dep}（30%）· 首次实付 <b>{due}</b>",
       "bnd.tax": "不含税 · 支持美元或等值人民币结算",
-      "bnd.i1": "机器租金与席位费用逐项透明列明",
-      "bnd.i2": "仅 Mac 享季付 9 折、年付 8 折",
-      "bnd.i3": "硬件/IP 故障与席位问题分别核查处理",
-      "bnd.i4": "支持单独退订席位并继续保留 Mac 机器",
+      "bnd.i1": "仅 Mac 享季/年折扣，席位固定 $299/月",
+      "bnd.i2": "按当期租金另收 30% 押金（取整到美元）",
+      "bnd.i3": "正常退订全额退押；违规共用不退押金",
+      "bnd.i4": "硬件与席位分别售后 · 可单独退席位",
       "bnd.cta": "咨询组合方案", "bnd.pay": "写信仅作方案咨询，确认细节后再付款",
       "svc.title": "其他服务", "svc.ask": "来信咨询",
-      "svc.biz.t": "多台 / 企业租用", "svc.biz.d": "批量租用，可开发票、签合同",
+      "svc.biz.t": "多台 / 企业租用", "svc.biz.d": "批量租用，可开发票、签合同；搭配席位同样适用 30% 押金规则",
       "svc.host.t": "自带 Mac 托管", "svc.host.d": "$29 / 月 · 寄送、机位和网络来信确认",
       "cmp.title": "纯机器对比：同样的配置，各家月租", "cmp.sub": "仅对比 M4 · 16GB · 256GB 纯硬件整机月租（不含 Team 席位）· 各家官网标价 · 2026 年 11 月",
       "cmp.us": "我们", "cmp.sg": "新加坡", "cmp.mo": "/月", "cmp.same": "与我们同价", "cmp.more": "比我们贵",
       "steps.l1": "四步开通", "steps.l2": "你只需要写信和连上", "steps.you": "你", "steps.us": "我们",
       "s1.t": "写信咨询", "s1.d": "说说要几台 Mac、租期，以及是否搭配 Team 高级席位。",
-      "s2.t": "确认方案与结算", "s2.d": "我们回信确认配置与金额，支持美元或等值人民币结算。",
+      "s2.t": "确认方案与结算", "s2.d": "回信确认配置、当期租金与押金（仅带席位套餐收 30%），支持美元或人民币。",
       "s3.t": "准备交付并起租", "s3.d": "付款后 24 小时内交付机器并起租，席位通过邮件邀请开通。",
       "s4.t": "连上就用", "s4.d": "用邮件里的连接信息登录独享 Mac，硬件与席位各自独立支持。",
       "faq.title": "常见问题",
       "faq.q1": "真的是一整台吗？", "faq.a1": "是。每台对应一台新加坡实体 Mac mini M4（10 核 CPU/GPU · 16GB · 256GB），不是虚拟机，也不共用。",
       "faq.q2": "IP 和流量有限制吗？", "faq.a2": "每台机器配有独立出口 IP，租期内不变；机器网络不限流量（不含第三方 AI 工具的使用额度）。",
       "faq.q3": "怎么连接？退租后数据怎么处理？", "faq.a3": "提供完整管理员权限，支持屏幕共享（VNC）、SSH 和 RustDesk；退租后整机抹盘重装。",
-      "faq.q4": "纯机器最短租多久？季付、年付怎么付？", "faq.a4": "最短 1 个月（$99/月）。季付一次实付 $267/季（折合 $89/月），年付一次实付 $948/年（折合 $79/月），均非按月扣费；标价不含税。",
+      "faq.q4": "纯机器最短租多久？季付、年付怎么付？需要押金吗？", "faq.a4": "最短 1 个月（$99/月）。季付一次实付 $267/季（折合 $89/月），年付一次实付 $948/年（折合 $79/月），均非按月扣费；标价不含税。单租纯机器无需支付押金。",
       "faq.q5": "Team 高级席位怎么收费？能单独买吗？", "faq.a5": "Cloudborne 服务售价 $299/席/月（非 Anthropic 官方标价），不含 Mac 租金，仅随独享 Mac 配套提供，暂不单买；季付 9 折与年付 8 折仅适用于 Mac 机器。",
       "faq.q6": "席位怎么交付？谁管理权限？", "faq.a6": "通过邮件邀请加入 Cloudborne 管理的 Team 组织（Cloudborne 持 Owner 管席位与账单，客户为成员身份），一人一席具名独享，严禁多人共用。",
-      "faq.q7": "第三方账号风控、机器故障和组合售后怎么处理？", "faq.a7": "纯机器客户自备账号由平台自行风控，机器可用则租金不退；组合客户将机器硬件/IP 故障与席位异常分别处理——非用户违规导致的席位失效可按剩余天数退席位费并保留 Mac。",
-      "faq.q8": "怎么付款？写信会扣款吗？地区或账号有保证吗？", "faq.a8": "写信只是咨询，确认方案后再付款（支持美元或等值人民币）；实体机与独立 IP 不保证第三方平台的地区资格、账号审核结果或长期状态，需合规使用。",
+      "faq.q7": "带订阅的套餐怎么收 30% 押金？什么时候退还？", "faq.a7": "单租纯机器免押金（$0）；选择 Mac＋Team 高级席位或含席位方案时，按当期套餐实付总额加收 30% 押金并四舍五入取整到美元（月付 $119、季付 $349、年付 $1,361）。正常退订席位或到期停租后原路全额退还；因多人共用或违规导致席位/组织连带受影响的，押金不予退还。",
+      "faq.q8": "第三方账号风控、机器故障和组合售后怎么处理？", "faq.a8": "纯机器客户自备账号由平台自行风控，机器可用则租金不退；组合客户将机器硬件/IP 故障与席位异常分别处理——非用户违规导致的席位失效可按剩余天数退席位费并保留 Mac。",
+      "faq.q9": "怎么付款？写信会扣款吗？地区或账号有保证吗？", "faq.a9": "写信只是咨询，确认方案后再付款（支持美元或等值人民币）；实体机与独立 IP 不保证第三方平台的地区资格、账号审核结果或长期状态，需合规使用。",
       "final.l1": "写封邮件", "final.l2": "确认你的方案", "final.sub": "写信到 contact@cloudborne.cn，说明要租几台 Mac、周期，或是否搭配 Team 高级席位。",
       "final.cta": "咨询组合方案", "final.copy": "复制邮箱地址", "final.copied": "已复制",
       "foot.tag": "新加坡 Mac mini M4 整机独享租赁，可选 Team 高级席位配套。", "foot.c1": "了解", "foot.c2": "联系",
       "foot.tm": "Mac 和 Mac mini 是 Apple Inc. 的商标，本服务与 Apple 无关联。Claude 是 Anthropic 的商标，本服务由 Cloudborne 独立提供，与 Anthropic 无官方隶属或代理关系。其他商标归各自所有者。",
       "mail.subject": "新加坡 Mac mini M4 纯机器租赁咨询",
-      "mail.body": "你好，我想咨询新加坡 Mac mini M4 纯机器租赁。\n\n台数：\n付款周期：{cycle}\n期望结算币种（美元 / 人民币）：\n用途：\n希望开通日期：\n其他联系方式（微信 / Telegram，可选）：\n",
+      "mail.body": "你好，我想咨询新加坡 Mac mini M4 纯机器租赁。\n\n台数：\n付款周期：{cycle}\n押金：单租纯机器免押金（$0）\n期望结算币种（美元 / 人民币）：\n用途：\n希望开通日期：\n其他联系方式（微信 / Telegram，可选）：\n",
       "mail.bundle.subject": "新加坡 Mac mini + Claude Team 高级席位组合方案咨询",
-      "mail.bundle.body": "你好，我想咨询新加坡 Mac mini M4 ＋ Claude Team 高级席位组合方案。\n\n机器数量：1 台\n组合周期：{cycle}\nTeam 席位：$299 / 席 / 月（Cloudborne 服务售价，具名独享）\n期望结算币种（美元 / 人民币）：\n用途说明：\n希望开通日期：\n其他联系方式（微信 / Telegram，可选）：\n",
+      "mail.bundle.body": "你好，我想咨询新加坡 Mac mini M4 ＋ Claude Team 高级席位组合方案。\n\n机器数量：1 台\n组合与押金明细：{cycle}\nTeam 席位：$299 / 席 / 月（Cloudborne 服务售价，具名独享）\n押金规则：按当期套餐总额另收 30% 可退押金，正常退订/停租原路全额退还；违规共用不退押金\n期望结算币种（美元 / 人民币）：\n用途说明：\n希望开通日期：\n其他联系方式（微信 / Telegram，可选）：\n",
       "mail.biz.subject": "Mac mini 多台 / 企业租用咨询",
-      "mail.biz.body": "你好，我们想批量租用新加坡的 Mac mini。\n\n公司 / 团队：\n台数：\n付款周期（月付 $99 · 季付 $267/季 · 年付 $948/年）：\n是否需要搭配 Team 高级席位（$299/席/月）：\n是否需要发票或合同：\n用途：\n其他联系方式（微信 / Telegram，可选）：\n",
+      "mail.biz.body": "你好，我们想批量租用新加坡的 Mac mini。\n\n公司 / 团队：\n台数：\n付款周期（月付 $99 · 季付 $267/季 · 年付 $948/年，纯机器免押金）：\n是否需要搭配 Team 高级席位（$299/席/月，带席位套餐另收当期总额 30% 可退押金）：\n是否需要发票或合同：\n用途：\n其他联系方式（微信 / Telegram，可选）：\n",
       "mail.host.subject": "自带 Mac 托管咨询",
       "mail.host.body": "你好，我想把自己的 Mac 托管在新加坡。\n\n机型和配置：\n台数：\n预计寄送时间：\n用途：\n其他联系方式（微信 / Telegram，可选）：\n",
     },
@@ -1044,7 +1049,7 @@ arm64
       "hero.title": "Dedicated Mac in Singapore,<br>optional Team Premium seats",
       "hero.sub": "Dedicated Mac mini M4 hardware for remote development and builds. Machine and seat pricing are itemized in USD, with 10% quarterly and 20% yearly discounts on hardware.",
       "hero.cta1": "View machine pricing", "hero.cta2": "Inquire about bundle",
-      "hero.note": "Mac only <b>$99</b>/mo ($267/qtr · $948/yr) · Team seat <b>$299</b>/seat/mo · USD or CNY accepted",
+      "hero.note": "Mac only <b>$99</b>/mo ($0 deposit) · Bundle from <b>$398</b>/mo (+30% refundable deposit) · USD or CNY",
       "hero.tag": "Online · Singapore",
       "stmt.a1": "<span class=\"nw\">Shared machines.</span> <span class=\"nw\">IPs that keep changing.</span> <span class=\"nw\">Metered traffic.</span>", "stmt.a2": "Each one gets in your way.",
       "stmt.b1": "We took all of that away.", "stmt.b2": "One Mac mini in Singapore. Yours alone.",
@@ -1069,12 +1074,12 @@ arm64
       "pricing.sub": "Listed separately in USD. Offered independently by Cloudborne, with no official affiliation with Anthropic.",
       "plan.kicker": "01 · Dedicated Mac",
       "plan.spec": "10-core CPU · 10-core GPU · 16GB · 256GB", "plan.per": "/ month", "plan.perEq": "/ mo eq.",
-      "plan.allcycles": "Quarterly $267 upfront · Yearly $948 upfront",
+      "plan.allcycles": "$0 deposit (Mac-only) · Qtr $267 / Yr $948",
       "plan.tax": "Excl. tax · Pay in USD or equivalent CNY",
       "plan.i1": "Dedicated physical Mac in Singapore, not a VM",
       "plan.i2": "Dedicated exit IP · unmetered machine traffic",
       "plan.i3": "Full admin access (Screen Sharing · SSH · RustDesk)",
-      "plan.i4": "Ready within 24h · disk wiped on cancellation",
+      "plan.i4": "No deposit · ready within 24h · wiped on exit",
       "plan.cta": "Inquire about Mac only", "plan.pay": "Billed from delivery · confirm payment by email",
       "cyc.label": "Billing period", "cyc.m": "Monthly", "cyc.q": "Quarterly", "cyc.y": "Yearly",
       "bill.m": "Billed monthly · $99 each cycle",
@@ -1085,56 +1090,57 @@ arm64
       "seat.title": "Claude Team Premium Seat", "seat.spec": "Optional add-on · Mac rental separate",
       "seat.slot": "Per seat / month · bundled only", "seat.per": "/ seat / mo",
       "seat.excl": "Excludes Mac rental — machine billed separately",
-      "seat.noStandalone": "Not sold standalone without a dedicated Mac",
+      "seat.noStandalone": "Not sold standalone · +30% deposit in bundles",
       "seat.tax": "Cloudborne service price · not official list price",
       "seat.i1": "Email invite to Cloudborne-managed Team org",
       "seat.i2": "One named person per seat — no sharing",
       "seat.i3": "Cloudborne keeps Owner role; you join as Member",
-      "seat.i4": "Billed apart from hardware · USD or CNY accepted",
+      "seat.i4": "Full deposit refund on normal exit or drop",
       "seat.cta": "See bundle pricing", "seat.pay": "Available with a dedicated Mac only",
       "bnd.kicker": "03 · Mac + Seat Bundle",
       "bnd.n1": "Mac mini M4", "bnd.n1s": "From $99 / mo",
       "bnd.n2": "Team Premium Seat", "bnd.n2s": "$299 / mo",
-      "bnd.title": "Dedicated Mac + Premium Seat", "bnd.spec": "Itemized · 10% qtr / 20% yr off hardware",
-      "bnd.bill.m": "Billed monthly: <b>{total}</b> (Mac {mac} + Seat {seat})",
-      "bnd.bill.q": "Upfront: <b>{total} / qtr</b> (Mac {mac} + Seat {seat} · save {save})",
-      "bnd.bill.y": "Upfront: <b>{total} / yr</b> (Mac {mac} + Seat {seat} · save {save})",
-      "bnd.note": "Mac-only term discounts · Seat stays $299/mo",
+      "bnd.title": "Dedicated Mac + Premium Seat", "bnd.spec": "10% qtr / 20% yr off Mac · +30% deposit",
+      "bnd.bill.m": "Period rent: <b>{total}</b> (Mac {mac} + Seat {seat})",
+      "bnd.bill.q": "Qtr rent: <b>{total}</b> (Mac {mac} + Seat {seat} · save {save})",
+      "bnd.bill.y": "Yr rent: <b>{total}</b> (Mac {mac} + Seat {seat} · save {save})",
+      "bnd.dep": "Refundable deposit {dep} (30%) · First total: <b>{due}</b>",
       "bnd.tax": "Excl. tax · Pay in USD or equivalent CNY",
-      "bnd.i1": "Hardware rental and seat fee itemized clearly",
-      "bnd.i2": "10% quarterly & 20% yearly savings apply to Mac",
-      "bnd.i3": "Hardware faults and seat issues handled separately",
-      "bnd.i4": "Cancel the seat anytime while keeping your Mac",
+      "bnd.i1": "10% qtr / 20% yr savings on Mac; seat $299/mo",
+      "bnd.i2": "30% deposit on period bundle total (to whole USD)",
+      "bnd.i3": "Full deposit refund on normal exit; forfeited on abuse",
+      "bnd.i4": "Separate Mac & seat support · drop seat anytime",
       "bnd.cta": "Inquire about bundle", "bnd.pay": "Emailing is an inquiry only; nothing is charged",
       "svc.title": "Other services", "svc.ask": "Ask us",
-      "svc.biz.t": "Teams & several machines", "svc.biz.d": "Bulk rental, with invoices and contracts",
+      "svc.biz.t": "Teams & several machines", "svc.biz.d": "Bulk rental with invoices & contracts; 30% deposit applies if seats are included",
       "svc.host.t": "Host your own Mac", "svc.host.d": "$29 / month · shipping, rack and network by email",
       "cmp.title": "Hardware only: same Mac, side by side", "cmp.sub": "Dedicated M4 · 16GB · 256GB hardware rental only (excludes Team seats) · provider list price/mo · Nov 2026",
       "cmp.us": "Us", "cmp.sg": "Singapore", "cmp.mo": "/mo", "cmp.same": "same as ours", "cmp.more": "more than ours",
       "steps.l1": "Four steps.", "steps.l2": "Email us, connect, build.", "steps.you": "You", "steps.us": "Us",
       "s1.t": "Send an inquiry", "s1.d": "Tell us how many Macs, the term, and whether you want a Team Premium seat.",
-      "s2.t": "Confirm setup & currency", "s2.d": "We reply with specs and totals — payable in USD or equivalent CNY.",
+      "s2.t": "Confirm setup & currency", "s2.d": "We reply with specs, period rent and deposit (30% on seat bundles; $0 Mac-only), in USD or CNY.",
       "s3.t": "Provision & invite", "s3.d": "Mac delivered within 24h of payment; Team seat provisioned via email invite.",
       "s4.t": "Connect & build", "s4.d": "Log in with the details we email you, with separate support for Mac and seat.",
       "faq.title": "Questions",
       "faq.q1": "Is it really a whole machine?", "faq.a1": "Yes. Each rental is one physical Mac mini M4 (10-core CPU/GPU, 16GB, 256GB) in Singapore — never a VM or time-shared.",
       "faq.q2": "Are the IP and traffic limited?", "faq.a2": "Each Mac has its own unchanged outbound IP and unmetered machine network traffic (not AI tool usage quotas).",
       "faq.q3": "How do I connect, and what happens when I leave?", "faq.a3": "Full admin access via Screen Sharing (VNC), SSH or RustDesk. Disk is wiped and macOS reinstalled on cancellation.",
-      "faq.q4": "Minimum term and upfront billing?", "faq.a4": "Monthly minimum is $99/mo. Quarterly bills $267 upfront ($89/mo eq.) and yearly bills $948 upfront ($79/mo eq.) — not billed monthly; prices exclude tax.",
+      "faq.q4": "Minimum term, upfront billing, and deposit for Mac only?", "faq.a4": "Monthly minimum is $99/mo. Quarterly bills $267 upfront ($89/mo eq.) and yearly bills $948 upfront ($79/mo eq.) — not billed monthly; prices exclude tax. No deposit is required for Mac-only rentals.",
       "faq.q5": "How is the Team Premium seat priced and sold?", "faq.a5": "Cloudborne prices Team Premium seats at $299/seat/mo (not Anthropic list price), excluding Mac rental and bundled with a Mac only; hardware term discounts apply to the Mac only.",
       "faq.q6": "How is the seat delivered and managed?", "faq.a6": "Via email invite to a Cloudborne-managed Team org (Cloudborne holds Owner for billing/seats; you join as Member), strictly 1 named person per seat.",
-      "faq.q7": "How are hardware faults vs. seat or account issues handled?", "faq.a7": "Mac-only rentals do not refund for user-owned accounts. For bundles, hardware/IP faults and seat anomalies are handled separately — non-violation seat outages receive a prorated seat refund while keeping the Mac.",
-      "faq.q8": "How do I pay? Are region access or accounts guaranteed?", "faq.a8": "Emailing never charges you; pay in USD or equivalent CNY after confirmation. Dedicated Macs and IPs do not guarantee third-party region access, moderation, or long-term platform status.",
+      "faq.q7": "How does the 30% subscription bundle deposit work?", "faq.a7": "Mac-only rentals require $0 deposit. Subscription bundles charge a 30% refundable deposit on the upfront period total rounded to whole USD ($119 monthly, $349 quarterly, $1,361 yearly). It is refunded in full via the original method on normal seat cancellation or term end, but forfeited if seat sharing or policy violations affect the seat or organization.",
+      "faq.q8": "How are hardware faults vs. seat or account issues handled?", "faq.a8": "Mac-only rentals do not refund for user-owned accounts. For bundles, hardware/IP faults and seat anomalies are handled separately — non-violation seat outages receive a prorated seat refund while keeping the Mac.",
+      "faq.q9": "How do I pay? Are region access or accounts guaranteed?", "faq.a9": "Emailing never charges you; pay in USD or equivalent CNY after confirmation. Dedicated Macs and IPs do not guarantee third-party region access, moderation, or long-term platform status.",
       "final.l1": "Send an email.", "final.l2": "Confirm your setup.", "final.sub": "Write to contact@cloudborne.cn with how many Macs, your cycle, or bundle needs.",
       "final.cta": "Inquire about bundle", "final.copy": "Copy email address", "final.copied": "Copied",
       "foot.tag": "Dedicated M4 Mac minis in Singapore, with optional Team Premium seats.", "foot.c1": "Explore", "foot.c2": "Contact",
       "foot.tm": "Mac and Mac mini are trademarks of Apple Inc. This service is not affiliated with Apple. Claude is a trademark of Anthropic; Cloudborne's services are offered independently with no official affiliation with Anthropic. Other trademarks belong to their owners.",
       "mail.subject": "Singapore Mac mini M4 rental inquiry",
-      "mail.body": "Hi, I'd like to inquire about renting a dedicated Mac mini M4 in Singapore.\n\nHow many:\nBilling period: {cycle}\nPreferred payment currency (USD / CNY):\nUse case:\nPreferred start date:\nOther contact (WeChat / Telegram, optional):\n",
+      "mail.body": "Hi, I'd like to inquire about renting a dedicated Mac mini M4 in Singapore.\n\nHow many:\nBilling period: {cycle}\nDeposit: $0 (Mac-only rental)\nPreferred payment currency (USD / CNY):\nUse case:\nPreferred start date:\nOther contact (WeChat / Telegram, optional):\n",
       "mail.bundle.subject": "Singapore Mac mini + Claude Team Premium bundle inquiry",
-      "mail.bundle.body": "Hi, I'd like to inquire about the Singapore Mac mini M4 + Claude Team Premium seat bundle.\n\nMachines: 1\nBundle period: {cycle}\nTeam Premium seat: $299/seat/mo (Cloudborne service price, named single user)\nPreferred payment currency (USD / CNY):\nUse case:\nPreferred start date:\nOther contact (WeChat / Telegram, optional):\n",
+      "mail.bundle.body": "Hi, I'd like to inquire about the Singapore Mac mini M4 + Claude Team Premium seat bundle.\n\nMachines: 1\nBundle & deposit summary: {cycle}\nTeam Premium seat: $299/seat/mo (Cloudborne service price, named single user)\nDeposit policy: 30% refundable deposit on period total, refunded in full on normal exit; forfeited if sharing/violations occur\nPreferred payment currency (USD / CNY):\nUse case:\nPreferred start date:\nOther contact (WeChat / Telegram, optional):\n",
       "mail.biz.subject": "Mac mini rental for a team",
-      "mail.biz.body": "Hi, we'd like to rent several Mac minis in Singapore.\n\nCompany / team:\nHow many:\nBilling period (Monthly $99 · Quarterly $267 upfront · Yearly $948 upfront):\nTeam Premium seats needed ($299/seat/mo):\nInvoice or contract needed:\nUse case:\nOther contact (WeChat / Telegram, optional):\n",
+      "mail.biz.body": "Hi, we'd like to rent several Mac minis in Singapore.\n\nCompany / team:\nHow many:\nBilling period (Monthly $99 · Quarterly $267 upfront · Yearly $948 upfront; $0 deposit for Mac only):\nTeam Premium seats needed ($299/seat/mo; +30% refundable deposit on period total if bundled):\nInvoice or contract needed:\nUse case:\nOther contact (WeChat / Telegram, optional):\n",
       "mail.host.subject": "Hosting my own Mac",
       "mail.host.body": "Hi, I'd like to host my own Mac in Singapore.\n\nModel and specs:\nHow many:\nWhen I can ship it:\nUse case:\nOther contact (WeChat / Telegram, optional):\n",
     },
@@ -1204,9 +1210,21 @@ arm64
   /* ---------- billing period & bundle calc ---------- */
   let cycle = "m";
   const amt = $("amt"), amtPer = $("amtPer"), bill = $("bill"), cyc = $("cyc");
-  const seatPrice = $("seatPrice"), bundleAmt = $("bundleAmt"), bundlePer = $("bundlePer"), bundleBill = $("bundleBill"), cycB = $("cycB");
+  const seatPrice = $("seatPrice"), bundleAmt = $("bundleAmt"), bundlePer = $("bundlePer");
+  const bundleBill = $("bundleBill"), bundleDeposit = $("bundleDeposit"), cycB = $("cycB");
 
   const usd = (n) => "$" + n.toLocaleString("en-US");
+
+  const calcBundle = (c = cycle) => {
+    const P = PLANS[c];
+    const seatTotal = SEAT.mo * P.n;
+    const rentTotal = P.total + seatTotal;
+    const moEq = P.mo + SEAT.mo;
+    const deposit = Math.round((rentTotal * SEAT.depositPct) / 100);
+    const dueFirst = rentTotal + deposit;
+    const save = (PLANS.m.mo - P.mo) * P.n;
+    return { P, seatTotal, rentTotal, moEq, deposit, dueFirst, save };
+  };
 
   const cycleText = (t) => {
     const P = PLANS[cycle];
@@ -1216,14 +1234,14 @@ arm64
   };
 
   const bundleCycleText = (t) => {
-    const P = PLANS[cycle], seatTotal = SEAT.mo * P.n, bTotal = P.total + seatTotal, bMo = P.mo + SEAT.mo;
+    const { P, seatTotal, rentTotal, moEq, deposit, dueFirst } = calcBundle();
     if (cycle === "m") return lang === "zh"
-      ? "月付（机器 $99 ＋ 席位 $299 ＝ $398/月）"
-      : "Monthly ($99 Mac + $299 seat = $398/mo)";
+      ? `月付（租金 $398 ＝ 机器 $99 ＋ 席位 $299；另收 30% 可退押金 ${usd(deposit)}；首次实付 ${usd(dueFirst)}）`
+      : `Monthly ($398 rent = Mac $99 + Seat $299; +${usd(deposit)} 30% refundable deposit; ${usd(dueFirst)} first payment)`;
     const unit = cycle === "q" ? (lang === "zh" ? "每季" : "per qtr") : (lang === "zh" ? "每年" : "per yr");
     return lang === "zh"
-      ? `${t["cyc." + cycle]}（${unit}一次付 ${usd(bTotal)} ＝ 机器 ${usd(P.total)} ＋ 席位 ${usd(seatTotal)}，折合 $${bMo}/月）`
-      : `${t["cyc." + cycle]} (${usd(bTotal)} upfront ${unit} = Mac ${usd(P.total)} + Seat ${usd(seatTotal)}, $${bMo}/mo eq.)`;
+      ? `${t["cyc." + cycle]}（${unit}租金 ${usd(rentTotal)} ＝ 机器 ${usd(P.total)} ＋ 席位 ${usd(seatTotal)}，折合 $${moEq}/月；另收 30% 可退押金 ${usd(deposit)}；首次实付 ${usd(dueFirst)}）`
+      : `${t["cyc." + cycle]} (${usd(rentTotal)} upfront rent ${unit} = Mac ${usd(P.total)} + Seat ${usd(seatTotal)}, $${moEq}/mo eq.; +${usd(deposit)} 30% refundable deposit; ${usd(dueFirst)} first payment)`;
   };
 
   const mailHref = (t, kind) => {
@@ -1250,20 +1268,19 @@ arm64
   }
 
   function renderBundle(t, animate) {
-    const P = PLANS[cycle];
-    const seatTotal = SEAT.mo * P.n;
-    const bundleTotal = P.total + seatTotal;
-    const bundleMo = P.mo + SEAT.mo;
-    const save = (PLANS.m.mo - P.mo) * P.n;
+    const { P, seatTotal, rentTotal, moEq, deposit, dueFirst, save } = calcBundle();
 
     seatPrice.textContent = SEAT.mo;
-    flipNum(bundleAmt, bundleMo, animate);
+    flipNum(bundleAmt, moEq, animate);
     bundlePer.textContent = cycle === "m" ? t["plan.per"] : t["plan.perEq"];
     bundleBill.innerHTML = t["bnd.bill." + cycle]
-      .replace("{total}", usd(bundleTotal))
+      .replace("{total}", usd(rentTotal))
       .replace("{mac}", usd(P.total))
       .replace("{seat}", usd(seatTotal))
       .replace("{save}", usd(save));
+    bundleDeposit.innerHTML = t["bnd.dep"]
+      .replace("{dep}", usd(deposit))
+      .replace("{due}", usd(dueFirst));
     cycB.setAttribute("aria-label", t["cyc.label"]);
     cycB.querySelectorAll("button").forEach((b) => b.setAttribute("aria-checked", String(b.dataset.c === cycle)));
   }
