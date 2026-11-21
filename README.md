@@ -23,10 +23,14 @@ to `contact@cloudborne.cn` (constant `EMAIL`) with prefilled inquiry templates.
 - Pricing (`PLANS` & `SEAT`):
   - `PLANS` drives pure Mac pricing (`m`: $99/mo, `q`: $267/qtr upfront eq. $89/mo,
     `y`: $948/yr upfront eq. $79/mo). Quarterly (-10%) and yearly (-20%) discounts apply
-    to Mac hardware only.
+    to Mac hardware only. Pure Mac rentals require **$0 deposit**.
   - `SEAT` holds `mo: 299` ($299/seat/mo, Cloudborne service price, excl. Mac rental,
-    `standaloneAllowed: false`). Bundle pricing (`m`: $398/mo, `q`: $1,164/qtr upfront eq.
-    $388/mo, `y`: $4,536/yr upfront eq. $378/mo) stays synchronized via `#cyc` and `#cycB`.
+    `standaloneAllowed: false`) and `depositPct: 30`. Every bundle/subscription plan
+    charges a refundable 30% deposit calculated on the upfront period total and rounded
+    to whole USD (`m`: $119 on $398 → $517 first total; `q`: $349 on $1,164 → $1,513
+    first total; `y`: $1,361 on $4,536 → $5,897 first total). Refunded in full on
+    normal cancellation/term end; forfeited if seat sharing or violations impact the
+    seat/organization. Synchronized via `#cyc` and `#cycB`.
   - All storefront prices are listed in USD excl. tax, with settlement accepted in USD or
     equivalent CNY. Update `meta` / `og` descriptions and `T` copy together if pricing changes.
 - Preview: open `index.html` in a browser, or `python3 -m http.server` in this folder.
