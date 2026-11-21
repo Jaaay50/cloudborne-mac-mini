@@ -29,8 +29,13 @@ to `contact@cloudborne.cn` (constant `EMAIL`) with prefilled inquiry templates.
     charges a refundable 30% deposit calculated on the upfront period total and rounded
     to whole USD (`m`: $119 on $398 → $517 first total; `q`: $349 on $1,164 → $1,513
     first total; `y`: $1,361 on $4,536 → $5,897 first total). Refunded in full on
-    normal cancellation/term end; forfeited if seat sharing or violations impact the
-    seat/organization. Synchronized via `#cyc` and `#cycB`.
+    normal cancellation/term end; seat violations (off-Mac login, Claude Code
+    reverse-proxying/token export, seat sharing, automated farming/scraping) result in
+    immediate termination of both the seat and the paired Mac with no refund of rent
+    or deposit. Synchronized via `#cyc` and `#cycB`.
+  - `#rules` documents the paired-Mac login restriction, anti-proxy/anti-sharing/anti-abuse
+    seat rules, Mac hardware/network AUP (no mining, attacks, public proxies, sub-leasing),
+    and the joint seat+Mac termination and forfeiture enforcement policy.
   - All storefront prices are listed in USD excl. tax, with settlement accepted in USD or
     equivalent CNY. Update `meta` / `og` descriptions and `T` copy together if pricing changes.
 - Preview: open `index.html` in a browser, or `python3 -m http.server` in this folder.

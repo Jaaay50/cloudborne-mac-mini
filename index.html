@@ -69,8 +69,8 @@ section{scroll-margin-top:var(--nav)}
 .brand{display:flex;align-items:center;gap:9px;font-size:16px;font-weight:600;white-space:nowrap}
 .brand img{width:22px;height:22px;flex:none}
 .brand .sub{font-weight:400;color:var(--ink2);padding-left:9px;border-left:1px solid var(--line)}
-.links{display:flex;gap:30px;font-size:13.5px;color:var(--ink2)}
-.links a{transition:color .2s}
+.links{display:flex;gap:28px;font-size:13.5px;color:var(--ink2)}
+.links a{white-space:nowrap;transition:color .2s}
 .links a:hover{color:var(--ink)}
 .nav-end{justify-self:end;display:flex;align-items:center;gap:14px}
 .lang{display:flex;background:rgba(22,43,69,.07);border-radius:999px;padding:2px;font-size:12px}
@@ -331,6 +331,34 @@ section{scroll-margin-top:var(--nav)}
 .more h3+.svc{border-top:0}
 .svc b{font-size:16px;font-weight:600}
 .svc span{font-size:14.5px;color:var(--ink2)}
+.pricing-note{margin:20px auto 0;text-align:center;font-size:13.5px;color:var(--ink2);line-height:1.6}
+.pricing-note .lnk{font-size:13.5px}
+
+/* ---------- rules ---------- */
+.rules-grid{display:grid;grid-template-columns:1.18fr 1fr;gap:18px;margin-top:56px;align-items:stretch}
+.rule-card{background:var(--card);border:1px solid var(--line);border-radius:20px;box-shadow:var(--sh);padding:28px 28px 26px;display:flex;flex-direction:column;min-width:0}
+.rule-card.strict{border-color:rgba(180,35,24,.22);box-shadow:0 1px 2px rgba(22,34,56,.05),0 18px 44px -16px rgba(180,35,24,.1)}
+.rule-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-bottom:18px;border-bottom:1px solid var(--hair)}
+.rule-card .kicker{margin-bottom:6px}
+.rule-card.strict .kicker{color:#b42318}
+.rule-card h3{font-size:21px;line-height:1.28}
+.rpill{display:inline-flex;align-items:center;padding:4px 11px;border-radius:999px;font-size:12px;font-weight:600;white-space:nowrap}
+.rpill.red{color:#b42318;background:#fdecea}
+.rpill.neu{color:var(--ink2);background:var(--inset);border:1px solid var(--hair)}
+.rlist{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:14px}
+.rlist li{display:grid;grid-template-columns:16px 1fr;gap:10px;align-items:start;font-size:14px;line-height:1.65;color:var(--ink2)}
+.rlist li::before{content:"";width:6px;height:6px;border-radius:50%;margin-top:8px;justify-self:center;background:var(--blue)}
+.rule-card.strict .rlist li::before{background:#d93a3a}
+.rlist li b{display:block;color:var(--ink);font-weight:600;margin-bottom:2px}
+.verdict{margin-top:18px;background:var(--card);border:1px solid rgba(180,35,24,.24);border-radius:20px;box-shadow:var(--sh-lg);padding:26px 32px}
+.verdict-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-bottom:18px;border-bottom:1px solid var(--hair)}
+.verdict-top h3{font-size:20px;line-height:1.3}
+.verdict-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:18px}
+.vcol{min-width:0}
+.vcol .vk{font-size:12px;font-weight:600;color:#b42318;letter-spacing:.03em;margin-bottom:5px}
+.vcol:last-child .vk{color:var(--ink2)}
+.vcol h4{font-size:16px;line-height:1.4;margin-bottom:6px}
+.vcol p{font-size:13.5px;color:var(--ink2);line-height:1.65}
 
 /* ---------- steps ---------- */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:64px;text-align:left}
@@ -395,6 +423,13 @@ footer{border-top:1px solid var(--line);padding:52px 0 34px;font-size:13px;color
 }
 
 /* ---------- responsive ---------- */
+@media (max-width:1140px){
+  .nav .wrap{gap:16px}
+  .links{gap:20px}
+}
+@media (max-width:1100px){
+  .nav .brand .sub{display:none}
+}
 @media (max-width:1000px){
   .nav .wrap{grid-template-columns:1fr auto}
   .links{display:none}
@@ -407,9 +442,11 @@ footer{border-top:1px solid var(--line);padding:52px 0 34px;font-size:13px;color
   .card.wide{flex-direction:column;align-items:stretch;padding:12px 12px 26px}
   .card.wide .vis{order:0;flex:none;height:210px}
   .card.wide .tx{padding:22px 14px 0}
-  .bento .card:nth-child(3){grid-column:1/-1}
   .plans3{grid-template-columns:1fr;max-width:620px;margin-left:auto;margin-right:auto}
-  .cmp,.more{max-width:620px;margin-left:auto;margin-right:auto}
+  .cmp,.more,.rules-grid,.verdict{max-width:620px;margin-left:auto;margin-right:auto}
+  .rules-grid,.verdict-cols{grid-template-columns:1fr}
+  .verdict-cols{gap:18px}
+  .bento .card:nth-child(3){grid-column:1/-1}
   .steps{grid-template-columns:1fr 1fr;row-gap:44px}
   .lr{grid-template-columns:78px 1.3fr 1.1fr 112px}
   .lr .nt{display:none}
@@ -458,6 +495,8 @@ footer{border-top:1px solid var(--line);padding:52px 0 34px;font-size:13px;color
   .svc{grid-template-columns:1fr auto;gap:4px 16px}
   .svc span{grid-column:1;grid-row:2}
   .svc .lnk{grid-column:2;grid-row:1/3;align-self:center}
+  .rules-grid{margin-top:42px}
+  .rule-card,.verdict{padding:22px 20px}
   .steps{grid-template-columns:1fr;gap:36px;margin-top:48px}
   .faq{padding:2px 20px;margin-top:44px}
   .faq summary{font-size:16px}
@@ -484,6 +523,7 @@ footer{border-top:1px solid var(--line);padding:52px 0 34px;font-size:13px;color
       <a href="#machine" data-i18n="nav.machine">机器</a>
       <a href="#why" data-i18n="nav.why">亮点</a>
       <a href="#pricing" data-i18n="nav.pricing">价格</a>
+      <a href="#rules" data-i18n="nav.rules">规则</a>
       <a href="#steps" data-i18n="nav.steps">开通</a>
       <a href="#faq" data-i18n="nav.faq">问答</a>
     </nav>
@@ -705,7 +745,7 @@ arm64
         <div class="vis vis-seat">
           <div class="seat-badge">
             <div class="top" data-i18n="seat.chipTitle">Claude Team · 高级席位</div>
-            <div class="meta" data-i18n="seat.chipMeta">邮件邀请进组织 · 一人一席具名独享</div>
+            <div class="meta" data-i18n="seat.chipMeta">仅限配套 Mac 登录 · 一人一席具名独享</div>
           </div>
         </div>
         <div class="bd">
@@ -719,9 +759,9 @@ arm64
           <div class="tax" data-i18n="seat.tax">Cloudborne 服务售价 · 非官方标价</div>
           <ul class="feat">
             <li data-i18n="seat.i1">邮件邀请加入 Cloudborne 团队组织</li>
-            <li data-i18n="seat.i2">一人一席具名独享，严禁多人共用</li>
+            <li data-i18n="seat.i2">仅限配套 Mac 本机登录 · 严禁共用与反代</li>
             <li data-i18n="seat.i3">Cloudborne 持 Owner，客户为成员身份</li>
-            <li data-i18n="seat.i4">正常退订或停租，押金原路全额退还</li>
+            <li data-i18n="seat.i4">正常退全押；违规连同机器清退且不退费</li>
           </ul>
           <div class="plan-foot">
             <a class="pill alt" href="#plan-bundle" data-i18n="seat.cta">查看组合方案</a>
@@ -755,8 +795,8 @@ arm64
           <ul class="feat">
             <li data-i18n="bnd.i1">仅 Mac 享季/年折扣，席位固定 $299/月</li>
             <li data-i18n="bnd.i2">按当期租金另收 30% 押金（取整到美元）</li>
-            <li data-i18n="bnd.i3">正常退订全额退押；违规共用不退押金</li>
-            <li data-i18n="bnd.i4">硬件与席位分别售后 · 可单独退席位</li>
+            <li data-i18n="bnd.i3">正常退全押；违规连同机器清退且不退费</li>
+            <li data-i18n="bnd.i4">合规可单退席位 · 仅限配套 Mac 本机使用</li>
           </ul>
           <div class="plan-foot">
             <a class="pill js-mail" data-mail="bundle" href="mailto:contact@cloudborne.cn" data-i18n="bnd.cta">咨询组合方案</a>
@@ -766,6 +806,8 @@ arm64
       </article>
     </div>
 
+    <p class="pricing-note rv" data-i18n-html="pricing.rulesNote">搭配 Team 高级席位须严格遵守本机独享、严禁反代等规定 · <a class="lnk" href="#rules">查看完整使用规则</a></p>
+
     <article class="cmp rv" id="compare" style="--i:1">
       <h3 data-i18n="cmp.title">纯机器对比：同样的配置，各家月租</h3>
       <div class="s" data-i18n="cmp.sub">仅对比 M4 · 16GB · 256GB 纯硬件整机月租（不含 Team 席位）· 各家官网标价 · 2026 年 11 月</div>
@@ -774,8 +816,77 @@ arm64
 
     <div class="more rv">
       <h3 data-i18n="svc.title">其他服务</h3>
-      <div class="svc"><b data-i18n="svc.biz.t">多台 / 企业租用</b><span data-i18n="svc.biz.d">批量租用，可开发票、签合同；搭配席位同样适用 30% 押金规则</span><a class="lnk js-mail" data-mail="biz" href="mailto:contact@cloudborne.cn" data-i18n="svc.ask">来信咨询</a></div>
+      <div class="svc"><b data-i18n="svc.biz.t">多台 / 企业租用</b><span data-i18n="svc.biz.d">批量租用，可开发票、签合同；搭配席位同样适用 30% 押金与使用规则</span><a class="lnk js-mail" data-mail="biz" href="mailto:contact@cloudborne.cn" data-i18n="svc.ask">来信咨询</a></div>
       <div class="svc"><b data-i18n="svc.host.t">自带 Mac 托管</b><span data-i18n="svc.host.d">$29 / 月 · 寄送、机位和网络来信确认</span><a class="lnk js-mail" data-mail="host" href="mailto:contact@cloudborne.cn" data-i18n="svc.ask">来信咨询</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="rules" style="padding-top:0">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="eyebrow" data-i18n="rules.eye">使用规则 · 合规红线</div>
+      <h2 class="hl"><span class="ln"><span data-i18n="rules.l1">守住红线</span></span><span class="ln mut"><span data-i18n="rules.l2">保护席位、机器与组织发号</span></span></h2>
+      <p class="sub" data-i18n="rules.sub">Team 高级席位统一挂靠在 Cloudborne 管理的组织内，任一违规都可能连带触发风控并影响后续发号。开通即视作同意以下规则。</p>
+    </div>
+
+    <div class="rules-grid">
+      <article class="rule-card strict rv">
+        <div class="rule-head">
+          <div>
+            <div class="kicker" data-i18n="rules.c1.k">01 · Team 高级席位与 Claude Code 红线</div>
+            <h3 data-i18n="rules.c1.t">仅限本机 · 严禁反代与共用</h3>
+          </div>
+          <span class="rpill red" data-i18n="rules.c1.badge">触犯即连同机器清退 · 不退费</span>
+        </div>
+        <ul class="rlist">
+          <li><div><b data-i18n="rules.s1.t">仅限在配套新加坡独享 Mac 上登录使用</b><span data-i18n="rules.s1.d">席位仅限在配套租赁的这台独享 Mac 上登录使用（官方网页端或原生 Claude Code），不得拿回本地电脑、其他 VPS 或任何第三方机器登录。</span></div></li>
+          <li><div><b data-i18n="rules.s2.t">严禁 Claude Code 反代与导出鉴权凭证</b><span data-i18n="rules.s2.d">禁止抓包或提取 OAuth Token、Session Key、Cookie 等凭证，严禁搭建反代或中转网关（如 2API、OpenAI 兼容接口转发），亦禁止接入第三方 IDE 插件或外部外壳工具。</span></div></li>
+          <li><div><b data-i18n="rules.s3.t">严禁多人共用、拼车与席位转租</b><span data-i18n="rules.s3.d">严格执行一人一席具名独享，禁止团队多人共享、拼车、轮流登录、出借或转租席位，禁止外泄组织邀请链接。</span></div></li>
+          <li><div><b data-i18n="rules.s4.t">严禁自动化刷量、脚本并发与模型爬取</b><span data-i18n="rules.s4.d">禁止使用脚本、压测工具或魔改客户端进行高频并发刷量、无人值守后台跑批；禁止批量抓取模型输出用于训练、微调或逆向竞品模型。</span></div></li>
+          <li><div><b data-i18n="rules.s5.t">严禁高风险违规用途与干扰组织管理</b><span data-i18n="rules.s5.d">须遵守 Anthropic 使用政策，禁止用于网络攻击、恶意代码或批量垃圾内容生成；禁止探测同组织其他成员信息或尝试变更组织配置。</span></div></li>
+        </ul>
+      </article>
+
+      <article class="rule-card rv" style="--i:1">
+        <div class="rule-head">
+          <div>
+            <div class="kicker" data-i18n="rules.c2.k">02 · 独享 Mac 整机与网络规范</div>
+            <h3 data-i18n="rules.c2.t">实体整机 · 守住机房与 IP 合规</h3>
+          </div>
+          <span class="rpill neu" data-i18n="rules.c2.badge">纯机器同样适用</span>
+        </div>
+        <ul class="rlist">
+          <li><div><b data-i18n="rules.m1.t">严禁加密货币挖矿与恶意算力压榨</b><span data-i18n="rules.m1.d">禁止运行 PoW/PoS 等加密货币挖矿程序，或长时间恶意满载跑分消耗实体硬件与散热寿命。</span></div></li>
+          <li><div><b data-i18n="rules.m2.t">严禁网络攻击与批量垃圾发信</b><span data-i18n="rules.m2.d">禁止 DDoS 攻击、端口扫描、漏洞探测、批量垃圾邮件（Spam）/群发消息或传播木马及恶意软件。</span></div></li>
+          <li><div><b data-i18n="rules.m3.t">严禁架设公开代理与流量转售跳板</b><span data-i18n="rules.m3.d">禁止将机器与独立出口 IP 搭设为公开代理节点、Tor 出口或流量转售跳板，防止污染 IP 信誉及影响发号。</span></div></li>
+          <li><div><b data-i18n="rules.m4.t">禁止整机转租与违法违规用途</b><span data-i18n="rules.m4.d">每台实体机限承租人自用开发、构建与测试，禁止二次虚拟化分销转租或从事新加坡及适用法律禁止的业务。</span></div></li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="verdict rv" style="--i:2">
+      <div class="verdict-top">
+        <h3 data-i18n="rules.v.title">违约认定与连带清退规则</h3>
+        <span class="rpill red" data-i18n="rules.v.badge">影响组织与发号零容忍</span>
+      </div>
+      <div class="verdict-cols">
+        <div class="vcol">
+          <div class="vk" data-i18n="rules.v1.k">处置一 · 立即清退</div>
+          <h4 data-i18n="rules.v1.t">连同机器一起立即清退</h4>
+          <p data-i18n="rules.v1.d">凡违反席位红线（如拿回本地或其他机器登录、Claude Code 反代、导出凭证、共用或刷量）或触发风控影响组织与发号，Cloudborne 将立即收回席位并连同配套 Mac 机器一并清退。</p>
+        </div>
+        <div class="vcol">
+          <div class="vk" data-i18n="rules.v2.k">处置二 · 费用不退</div>
+          <h4 data-i18n="rules.v2.t">已付租金与 30% 押金均不退</h4>
+          <p data-i18n="rules.v2.d">因违规清退时，当期已支付的全部租金（含席位费及 Mac 租金）与 30% 押金均不予退还，用于弥补组织、席位及发号链路受损；严重者永久拒服。</p>
+        </div>
+        <div class="vcol">
+          <div class="vk" data-i18n="rules.v3.k">边界说明 · 合规保障</div>
+          <h4 data-i18n="rules.v3.t">纯机器与合规退订不受影响</h4>
+          <p data-i18n="rules.v3.d">纯 Mac 仅受“02 整机规范”约束；合规组合用户正常退订仍全额退还 30% 押金，非用户违规导致的席位失效仍按剩余天数退席位费并保留 Mac。</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -794,7 +905,7 @@ arm64
       <div class="step" style="--i:1">
         <svg viewBox="0 0 72 44"><rect x="10" y="10" width="40" height="26" rx="4"/><path d="M10 18h40M16 29h10"/><circle cx="54" cy="30" r="9"/><path d="M50 30l3 3 5-6"/></svg>
         <div class="who">02 · <span data-i18n="steps.us">我们</span></div>
-        <h3 data-i18n="s2.t">确认方案与结算</h3><p data-i18n="s2.d">回信确认配置、当期租金与押金（仅带席位套餐收 30%），支持美元或人民币。</p>
+        <h3 data-i18n="s2.t">确认方案与结算</h3><p data-i18n="s2.d">回信确认配置、使用规则、当期租金与押金（仅带席位套餐收 30%），支持美元或人民币。</p>
       </div>
       <div class="step" style="--i:2">
         <svg viewBox="0 0 72 44"><rect x="10" y="16" width="52" height="16" rx="5"/><path d="M14 36h44"/><circle cx="54" cy="24" r="1.6"/><path d="M18 22v4M23 22v4"/></svg>
@@ -804,7 +915,7 @@ arm64
       <div class="step" style="--i:3">
         <svg viewBox="0 0 72 44"><rect x="12" y="4" width="48" height="28" rx="3"/><path d="M30 40h12M36 32v8"/><path d="M33 13l10 6-10 6z"/></svg>
         <div class="who you">04 · <span data-i18n="steps.you">你</span></div>
-        <h3 data-i18n="s4.t">连上就用</h3><p data-i18n="s4.d">用邮件里的连接信息登录独享 Mac，硬件与席位各自独立支持。</p>
+        <h3 data-i18n="s4.t">连上就用</h3><p data-i18n="s4.d">用邮件里的连接信息登录独享 Mac；搭配席位限该机本机使用。</p>
       </div>
     </div>
   </div>
@@ -821,10 +932,12 @@ arm64
       <details><summary data-i18n="faq.q3">怎么连接？退租后数据怎么处理？</summary><p data-i18n="faq.a3">提供完整管理员权限，支持屏幕共享（VNC）、SSH 和 RustDesk；退租后整机抹盘重装。</p></details>
       <details><summary data-i18n="faq.q4">纯机器最短租多久？季付、年付怎么付？需要押金吗？</summary><p data-i18n="faq.a4">最短 1 个月（$99/月）。季付一次实付 $267/季（折合 $89/月），年付一次实付 $948/年（折合 $79/月），均非按月扣费；标价不含税。单租纯机器无需支付押金。</p></details>
       <details><summary data-i18n="faq.q5">Team 高级席位怎么收费？能单独买吗？</summary><p data-i18n="faq.a5">Cloudborne 服务售价 $299/席/月（非 Anthropic 官方标价），不含 Mac 租金，仅随独享 Mac 配套提供，暂不单买；季付 9 折与年付 8 折仅适用于 Mac 机器。</p></details>
-      <details><summary data-i18n="faq.q6">席位怎么交付？谁管理权限？</summary><p data-i18n="faq.a6">通过邮件邀请加入 Cloudborne 管理的 Team 组织（Cloudborne 持 Owner 管席位与账单，客户为成员身份），一人一席具名独享，严禁多人共用。</p></details>
-      <details><summary data-i18n="faq.q7">带订阅的套餐怎么收 30% 押金？什么时候退还？</summary><p data-i18n="faq.a7">单租纯机器免押金（$0）；选择 Mac＋Team 高级席位或含席位方案时，按当期套餐实付总额加收 30% 押金并四舍五入取整到美元（月付 $119、季付 $349、年付 $1,361）。正常退订席位或到期停租后原路全额退还；因多人共用或违规导致席位/组织连带受影响的，押金不予退还。</p></details>
-      <details><summary data-i18n="faq.q8">第三方账号风控、机器故障和组合售后怎么处理？</summary><p data-i18n="faq.a8">纯机器客户自备账号由平台自行风控，机器可用则租金不退；组合客户将机器硬件/IP 故障与席位异常分别处理——非用户违规导致的席位失效可按剩余天数退席位费并保留 Mac。</p></details>
+      <details><summary data-i18n="faq.q6">席位怎么交付？谁管理权限？</summary><p data-i18n="faq.a6">通过邮件邀请加入 Cloudborne 管理的 Team 组织（Cloudborne 持 Owner 管席位与账单，客户为成员身份），一人一席具名独享，且仅限在配套租赁的新加坡独享 Mac 上登录使用，严禁拿回本地或其他机器登录、多人共用或反代。</p></details>
+      <details><summary data-i18n="faq.q7">带订阅的套餐怎么收 30% 押金？什么时候退还？</summary><p data-i18n="faq.a7">单租纯机器免押金（$0）；选择 Mac＋Team 高级席位或含席位方案时，按当期套餐实付总额加收 30% 押金并四舍五入取整到美元（月付 $119、季付 $349、年付 $1,361）。正常退订席位或到期停租后原路全额退还；若因拿回本地或其他机器登录、Claude Code 反代、多人共用、脚本刷量等违规行为导致席位/组织受影响或破坏发号，将连同机器一并清退，已付租金及 30% 押金均不予退还。</p></details>
+      <details><summary data-i18n="faq.q8">第三方账号风控、机器故障和组合售后怎么处理？</summary><p data-i18n="faq.a8">纯机器客户自备账号由平台自行风控，机器可用则租金不退；组合客户在合规前提下将硬件/IP 故障与席位异常分别处理——非用户违规导致的席位失效可按剩余天数退席位费并保留 Mac。若因用户违规触发风控或影响组织发号，则收回席位并连同机器一起立即清退，租金与押金均不退款。</p></details>
       <details><summary data-i18n="faq.q9">怎么付款？写信会扣款吗？地区或账号有保证吗？</summary><p data-i18n="faq.a9">写信只是咨询，确认方案后再付款（支持美元或等值人民币）；实体机与独立 IP 不保证第三方平台的地区资格、账号审核结果或长期状态，需合规使用。</p></details>
+      <details><summary data-i18n="faq.q10">为什么严禁把 Claude Code 反代、导出凭证或换到其他设备登录？</summary><p data-i18n="faq.a10">Team 高级席位统一挂靠在 Cloudborne 管理的组织内。提取或抓包 OAuth Token、Session Key、Cookie 搭建反代或接入第三方插件/转发工具、将账号拿回本地或其他 VPS 登录、多人共用或脚本高频刷量与爬取数据，均违反官方服务条款并极易触发风控，不仅会导致单个席位被封，还会连带造成整个 Team 组织受限、支付与发号能力受损。因此一旦发现立即连同机器清退且均不退款。</p></details>
+      <details><summary data-i18n="faq.q11">纯 Mac 机器有哪些使用限制？会影响正常的远程开发吗？</summary><p data-i18n="faq.a11">正常的远程编码、Claude Code 自有账号开发、Xcode 构建与 CI/CD 跑批完全自由使用，提供完整管理员权限。仅禁止加密货币挖矿、DDoS/端口扫描/垃圾邮件等网络攻击、对外架设公开代理/跳板节点，以及整机转租或违法用途，以保护硬件寿命与独立 IP 信誉。</p></details>
     </div>
   </div>
 </section>
@@ -856,6 +969,7 @@ arm64
         <a href="#machine" data-i18n="nav.machine">机器</a>
         <a href="#why" data-i18n="nav.why">亮点</a>
         <a href="#pricing" data-i18n="nav.pricing">价格</a>
+        <a href="#rules" data-i18n="nav.rules">规则</a>
         <a href="#steps" data-i18n="nav.steps">开通</a>
         <a href="#faq" data-i18n="nav.faq">问答</a>
       </div>
@@ -941,7 +1055,7 @@ arm64
     zh: {
       "meta.title": "新加坡独享 Mac，可选 Team 高级席位 | Cloudborne",
       "brand": "Mac 租赁 · 团队席位",
-      "nav.machine": "机器", "nav.why": "亮点", "nav.pricing": "价格", "nav.steps": "开通", "nav.faq": "问答", "nav.cta": "联系咨询",
+      "nav.machine": "机器", "nav.why": "亮点", "nav.pricing": "价格", "nav.rules": "规则", "nav.steps": "开通", "nav.faq": "问答", "nav.cta": "联系咨询",
       "hero.e1": "新加坡独享 Mac mini M4", "hero.e2": "独立出口 IP · 不限网络流量", "hero.e3": "可选 Claude Team 高级席位",
       "hero.title": "新加坡独享 Mac，<br>可选 Team 高级席位",
       "hero.sub": "Mac mini M4 整机独享，支持远程开发与构建。机器与席位分项定价，机器享季付 9 折、年付 8 折。",
@@ -983,16 +1097,16 @@ arm64
       "bill.q": "每季一次实付 <b>{total}</b> · 省 {save}",
       "bill.y": "每年一次实付 <b>{total}</b> · 省 {save}",
       "seat.kicker": "02 · Team 高级席位",
-      "seat.chipTitle": "Claude Team · 高级席位", "seat.chipMeta": "邮件邀请进组织 · 一人一席具名独享",
+      "seat.chipTitle": "Claude Team · 高级席位", "seat.chipMeta": "仅限配套 Mac 登录 · 一人一席具名独享",
       "seat.title": "Claude Team 高级席位", "seat.spec": "可选配套 · 机器租金另计",
       "seat.slot": "按席按月计价 · 仅随机器配套", "seat.per": "/ 席 / 月",
       "seat.excl": "此价格不含 Mac 租金，机器需另付",
       "seat.noStandalone": "不开放单买 · 组合另收 30% 可退押金",
       "seat.tax": "Cloudborne 服务售价 · 非官方标价",
       "seat.i1": "邮件邀请加入 Cloudborne 团队组织",
-      "seat.i2": "一人一席具名独享，严禁多人共用",
+      "seat.i2": "仅限配套 Mac 本机登录 · 严禁共用与反代",
       "seat.i3": "Cloudborne 持 Owner，客户为成员身份",
-      "seat.i4": "正常退订或停租，押金原路全额退还",
+      "seat.i4": "正常退全押；违规连同机器清退且不退费",
       "seat.cta": "查看组合方案", "seat.pay": "仅随独享 Mac 配套提供",
       "bnd.kicker": "03 · 组合方案",
       "bnd.n1": "Mac mini M4", "bnd.n1s": "$99 起 / 月",
@@ -1005,46 +1119,87 @@ arm64
       "bnd.tax": "不含税 · 支持美元或等值人民币结算",
       "bnd.i1": "仅 Mac 享季/年折扣，席位固定 $299/月",
       "bnd.i2": "按当期租金另收 30% 押金（取整到美元）",
-      "bnd.i3": "正常退订全额退押；违规共用不退押金",
-      "bnd.i4": "硬件与席位分别售后 · 可单独退席位",
+      "bnd.i3": "正常退全押；违规连同机器清退且不退费",
+      "bnd.i4": "合规可单退席位 · 仅限配套 Mac 本机使用",
       "bnd.cta": "咨询组合方案", "bnd.pay": "写信仅作方案咨询，确认细节后再付款",
+      "pricing.rulesNote": "搭配 Team 高级席位须严格遵守本机独享、严禁反代等规定 · <a class=\"lnk\" href=\"#rules\">查看完整使用规则</a>",
       "svc.title": "其他服务", "svc.ask": "来信咨询",
-      "svc.biz.t": "多台 / 企业租用", "svc.biz.d": "批量租用，可开发票、签合同；搭配席位同样适用 30% 押金规则",
+      "svc.biz.t": "多台 / 企业租用", "svc.biz.d": "批量租用，可开发票、签合同；搭配席位同样适用 30% 押金与使用规则",
       "svc.host.t": "自带 Mac 托管", "svc.host.d": "$29 / 月 · 寄送、机位和网络来信确认",
       "cmp.title": "纯机器对比：同样的配置，各家月租", "cmp.sub": "仅对比 M4 · 16GB · 256GB 纯硬件整机月租（不含 Team 席位）· 各家官网标价 · 2026 年 11 月",
       "cmp.us": "我们", "cmp.sg": "新加坡", "cmp.mo": "/月", "cmp.same": "与我们同价", "cmp.more": "比我们贵",
+      "rules.eye": "使用规则 · 合规红线",
+      "rules.l1": "守住红线", "rules.l2": "保护席位、机器与组织发号",
+      "rules.sub": "Team 高级席位统一挂靠在 Cloudborne 管理的组织内，任一违规都可能连带触发风控并影响后续发号。开通即视作同意以下规则。",
+      "rules.c1.k": "01 · Team 高级席位与 Claude Code 红线",
+      "rules.c1.t": "仅限本机 · 严禁反代与共用",
+      "rules.c1.badge": "触犯即连同机器清退 · 不退费",
+      "rules.s1.t": "仅限在配套新加坡独享 Mac 上登录使用",
+      "rules.s1.d": "席位仅限在配套租赁的这台独享 Mac 上登录使用（官方网页端或原生 Claude Code），不得拿回本地电脑、其他 VPS 或任何第三方机器登录。",
+      "rules.s2.t": "严禁 Claude Code 反代与导出鉴权凭证",
+      "rules.s2.d": "禁止抓包或提取 OAuth Token、Session Key、Cookie 等凭证，严禁搭建反代或中转网关（如 2API、OpenAI 兼容接口转发），亦禁止接入第三方 IDE 插件或外部外壳工具。",
+      "rules.s3.t": "严禁多人共用、拼车与席位转租",
+      "rules.s3.d": "严格执行一人一席具名独享，禁止团队多人共享、拼车、轮流登录、出借或转租席位，禁止外泄组织邀请链接。",
+      "rules.s4.t": "严禁自动化刷量、脚本并发与模型爬取",
+      "rules.s4.d": "禁止使用脚本、压测工具或魔改客户端进行高频并发刷量、无人值守后台跑批；禁止批量抓取模型输出用于训练、微调或逆向竞品模型。",
+      "rules.s5.t": "严禁高风险违规用途与干扰组织管理",
+      "rules.s5.d": "须遵守 Anthropic 使用政策，禁止用于网络攻击、恶意代码或批量垃圾内容生成；禁止探测同组织其他成员信息或尝试变更组织配置。",
+      "rules.c2.k": "02 · 独享 Mac 整机与网络规范",
+      "rules.c2.t": "实体整机 · 守住机房与 IP 合规",
+      "rules.c2.badge": "纯机器同样适用",
+      "rules.m1.t": "严禁加密货币挖矿与恶意算力压榨",
+      "rules.m1.d": "禁止运行 PoW/PoS 等加密货币挖矿程序，或长时间恶意满载跑分消耗实体硬件与散热寿命。",
+      "rules.m2.t": "严禁网络攻击与批量垃圾发信",
+      "rules.m2.d": "禁止 DDoS 攻击、端口扫描、漏洞探测、批量垃圾邮件（Spam）/群发消息或传播木马及恶意软件。",
+      "rules.m3.t": "严禁架设公开代理与流量转售跳板",
+      "rules.m3.d": "禁止将机器与独立出口 IP 搭设为公开代理节点、Tor 出口或流量转售跳板，防止污染 IP 信誉及影响发号。",
+      "rules.m4.t": "禁止整机转租与违法违规用途",
+      "rules.m4.d": "每台实体机限承租人自用开发、构建与测试，禁止二次虚拟化分销转租或从事新加坡及适用法律禁止的业务。",
+      "rules.v.title": "违约认定与连带清退规则",
+      "rules.v.badge": "影响组织与发号零容忍",
+      "rules.v1.k": "处置一 · 立即清退",
+      "rules.v1.t": "连同机器一起立即清退",
+      "rules.v1.d": "凡违反席位红线（如拿回本地或其他机器登录、Claude Code 反代、导出凭证、共用或刷量）或触发风控影响组织与发号，Cloudborne 将立即收回席位并连同配套 Mac 机器一并清退。",
+      "rules.v2.k": "处置二 · 费用不退",
+      "rules.v2.t": "已付租金与 30% 押金均不退",
+      "rules.v2.d": "因违规清退时，当期已支付的全部租金（含席位费及 Mac 租金）与 30% 押金均不予退还，用于弥补组织、席位及发号链路受损；严重者永久拒服。",
+      "rules.v3.k": "边界说明 · 合规保障",
+      "rules.v3.t": "纯机器与合规退订不受影响",
+      "rules.v3.d": "纯 Mac 仅受“02 整机规范”约束；合规组合用户正常退订仍全额退还 30% 押金，非用户违规导致的席位失效仍按剩余天数退席位费并保留 Mac。",
       "steps.l1": "四步开通", "steps.l2": "你只需要写信和连上", "steps.you": "你", "steps.us": "我们",
       "s1.t": "写信咨询", "s1.d": "说说要几台 Mac、租期，以及是否搭配 Team 高级席位。",
-      "s2.t": "确认方案与结算", "s2.d": "回信确认配置、当期租金与押金（仅带席位套餐收 30%），支持美元或人民币。",
+      "s2.t": "确认方案与结算", "s2.d": "回信确认配置、使用规则、当期租金与押金（仅带席位套餐收 30%），支持美元或人民币。",
       "s3.t": "准备交付并起租", "s3.d": "付款后 24 小时内交付机器并起租，席位通过邮件邀请开通。",
-      "s4.t": "连上就用", "s4.d": "用邮件里的连接信息登录独享 Mac，硬件与席位各自独立支持。",
+      "s4.t": "连上就用", "s4.d": "用邮件里的连接信息登录独享 Mac；搭配席位限该机本机使用。",
       "faq.title": "常见问题",
       "faq.q1": "真的是一整台吗？", "faq.a1": "是。每台对应一台新加坡实体 Mac mini M4（10 核 CPU/GPU · 16GB · 256GB），不是虚拟机，也不共用。",
       "faq.q2": "IP 和流量有限制吗？", "faq.a2": "每台机器配有独立出口 IP，租期内不变；机器网络不限流量（不含第三方 AI 工具的使用额度）。",
       "faq.q3": "怎么连接？退租后数据怎么处理？", "faq.a3": "提供完整管理员权限，支持屏幕共享（VNC）、SSH 和 RustDesk；退租后整机抹盘重装。",
       "faq.q4": "纯机器最短租多久？季付、年付怎么付？需要押金吗？", "faq.a4": "最短 1 个月（$99/月）。季付一次实付 $267/季（折合 $89/月），年付一次实付 $948/年（折合 $79/月），均非按月扣费；标价不含税。单租纯机器无需支付押金。",
       "faq.q5": "Team 高级席位怎么收费？能单独买吗？", "faq.a5": "Cloudborne 服务售价 $299/席/月（非 Anthropic 官方标价），不含 Mac 租金，仅随独享 Mac 配套提供，暂不单买；季付 9 折与年付 8 折仅适用于 Mac 机器。",
-      "faq.q6": "席位怎么交付？谁管理权限？", "faq.a6": "通过邮件邀请加入 Cloudborne 管理的 Team 组织（Cloudborne 持 Owner 管席位与账单，客户为成员身份），一人一席具名独享，严禁多人共用。",
-      "faq.q7": "带订阅的套餐怎么收 30% 押金？什么时候退还？", "faq.a7": "单租纯机器免押金（$0）；选择 Mac＋Team 高级席位或含席位方案时，按当期套餐实付总额加收 30% 押金并四舍五入取整到美元（月付 $119、季付 $349、年付 $1,361）。正常退订席位或到期停租后原路全额退还；因多人共用或违规导致席位/组织连带受影响的，押金不予退还。",
-      "faq.q8": "第三方账号风控、机器故障和组合售后怎么处理？", "faq.a8": "纯机器客户自备账号由平台自行风控，机器可用则租金不退；组合客户将机器硬件/IP 故障与席位异常分别处理——非用户违规导致的席位失效可按剩余天数退席位费并保留 Mac。",
+      "faq.q6": "席位怎么交付？谁管理权限？", "faq.a6": "通过邮件邀请加入 Cloudborne 管理的 Team 组织（Cloudborne 持 Owner 管席位与账单，客户为成员身份），一人一席具名独享，且仅限在配套租赁的新加坡独享 Mac 上登录使用，严禁拿回本地或其他机器登录、多人共用或反代。",
+      "faq.q7": "带订阅的套餐怎么收 30% 押金？什么时候退还？", "faq.a7": "单租纯机器免押金（$0）；选择 Mac＋Team 高级席位或含席位方案时，按当期套餐实付总额加收 30% 押金并四舍五入取整到美元（月付 $119、季付 $349、年付 $1,361）。正常退订席位或到期停租后原路全额退还；若因拿回本地或其他机器登录、Claude Code 反代、多人共用、脚本刷量等违规行为导致席位/组织受影响或破坏发号，将连同机器一并清退，已付租金及 30% 押金均不予退还。",
+      "faq.q8": "第三方账号风控、机器故障和组合售后怎么处理？", "faq.a8": "纯机器客户自备账号由平台自行风控，机器可用则租金不退；组合客户在合规前提下将硬件/IP 故障与席位异常分别处理——非用户违规导致的席位失效可按剩余天数退席位费并保留 Mac。若因用户违规触发风控或影响组织发号，则收回席位并连同机器一起立即清退，租金与押金均不退款。",
       "faq.q9": "怎么付款？写信会扣款吗？地区或账号有保证吗？", "faq.a9": "写信只是咨询，确认方案后再付款（支持美元或等值人民币）；实体机与独立 IP 不保证第三方平台的地区资格、账号审核结果或长期状态，需合规使用。",
+      "faq.q10": "为什么严禁把 Claude Code 反代、导出凭证或换到其他设备登录？", "faq.a10": "Team 高级席位统一挂靠在 Cloudborne 管理的组织内。提取或抓包 OAuth Token、Session Key、Cookie 搭建反代或接入第三方插件/转发工具、将账号拿回本地或其他 VPS 登录、多人共用或脚本高频刷量与爬取数据，均违反官方服务条款并极易触发风控，不仅会导致单个席位被封，还会连带造成整个 Team 组织受限、支付与发号能力受损。因此一旦发现立即连同机器清退且均不退款。",
+      "faq.q11": "纯 Mac 机器有哪些使用限制？会影响正常的远程开发吗？", "faq.a11": "正常的远程编码、Claude Code 自有账号开发、Xcode 构建与 CI/CD 跑批完全自由使用，提供完整管理员权限。仅禁止加密货币挖矿、DDoS/端口扫描/垃圾邮件等网络攻击、对外架设公开代理/跳板节点，以及整机转租或违法用途，以保护硬件寿命与独立 IP 信誉。",
       "final.l1": "写封邮件", "final.l2": "确认你的方案", "final.sub": "写信到 contact@cloudborne.cn，说明要租几台 Mac、周期，或是否搭配 Team 高级席位。",
       "final.cta": "咨询组合方案", "final.copy": "复制邮箱地址", "final.copied": "已复制",
       "foot.tag": "新加坡 Mac mini M4 整机独享租赁，可选 Team 高级席位配套。", "foot.c1": "了解", "foot.c2": "联系",
       "foot.tm": "Mac 和 Mac mini 是 Apple Inc. 的商标，本服务与 Apple 无关联。Claude 是 Anthropic 的商标，本服务由 Cloudborne 独立提供，与 Anthropic 无官方隶属或代理关系。其他商标归各自所有者。",
       "mail.subject": "新加坡 Mac mini M4 纯机器租赁咨询",
-      "mail.body": "你好，我想咨询新加坡 Mac mini M4 纯机器租赁。\n\n台数：\n付款周期：{cycle}\n押金：单租纯机器免押金（$0）\n期望结算币种（美元 / 人民币）：\n用途：\n希望开通日期：\n其他联系方式（微信 / Telegram，可选）：\n",
+      "mail.body": "你好，我想咨询新加坡 Mac mini M4 纯机器租赁。\n\n台数：\n付款周期：{cycle}\n押金与合规：纯机器免押金（$0）；不用于挖矿、攻击或公开代理\n结算币种（美元 / 人民币）：\n用途：\n希望开通日期：\n微信 / Telegram（可选）：\n",
       "mail.bundle.subject": "新加坡 Mac mini + Claude Team 高级席位组合方案咨询",
-      "mail.bundle.body": "你好，我想咨询新加坡 Mac mini M4 ＋ Claude Team 高级席位组合方案。\n\n机器数量：1 台\n组合与押金明细：{cycle}\nTeam 席位：$299 / 席 / 月（Cloudborne 服务售价，具名独享）\n押金规则：按当期套餐总额另收 30% 可退押金，正常退订/停租原路全额退还；违规共用不退押金\n期望结算币种（美元 / 人民币）：\n用途说明：\n希望开通日期：\n其他联系方式（微信 / Telegram，可选）：\n",
+      "mail.bundle.body": "你好，我想咨询 Mac mini M4 ＋ Claude Team 高级席位组合方案。\n\n台数：1 台\n明细：{cycle}\n红线与押金：席位 $299/月限配套新加坡 Mac 登录，严禁换机、Claude Code 反代/导凭证、共用或刷量；违规连同机器清退且租金押金均不退，正常退订退全押\n结算币种（美元 / 人民币）：\n用途：\n希望开通日期：\n微信 / Telegram（可选）：\n",
       "mail.biz.subject": "Mac mini 多台 / 企业租用咨询",
-      "mail.biz.body": "你好，我们想批量租用新加坡的 Mac mini。\n\n公司 / 团队：\n台数：\n付款周期（月付 $99 · 季付 $267/季 · 年付 $948/年，纯机器免押金）：\n是否需要搭配 Team 高级席位（$299/席/月，带席位套餐另收当期总额 30% 可退押金）：\n是否需要发票或合同：\n用途：\n其他联系方式（微信 / Telegram，可选）：\n",
+      "mail.biz.body": "你好，我们想批量租用新加坡 Mac mini。\n\n公司 / 团队：\n台数：\n周期（月 $99 · 季 $267 · 年 $948，纯机器免押）：\n搭配 Team 席位（$299/席/月，限配套 Mac 登录、禁反代共用，+30% 押金，违规连同机器清退不退费）：\n是否需发票/合同：\n用途：\n微信 / Telegram（可选）：\n",
       "mail.host.subject": "自带 Mac 托管咨询",
       "mail.host.body": "你好，我想把自己的 Mac 托管在新加坡。\n\n机型和配置：\n台数：\n预计寄送时间：\n用途：\n其他联系方式（微信 / Telegram，可选）：\n",
     },
     en: {
       "meta.title": "Dedicated Mac in Singapore, Optional Team Premium Seat | Cloudborne",
       "brand": "Mac Rental · Team Seats",
-      "nav.machine": "Machine", "nav.why": "Highlights", "nav.pricing": "Pricing", "nav.steps": "How it works", "nav.faq": "FAQ", "nav.cta": "Contact",
+      "nav.machine": "Machine", "nav.why": "Highlights", "nav.pricing": "Pricing", "nav.rules": "Rules", "nav.steps": "How it works", "nav.faq": "FAQ", "nav.cta": "Contact",
       "hero.e1": "Dedicated Mac mini M4 in Singapore", "hero.e2": "Dedicated IP · Unmetered network traffic", "hero.e3": "Optional Claude Team Premium seat",
       "hero.title": "Dedicated Mac in Singapore,<br>optional Team Premium seats",
       "hero.sub": "Dedicated Mac mini M4 hardware for remote development and builds. Machine and seat pricing are itemized in USD, with 10% quarterly and 20% yearly discounts on hardware.",
@@ -1086,16 +1241,16 @@ arm64
       "bill.q": "Paid upfront: <b>{total} / qtr</b> · save {save}",
       "bill.y": "Paid upfront: <b>{total} / yr</b> · save {save}",
       "seat.kicker": "02 · Team Premium Seat",
-      "seat.chipTitle": "Claude Team · Premium Seat", "seat.chipMeta": "Email invite · 1 named user per seat",
+      "seat.chipTitle": "Claude Team · Premium Seat", "seat.chipMeta": "Paired Mac only · 1 named user per seat",
       "seat.title": "Claude Team Premium Seat", "seat.spec": "Optional add-on · Mac rental separate",
       "seat.slot": "Per seat / month · bundled only", "seat.per": "/ seat / mo",
       "seat.excl": "Excludes Mac rental — machine billed separately",
       "seat.noStandalone": "Not sold standalone · +30% deposit in bundles",
       "seat.tax": "Cloudborne service price · not official list price",
       "seat.i1": "Email invite to Cloudborne-managed Team org",
-      "seat.i2": "One named person per seat — no sharing",
+      "seat.i2": "Paired Mac login only · no sharing or proxying",
       "seat.i3": "Cloudborne keeps Owner role; you join as Member",
-      "seat.i4": "Full deposit refund on normal exit or drop",
+      "seat.i4": "Normal exit refunds deposit; violations forfeit all",
       "seat.cta": "See bundle pricing", "seat.pay": "Available with a dedicated Mac only",
       "bnd.kicker": "03 · Mac + Seat Bundle",
       "bnd.n1": "Mac mini M4", "bnd.n1s": "From $99 / mo",
@@ -1108,39 +1263,80 @@ arm64
       "bnd.tax": "Excl. tax · Pay in USD or equivalent CNY",
       "bnd.i1": "10% qtr / 20% yr savings on Mac; seat $299/mo",
       "bnd.i2": "30% deposit on period bundle total (to whole USD)",
-      "bnd.i3": "Full deposit refund on normal exit; forfeited on abuse",
-      "bnd.i4": "Separate Mac & seat support · drop seat anytime",
+      "bnd.i3": "Normal exit refunds deposit; violations forfeit all",
+      "bnd.i4": "Drop seat if compliant · paired Mac use only",
       "bnd.cta": "Inquire about bundle", "bnd.pay": "Emailing is an inquiry only; nothing is charged",
+      "pricing.rulesNote": "Team Premium seats require paired-Mac use and prohibit proxying or sharing · <a class=\"lnk\" href=\"#rules\">Read usage rules</a>",
       "svc.title": "Other services", "svc.ask": "Ask us",
-      "svc.biz.t": "Teams & several machines", "svc.biz.d": "Bulk rental with invoices & contracts; 30% deposit applies if seats are included",
+      "svc.biz.t": "Teams & several machines", "svc.biz.d": "Bulk rental with invoices & contracts; seats carry 30% deposit and usage rules",
       "svc.host.t": "Host your own Mac", "svc.host.d": "$29 / month · shipping, rack and network by email",
       "cmp.title": "Hardware only: same Mac, side by side", "cmp.sub": "Dedicated M4 · 16GB · 256GB hardware rental only (excludes Team seats) · provider list price/mo · Nov 2026",
       "cmp.us": "Us", "cmp.sg": "Singapore", "cmp.mo": "/mo", "cmp.same": "same as ours", "cmp.more": "more than ours",
+      "rules.eye": "Usage Rules · Compliance",
+      "rules.l1": "Clear boundaries.", "rules.l2": "Keep your Mac, seat and org safe.",
+      "rules.sub": "Team seats share Cloudborne-managed organizations; any abuse can trigger org-wide flags and disrupt future issuance. Provisioning implies acceptance of these rules.",
+      "rules.c1.k": "01 · Team Seat & Claude Code Red Lines",
+      "rules.c1.t": "Paired Mac only · no proxying or sharing",
+      "rules.c1.badge": "Violations terminate Mac & seat",
+      "rules.s1.t": "Paired Singapore Mac login only",
+      "rules.s1.d": "Seats may only be used on your paired Singapore Mac (official web app or native Claude Code). Logging in from your local computer, another VPS, or any other device is strictly prohibited.",
+      "rules.s2.t": "No Claude Code reverse-proxying or credential export",
+      "rules.s2.d": "Extracting or exporting OAuth tokens, session keys, or cookies is forbidden. Building reverse proxies or relay APIs (e.g., 2API or OpenAI-compatible wrappers), or routing credentials into third-party IDE plugins or external wrappers, is strictly prohibited.",
+      "rules.s3.t": "No seat sharing, pooling, or reselling",
+      "rules.s3.d": "Strictly one named user per seat. Sharing across teammates, pooling, account rotation, lending, reselling seats, or leaking org invite links is prohibited.",
+      "rules.s4.t": "No automated farming, botting, or model scraping",
+      "rules.s4.d": "Automated volume farming, stress testing, headless batch scraping, or using modified/spoofed clients is prohibited, as is harvesting outputs to train, fine-tune, or reverse-engineer competing models.",
+      "rules.s5.t": "No high-risk misuse or org interference",
+      "rules.s5.d": "Comply with Anthropic's Usage Policy—no cyberattacks, malware generation, or bulk spam, and no probing org members or attempting to alter organization settings.",
+      "rules.c2.k": "02 · Dedicated Mac & Network Rules",
+      "rules.c2.t": "Dedicated hardware · keep IP & rack clean",
+      "rules.c2.badge": "Applies to Mac-only too",
+      "rules.m1.t": "No cryptocurrency mining or abusive loads",
+      "rules.m1.d": "Cryptocurrency mining (PoW/PoS) and sustained abusive workloads that degrade physical hardware are prohibited.",
+      "rules.m2.t": "No network attacks or bulk spam",
+      "rules.m2.d": "DDoS attacks, port scanning, vulnerability probing, bulk unsolicited messaging (spam), and malware distribution are forbidden.",
+      "rules.m3.t": "No public proxies or traffic-resale relays",
+      "rules.m3.d": "Running public proxies, Tor exit nodes, or traffic-resale relays on the Mac or its IP is prohibited to protect IP reputation and issuance.",
+      "rules.m4.t": "No sub-leasing or unlawful use",
+      "rules.m4.d": "Each physical Mac is for your own dev, build, and testing use only—no sub-leasing, virtualized reselling, or unlawful activity.",
+      "rules.v.title": "Enforcement & Termination Policy",
+      "rules.v.badge": "Zero tolerance for issuance risk",
+      "rules.v1.k": "Action 1 · Immediate Termination",
+      "rules.v1.t": "Seat & paired Mac terminated together",
+      "rules.v1.d": "Any seat violation—logging in off the paired Mac, reverse-proxying Claude Code, exporting credentials, sharing, or automated abuse—or any org/issuance risk results in immediate termination of both the seat and the paired Mac.",
+      "rules.v2.k": "Action 2 · No Refunds",
+      "rules.v2.t": "All rent & 30% deposit forfeited",
+      "rules.v2.d": "Upon violation-based termination, all prepaid rent for the current period (both seat and Mac) and the 30% deposit are forfeited in full; severe abuse results in a permanent ban.",
+      "rules.v3.k": "Boundary · Compliant Users",
+      "rules.v3.t": "Normal exits & Mac-only protected",
+      "rules.v3.d": "Mac-only rentals follow Section 02 only. Compliant bundle users still receive a full 30% deposit refund on normal exit, and prorated seat refunds while keeping the Mac for non-violation outages.",
       "steps.l1": "Four steps.", "steps.l2": "Email us, connect, build.", "steps.you": "You", "steps.us": "Us",
       "s1.t": "Send an inquiry", "s1.d": "Tell us how many Macs, the term, and whether you want a Team Premium seat.",
-      "s2.t": "Confirm setup & currency", "s2.d": "We reply with specs, period rent and deposit (30% on seat bundles; $0 Mac-only), in USD or CNY.",
+      "s2.t": "Confirm setup & currency", "s2.d": "We reply with specs, rules, period rent and deposit (30% on seat bundles; $0 Mac-only), in USD or CNY.",
       "s3.t": "Provision & invite", "s3.d": "Mac delivered within 24h of payment; Team seat provisioned via email invite.",
-      "s4.t": "Connect & build", "s4.d": "Log in with the details we email you, with separate support for Mac and seat.",
+      "s4.t": "Connect & build", "s4.d": "Log in to your Mac with the details we email you; bundled seats are limited to that Mac only.",
       "faq.title": "Questions",
       "faq.q1": "Is it really a whole machine?", "faq.a1": "Yes. Each rental is one physical Mac mini M4 (10-core CPU/GPU, 16GB, 256GB) in Singapore — never a VM or time-shared.",
       "faq.q2": "Are the IP and traffic limited?", "faq.a2": "Each Mac has its own unchanged outbound IP and unmetered machine network traffic (not AI tool usage quotas).",
       "faq.q3": "How do I connect, and what happens when I leave?", "faq.a3": "Full admin access via Screen Sharing (VNC), SSH or RustDesk. Disk is wiped and macOS reinstalled on cancellation.",
       "faq.q4": "Minimum term, upfront billing, and deposit for Mac only?", "faq.a4": "Monthly minimum is $99/mo. Quarterly bills $267 upfront ($89/mo eq.) and yearly bills $948 upfront ($79/mo eq.) — not billed monthly; prices exclude tax. No deposit is required for Mac-only rentals.",
       "faq.q5": "How is the Team Premium seat priced and sold?", "faq.a5": "Cloudborne prices Team Premium seats at $299/seat/mo (not Anthropic list price), excluding Mac rental and bundled with a Mac only; hardware term discounts apply to the Mac only.",
-      "faq.q6": "How is the seat delivered and managed?", "faq.a6": "Via email invite to a Cloudborne-managed Team org (Cloudborne holds Owner for billing/seats; you join as Member), strictly 1 named person per seat.",
-      "faq.q7": "How does the 30% subscription bundle deposit work?", "faq.a7": "Mac-only rentals require $0 deposit. Subscription bundles charge a 30% refundable deposit on the upfront period total rounded to whole USD ($119 monthly, $349 quarterly, $1,361 yearly). It is refunded in full via the original method on normal seat cancellation or term end, but forfeited if seat sharing or policy violations affect the seat or organization.",
-      "faq.q8": "How are hardware faults vs. seat or account issues handled?", "faq.a8": "Mac-only rentals do not refund for user-owned accounts. For bundles, hardware/IP faults and seat anomalies are handled separately — non-violation seat outages receive a prorated seat refund while keeping the Mac.",
+      "faq.q6": "How is the seat delivered and managed?", "faq.a6": "Via email invite to a Cloudborne-managed Team org (Cloudborne holds Owner for billing/seats; you join as Member), strictly 1 named person per seat and restricted to login on your paired Singapore Mac only—no local or external-device login, sharing, or reverse-proxying.",
+      "faq.q7": "How does the 30% subscription bundle deposit work?", "faq.a7": "Mac-only rentals require $0 deposit. Subscription bundles charge a 30% refundable deposit on the upfront period total rounded to whole USD ($119 monthly, $349 quarterly, $1,361 yearly). It is refunded in full via the original method on normal exit, but if off-machine login, Claude Code reverse-proxying, seat sharing, or automated abuse affects the seat, org, or issuance, both the seat and paired Mac are terminated immediately with no refund of rent or deposit.",
+      "faq.q8": "How are hardware faults vs. seat or account issues handled?", "faq.a8": "Mac-only rentals do not refund for user-owned accounts. For compliant bundles, hardware/IP faults and seat anomalies are handled separately — non-violation seat outages receive a prorated seat refund while keeping the Mac. Violations triggering flags or issuance risk result in immediate termination of both seat and Mac with no refunds.",
       "faq.q9": "How do I pay? Are region access or accounts guaranteed?", "faq.a9": "Emailing never charges you; pay in USD or equivalent CNY after confirmation. Dedicated Macs and IPs do not guarantee third-party region access, moderation, or long-term platform status.",
+      "faq.q10": "Why are Claude Code reverse-proxying, token export, and off-Mac logins strictly banned?", "faq.a10": "Team Premium seats sit inside Cloudborne-managed organizations. Extracting OAuth tokens, session keys, or cookies to run reverse proxies or third-party wrappers, logging in from local machines or external VPSs, sharing seats, or running automated scraping/farming violates platform terms and triggers risk controls—jeopardizing not only that seat, but the entire Team org, billing standing, and ongoing seat issuance. Violations trigger immediate termination of both the seat and paired Mac with no refund.",
+      "faq.q11": "What restrictions apply to Mac-only rentals? Does this limit normal dev work?", "faq.a11": "Normal remote coding, using your own Claude Code account, Xcode builds, and CI/CD runners are completely unrestricted with full admin access. Only crypto mining, DDoS/port scanning/spam attacks, public proxy/exit relays, sub-leasing, and unlawful uses are prohibited to protect hardware and IP reputation.",
       "final.l1": "Send an email.", "final.l2": "Confirm your setup.", "final.sub": "Write to contact@cloudborne.cn with how many Macs, your cycle, or bundle needs.",
       "final.cta": "Inquire about bundle", "final.copy": "Copy email address", "final.copied": "Copied",
       "foot.tag": "Dedicated M4 Mac minis in Singapore, with optional Team Premium seats.", "foot.c1": "Explore", "foot.c2": "Contact",
       "foot.tm": "Mac and Mac mini are trademarks of Apple Inc. This service is not affiliated with Apple. Claude is a trademark of Anthropic; Cloudborne's services are offered independently with no official affiliation with Anthropic. Other trademarks belong to their owners.",
       "mail.subject": "Singapore Mac mini M4 rental inquiry",
-      "mail.body": "Hi, I'd like to inquire about renting a dedicated Mac mini M4 in Singapore.\n\nHow many:\nBilling period: {cycle}\nDeposit: $0 (Mac-only rental)\nPreferred payment currency (USD / CNY):\nUse case:\nPreferred start date:\nOther contact (WeChat / Telegram, optional):\n",
+      "mail.body": "Hi, I'd like to inquire about renting a dedicated Mac mini M4 in Singapore.\n\nHow many:\nBilling period: {cycle}\nDeposit: $0 (Mac-only rental)\nCompliance confirmation: Legal dev/build use only; no mining, network attacks, or public proxies\nPreferred payment currency (USD / CNY):\nUse case:\nPreferred start date:\nOther contact (WeChat / Telegram, optional):\n",
       "mail.bundle.subject": "Singapore Mac mini + Claude Team Premium bundle inquiry",
-      "mail.bundle.body": "Hi, I'd like to inquire about the Singapore Mac mini M4 + Claude Team Premium seat bundle.\n\nMachines: 1\nBundle & deposit summary: {cycle}\nTeam Premium seat: $299/seat/mo (Cloudborne service price, named single user)\nDeposit policy: 30% refundable deposit on period total, refunded in full on normal exit; forfeited if sharing/violations occur\nPreferred payment currency (USD / CNY):\nUse case:\nPreferred start date:\nOther contact (WeChat / Telegram, optional):\n",
+      "mail.bundle.body": "Hi, I'd like to inquire about the Singapore Mac mini M4 + Claude Team Premium seat bundle.\n\nMachines: 1\nBundle & deposit: {cycle}\nSeat & rules: $299/seat/mo, paired Singapore Mac login only—no off-Mac logins, Claude Code reverse-proxying, token export, sharing, or botting; normal exit refunds 30% deposit, violations terminate seat & Mac with no refund\nCurrency (USD / CNY):\nUse case:\nStart date:\nOther contact (WeChat / Telegram, optional):\n",
       "mail.biz.subject": "Mac mini rental for a team",
-      "mail.biz.body": "Hi, we'd like to rent several Mac minis in Singapore.\n\nCompany / team:\nHow many:\nBilling period (Monthly $99 · Quarterly $267 upfront · Yearly $948 upfront; $0 deposit for Mac only):\nTeam Premium seats needed ($299/seat/mo; +30% refundable deposit on period total if bundled):\nInvoice or contract needed:\nUse case:\nOther contact (WeChat / Telegram, optional):\n",
+      "mail.biz.body": "Hi, we'd like to rent several Mac minis in Singapore.\n\nCompany / team:\nHow many:\nBilling period (Monthly $99 · Quarterly $267 upfront · Yearly $948 upfront; $0 deposit for Mac only):\nTeam Premium seats needed ($299/seat/mo; paired-Mac login only, no proxying/sharing, +30% deposit; violations terminate Mac & seat with no refund):\nInvoice or contract needed:\nUse case:\nOther contact (WeChat / Telegram, optional):\n",
       "mail.host.subject": "Hosting my own Mac",
       "mail.host.body": "Hi, I'd like to host my own Mac in Singapore.\n\nModel and specs:\nHow many:\nWhen I can ship it:\nUse case:\nOther contact (WeChat / Telegram, optional):\n",
     },
