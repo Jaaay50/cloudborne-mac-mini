@@ -1,7 +1,7 @@
 # Cloudborne Mac mini rental landing page
 
 Single static page (`index.html`, no build step, no external requests) for renting
-dedicated M4 Mac minis hosted in Singapore with optional Claude Team Premium seats.
+dedicated M4 Mac minis hosted in Singapore with optional Claude Team seats (Standard or Premium).
 Chinese / English toggle; `?lang=zh|en` forces a language. Contact is a `mailto:` link
 to `contact@cloudborne.cn` (constant `EMAIL`) with prefilled inquiry templates.
 
@@ -20,19 +20,24 @@ to `contact@cloudborne.cn` (constant `EMAIL`) with prefilled inquiry templates.
 - Layout follows a pinned "before / after" statement: `LOG` holds the illustrative
   connection rows (documentation-range IPs, RFC 5737). The rows flip as the section
   scrolls; the hub wires between the Mac mini and the four windows are drawn in JS.
-- Pricing (`PLANS` & `SEAT`):
+- Pricing (`PLANS`, `SEATS` & `SEAT_POLICY`):
   - `PLANS` drives pure Mac pricing (`m`: $99/mo, `q`: $267/qtr upfront eq. $89/mo,
     `y`: $948/yr upfront eq. $79/mo). Quarterly (-10%) and yearly (-20%) discounts apply
     to Mac hardware only. Pure Mac rentals require **$0 deposit**.
-  - `SEAT` holds `mo: 299` ($299/seat/mo, Cloudborne service price, excl. Mac rental,
-    `standaloneAllowed: false`) and `depositPct: 30`. Every bundle/subscription plan
-    charges a refundable 30% deposit calculated on the upfront period total and rounded
-    to whole USD (`m`: $119 on $398 → $517 first total; `q`: $349 on $1,164 → $1,513
-    first total; `y`: $1,361 on $4,536 → $5,897 first total). Refunded in full on
-    normal cancellation/term end; seat violations (off-Mac login, Claude Code
-    reverse-proxying/token export, seat sharing, automated farming/scraping) result in
-    immediate termination of both the seat and the paired Mac with no refund of rent
-    or deposit. Synchronized via `#cyc` and `#cycB`.
+  - `SEATS` holds `std.mo: 50` ($50/seat/mo, Cloudborne service price, bundled with Mac
+    for $149/mo) and `prem.mo: 299` ($299/seat/mo, Cloudborne service price, bundled with
+    Mac for $398/mo); `SEAT_POLICY` sets `standaloneAllowed: false` and `depositPct: 30`.
+    Every bundle/subscription plan charges a refundable 30% deposit calculated on the
+    upfront period total and rounded to whole USD:
+    - Standard bundle: `m` $45 on $149 → $194 first total; `q` $125 on $417 → $542 first
+      total; `y` $464 on $1,548 → $2,012 first total.
+    - Premium bundle: `m` $119 on $398 → $517 first total; `q` $349 on $1,164 → $1,513
+      first total; `y` $1,361 on $4,536 → $5,897 first total.
+    Refunded in full on normal cancellation/term end; seat violations (off-Mac login,
+    Claude Code reverse-proxying/token export, seat sharing, automated farming/scraping)
+    result in immediate termination of both the seat and the paired Mac with no refund of
+    rent or deposit. Cycles synchronize via `#cyc` and `#cycB`; seat tiers synchronize
+    via `#tierS` and `#tierB`.
   - `#rules` documents the paired-Mac login restriction, anti-proxy/anti-sharing/anti-abuse
     seat rules, Mac hardware/network AUP (no mining, attacks, public proxies, sub-leasing),
     and the joint seat+Mac termination and forfeiture enforcement policy.
@@ -49,8 +54,9 @@ to `contact@cloudborne.cn` (constant `EMAIL`) with prefilled inquiry templates.
 
 Check with headless Chrome (Playwright) at 1440, 1024, 390 and 360 px, in Chinese and English:
 no horizontal scroll and no console errors; `T.zh` and `T.en` have the same keys; each
-billing period updates both `#plan-mac` and `#plan-bundle` with monthly equivalent and
-upfront total and lands in the `mailto:` body; every `.js-mail` link starts with
-`mailto:contact@cloudborne.cn`; the copy-email button works. After a push, wait for the
-Pages build (`gh api repos/Jaaay50/cloudborne-mac-mini/pages/builds/latest`), then confirm
-the live `index.html` is byte-identical to the local file.
+billing period and seat tier (`std` / `prem`) updates `#plan-mac`, `#plan-seat`, and
+`#plan-bundle` with monthly equivalent, upfront total, and deposit, and lands in the
+`mailto:` body; every `.js-mail` link starts with `mailto:contact@cloudborne.cn`; the
+copy-email button works. After a push, wait for the Pages build
+(`gh api repos/Jaaay50/cloudborne-mac-mini/pages/builds/latest`), then confirm the live
+`index.html` is byte-identical to the local file.
