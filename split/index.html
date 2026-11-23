@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>新加坡 Mac mini + 5× 席位错峰合租方案 | Cloudborne</title>
-<meta name="description" content="1 台新加坡实体 Mac mini M4 搭配 1 个 Claude Team 高级席位（5×），$398/月（约 ¥2,880/月），小群错峰分时共用参考方案。">
+<title>新加坡 Mac mini + Team 席位错峰合租方案 | Cloudborne</title>
+<meta name="description" content="1 台新加坡实体 Mac mini M4 搭配 1 个 Claude Team 席位（标准席位 $149/月 约 ¥1,080，高级 5× 席位 $398/月 约 ¥2,880），小群错峰分时共用参考方案。">
 <meta name="robots" content="noindex, nofollow, noarchive">
 <meta name="theme-color" content="#eaecf0">
 <link rel="icon" href="/assets/cloudborne-mark.svg" type="image/svg+xml">
@@ -58,7 +58,15 @@ h1,h2,h3,h4,p,ul,ol{margin:0}
 .dot{width:7px;height:7px;border-radius:50%;background:#22a65a;box-shadow:0 0 0 3px rgba(34,166,90,.18);flex:none}
 .hero h1{margin-top:20px;font-size:clamp(30px,5vw,48px);line-height:1.18;letter-spacing:-.01em}
 .hero-sub{max-width:680px;margin:14px auto 0;font-size:clamp(15px,1.8vw,17.5px);line-height:1.68;color:var(--ink2)}
-.kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px}
+.tier-wrap{margin-top:24px;display:flex;justify-content:center}
+.tier-seg{display:inline-flex;background:rgba(22,43,69,.08);border-radius:999px;padding:3px;gap:2px}
+.tier-seg button{border:0;background:none;padding:8px 18px;border-radius:999px;font-size:14px;font-weight:500;color:var(--ink2);cursor:pointer;white-space:nowrap;transition:background .22s var(--ease),color .22s var(--ease),box-shadow .22s var(--ease),transform .16s var(--ease)}
+.tier-seg button:hover{color:var(--ink)}
+.tier-seg button:active{transform:scale(.97)}
+.tier-seg button[aria-pressed="true"]{background:#fff;color:var(--ink);box-shadow:0 1px 4px rgba(22,34,56,.16)}
+.tier-seg .tp{margin-left:6px;font-size:12.5px;color:var(--mut);font-variant-numeric:tabular-nums}
+.tier-seg button[aria-pressed="true"] .tp{color:var(--blue);font-weight:600}
+.kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
 .kpi-card{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--sh);padding:20px 18px;text-align:left;transition:transform .24s var(--ease),box-shadow .24s var(--ease)}
 .kpi-card:hover{transform:translateY(-2px);box-shadow:var(--sh-lg)}
 .kpi-card .k{font-size:12.5px;color:var(--mut)}
@@ -184,6 +192,9 @@ footer a:hover{color:var(--ink)}
   .wrap{padding:0 16px}
   .hero{padding:36px 0 20px}
   .brand .sub{display:none}
+  .tier-seg{width:100%;display:grid;grid-template-columns:repeat(2,1fr)}
+  .tier-seg button{padding:8px 8px;font-size:13px}
+  .tier-seg .tp{display:block;margin:2px 0 0;font-size:12px}
   .seg{width:100%;display:grid;grid-template-columns:repeat(3,1fr)}
   .seg button{padding:7px 6px;font-size:12.5px}
   .seg .badge{display:none}
@@ -210,18 +221,25 @@ footer a:hover{color:var(--ink)}
   <section class="hero">
     <div class="tag"><span class="dot"></span><span>新加坡实体 Mac mini M4 · 原生直连 · 错峰共用</span></div>
     <h1>一台独享整机，<span class="nw">几人错峰分摊</span></h1>
-    <p class="hero-sub">1 台新加坡实体 Mac mini M4（16GB · 256GB · 独立新加坡 IP）搭配 1 个高配 <b>5× Claude Team 席位</b>。全程本机原生运行，不走反代、不魔改客户端；小群自行约定错峰时段，同时仅 1 人远程使用。</p>
+    <p class="hero-sub">1 台新加坡实体 Mac mini M4（16GB · 256GB · 独立新加坡 IP）搭配 1 个 <b>Claude Team 席位</b>（支持标准席位与 5× 高级席位）。全程本机原生运行，不走反代、不魔改客户端；小群自行约定错峰时段，同时仅 1 人远程使用。</p>
 
-    <div class="kpi">
+    <div class="tier-wrap">
+      <div class="tier-seg" id="tierSeg" role="group" aria-label="选择 Claude Team 席位档位">
+        <button type="button" data-tier="prem" aria-pressed="true">高级席位 5×<span class="tp">$398/月</span></button>
+        <button type="button" data-tier="std" aria-pressed="false">标准席位 1×<span class="tp">$149/月</span></button>
+      </div>
+    </div>
+
+    <div class="kpi" id="kpiGrid">
       <div class="kpi-card">
-        <div class="k">整车月付（机器 + 5× 高级席位）</div>
-        <div class="v blue">$398 <small style="font-size:15px;font-weight:500">/ 月</small></div>
-        <div class="s">约 ¥2,880/月（不含税，支持美元或等值人民币结算）</div>
+        <div class="k" id="kPriceLabel">整车月付（机器 + 5× 高级席位）</div>
+        <div class="v blue" id="kPriceVal">$398 <small style="font-size:15px;font-weight:500">/ 月</small></div>
+        <div class="s" id="kPriceSub">约 ¥2,880/月（不含税，支持美元或等值人民币结算）</div>
       </div>
       <div class="kpi-card">
         <div class="k">整车可退押金（当期总额 30%）</div>
-        <div class="v">$119</div>
-        <div class="s">约 ¥860，正常到期或退租无违规原路全额退还</div>
+        <div class="v" id="kDepVal">$119</div>
+        <div class="s" id="kDepSub">约 ¥860，正常到期或退租无违规原路全额退还</div>
       </div>
       <div class="kpi-card">
         <div class="k">同时在线方式</div>
@@ -239,16 +257,16 @@ footer a:hover{color:var(--ink)}
         <p class="desc">整机价格固定，小群可按人数自由分摊，系统仅按整单结算。</p>
       </div>
       <div class="seg" role="group" aria-label="选择合租人数">
-        <button type="button" data-n="4" aria-pressed="true">4 人错峰<span class="badge">推荐</span></button>
-        <button type="button" data-n="3" aria-pressed="false">3 人错峰</button>
-        <button type="button" data-n="2" aria-pressed="false">2 人日夜班</button>
+        <button type="button" data-n="4" aria-pressed="true">4 人错峰<span class="badge" id="b4">推荐</span></button>
+        <button type="button" data-n="3" aria-pressed="false">3 人错峰<span class="badge" id="b3" hidden>推荐</span></button>
+        <button type="button" data-n="2" aria-pressed="false">2 人日夜班<span class="badge" id="b2" hidden>推荐</span></button>
       </div>
     </div>
 
     <div class="panel" id="splitPanel">
       <div class="split-grid">
         <div>
-          <div class="price-eyebrow" id="pTitle">4 人错峰分摊参考 · 每人每日 6 小时主时段</div>
+          <div class="price-eyebrow" id="pTitle">高级席位 5× · 4 人错峰分摊参考 · 每人每日 6 小时</div>
           <div class="price-row">
             <div class="price-main" id="pUsd">约 $100<span style="font-size:17px;font-weight:400;color:var(--mut)"> /人/月</span></div>
             <div class="price-cny" id="pCny">约 ¥720 /人/月</div>
@@ -272,7 +290,7 @@ footer a:hover{color:var(--ink)}
       </div>
 
       <div class="panel-foot">
-        <span><b>整车构成：</b>M4 Mac mini（$99/月）+ Claude Team 高级席位 5×（$299/月）= <b>$398/月</b>（约 ¥2,880/月），首期含 30% 押金 $119 合计 <b>$517</b>（约 ¥3,740）。</span>
+        <span id="pFootComp"><b>整车构成：</b>M4 Mac mini（$99/月）+ Claude Team 高级席位 5×（$299/月）= <b>$398/月</b>（约 ¥2,880/月），首期含 30% 押金 $119 合计 <b>$517</b>（约 ¥3,740）。</span>
         <span>人民币为约 7.24 参考换算，以结算当日为准。</span>
       </div>
     </div>
@@ -362,7 +380,7 @@ footer a:hover{color:var(--ink)}
       <div class="step">
         <div class="sn">2</div>
         <h3>推选 1 位对接人结算</h3>
-        <p>小群自行选定 1 位对接人，按整机整单完成结算（月付 $398 + 押金 $119，支持美元或等值人民币）。</p>
+        <p>小群自行选定 1 位对接人，按整机整单完成结算（标准席位 $149 + 押金 $45，或高级 5× 席位 $398 + 押金 $119，支持美元或等值人民币）。</p>
       </div>
       <div class="step">
         <div class="sn">3</div>
@@ -387,10 +405,10 @@ footer a:hover{color:var(--ink)}
     <div class="faq" id="faqList">
       <div class="fq open">
         <button type="button" class="fq-btn" aria-expanded="true">
-          <span>一定要 4 个人吗？2 人、3 人或者 5 人可以吗？</span>
+          <span>标准席位（1×）和高级席位（5×）都可以拼吗？人数有限制吗？</span>
           <i class="ic" aria-hidden="true"></i>
         </button>
-        <div class="fq-ans"><div><p>人数不限，由小群自行商定和分摊即可，我们只按整机整单收费（$398/月 + $119 押金）。结合 5× 高级席位额度与 5 小时刷新周期，3–4 人错峰的性价比和体验最均衡；人数过多会明显挤压周限额。</p></div></div>
+        <div class="fq-ans"><div><p>两档都支持，人数不限，由小群自行商定和分摊即可，我们只按整机整单收费（标准档 $149/月 + $45 押金；高级 5× 档 $398/月 + $119 押金）。结合官方额度与 5 小时刷新周期，标准席位（1×）建议 2–3 人轻度错峰，高级席位（5×）建议 3–4 人错峰；人数过多会明显挤压周限额。</p></div></div>
       </div>
       <div class="fq">
         <button type="button" class="fq-btn" aria-expanded="false">
@@ -411,7 +429,7 @@ footer a:hover{color:var(--ink)}
           <span>到期不续了，30% 押金怎么退？</span>
           <i class="ic" aria-hidden="true"></i>
         </button>
-        <div class="fq-ans"><div><p>在无任何违规记录、正常到期退租或取消席位的情况下，30% 押金（$119 / 约 ¥860）将按原付款渠道全额退还给统一对接人，由小群内部按原分摊比例返还各成员。</p></div></div>
+        <div class="fq-ans"><div><p>在无任何违规记录、正常到期退租或取消席位的情况下，30% 押金（标准档 $45 / 约 ¥325，高级 5× 档 $119 / 约 ¥860）将按原付款渠道全额退还给统一对接人，由小群内部按原分摊比例返还各成员。</p></div></div>
       </div>
     </div>
   </section>
@@ -442,15 +460,9 @@ footer a:hover{color:var(--ink)}
 <script>
 (() => {
   const EMAIL = "contact@cloudborne.cn";
-  const MODES = {
+  const SLOTS = {
     4: {
-      title: "4 人错峰分摊参考 · 每人每日 6 小时主时段",
-      usd: "约 $100",
-      cny: "约 ¥720 /人/月",
-      dep: "约 $30（约 ¥215）",
-      first: "约 $130（约 ¥935）",
       hours: "6 小时 / 天",
-      fit: "贴合 5 小时窗口刷新，交接不易撞额度",
       sub: "4 班 × 6 小时",
       slots: [
         { name: "班次 A · 深夜/凌晨", time: "00:00 – 06:00", note: "适合海外时差党或夜猫子" },
@@ -460,13 +472,7 @@ footer a:hover{color:var(--ink)}
       ]
     },
     3: {
-      title: "3 人错峰分摊参考 · 每人每日 8 小时主时段",
-      usd: "约 $133",
-      cny: "约 ¥960 /人/月",
-      dep: "约 $40（约 ¥287）",
-      first: "约 $173（约 ¥1,247）",
       hours: "8 小时 / 天",
-      fit: "时间更宽裕，周限额更从容",
       sub: "3 班 × 8 小时",
       slots: [
         { name: "班次 A · 凌晨/早班", time: "00:00 – 08:00", note: "海外时差党或早鸟全段" },
@@ -475,13 +481,7 @@ footer a:hover{color:var(--ink)}
       ]
     },
     2: {
-      title: "2 人日夜班分摊参考 · 每人每日 12 小时主时段",
-      usd: "$199",
-      cny: "约 ¥1,440 /人/月",
-      dep: "约 $60（约 ¥430）",
-      first: "约 $259（约 ¥1,870）",
       hours: "12 小时 / 天",
-      fit: "几乎等同独享体验，极少冲突",
       sub: "2 班 × 12 小时",
       slots: [
         { name: "白班 · 日间 12 小时", time: "09:00 – 21:00", note: "覆盖国内完整白天与晚间" },
@@ -490,15 +490,56 @@ footer a:hover{color:var(--ink)}
     }
   };
 
-  let curN = 4;
+  const TIERS = {
+    prem: {
+      short: "高级席位 5×",
+      recN: 4,
+      kpiLabel: "整车月付（机器 + 5× 高级席位）",
+      kpiPrice: "$398",
+      kpiPriceSub: "约 ¥2,880/月（不含税，支持美元或等值人民币结算）",
+      kpiDep: "$119",
+      kpiDepSub: "约 ¥860，正常到期或退租无违规原路全额退还",
+      footHtml: "<b>整车构成：</b>M4 Mac mini（$99/月）+ Claude Team 高级席位 5×（$299/月）= <b>$398/月</b>（约 ¥2,880/月），首期含 30% 押金 $119 合计 <b>$517</b>（约 ¥3,740）。",
+      mailSub: "Cloudborne 新加坡 Mac mini + 5× 高级席位错峰整机发车咨询",
+      mailBody: "你好，我们小群已确认接受错峰合租方案与红线条款，申请开通 1 台新加坡 M4 Mac mini + Claude Team 5× 高级席位（月付 $398 + 30% 可退押金 $119）。\n\n结算币种（USD / 人民币）：\n对接人联系方式：",
+      splits: {
+        4: { usd: "约 $100", cny: "约 ¥720 /人/月", dep: "约 $30（约 ¥215）", first: "约 $130（约 ¥935）", fit: "贴合 5 小时窗口刷新，交接不易撞额度" },
+        3: { usd: "约 $133", cny: "约 ¥960 /人/月", dep: "约 $40（约 ¥287）", first: "约 $173（约 ¥1,247）", fit: "时间更宽裕，5× 周限额更从容" },
+        2: { usd: "$199", cny: "约 ¥1,440 /人/月", dep: "约 $60（约 ¥430）", first: "约 $259（约 ¥1,870）", fit: "几乎等同独享体验，极少冲突" }
+      }
+    },
+    std: {
+      short: "标准席位 1×",
+      recN: 2,
+      kpiLabel: "整车月付（机器 + 标准席位 1×）",
+      kpiPrice: "$149",
+      kpiPriceSub: "约 ¥1,080/月（不含税，支持美元或等值人民币结算）",
+      kpiDep: "$45",
+      kpiDepSub: "约 ¥325，正常到期或退租无违规原路全额退还",
+      footHtml: "<b>整车构成：</b>M4 Mac mini（$99/月）+ Claude Team 标准席位 1×（$50/月）= <b>$149/月</b>（约 ¥1,080/月），首期含 30% 押金 $45 合计 <b>$194</b>（约 ¥1,405）。",
+      mailSub: "Cloudborne 新加坡 Mac mini + 标准席位错峰整机发车咨询",
+      mailBody: "你好，我们小群已确认接受错峰合租方案与红线条款，申请开通 1 台新加坡 M4 Mac mini + Claude Team 标准席位（月付 $149 + 30% 可退押金 $45）。\n\n结算币种（USD / 人民币）：\n对接人联系方式：",
+      splits: {
+        4: { usd: "约 $37", cny: "约 ¥270 /人/月", dep: "约 $11（约 ¥81）", first: "约 $49（约 ¥351）", fit: "超低门槛尝鲜，适合轻度问答与偶发编码" },
+        3: { usd: "约 $50", cny: "约 ¥360 /人/月", dep: "$15（约 ¥108）", first: "约 $65（约 ¥468）", fit: "适合轻中度日常开发，性价比均衡" },
+        2: { usd: "约 $75", cny: "约 ¥540 /人/月", dep: "约 $23（约 ¥163）", first: "$97（约 ¥703）", fit: "1× 额度最从容，适合双人日夜错峰开发" }
+      }
+    }
+  };
+
+  const params = new URLSearchParams(location.search);
+  let curTier = params.get("tier") === "std" ? "std" : "prem";
+  let curN = TIERS[curTier].recN;
   let activeSlot = 1;
   const panel = document.getElementById("splitPanel");
+  const kpiGrid = document.getElementById("kpiGrid");
   const tlBar = document.getElementById("tlBar");
   const tlFoot = document.getElementById("tlFoot");
+  const mailLink = document.querySelector(".js-mail");
 
-  function renderSlots(mode) {
+  function renderSlots(slotSpec) {
     tlBar.innerHTML = "";
-    mode.slots.forEach((s, idx) => {
+    slotSpec.slots.forEach((s, idx) => {
       const btn = document.createElement("button");
       btn.type = "button";
       btn.className = "tl-slot" + (idx === activeSlot ? " active" : "");
@@ -512,43 +553,80 @@ footer a:hover{color:var(--ink)}
       });
       tlBar.appendChild(btn);
     });
-    const cur = mode.slots[activeSlot] || mode.slots[0];
+    const cur = slotSpec.slots[activeSlot] || slotSpec.slots[0];
     tlFoot.textContent = `${cur.name}（${cur.time}）：归属人优先使用；本人不用时，同车成员在群里问一声即可借用。`;
   }
 
-  function renderMode(n, animate = false) {
-    curN = n;
-    activeSlot = Math.min(activeSlot, MODES[n].slots.length - 1);
-    const m = MODES[n];
-    document.querySelectorAll(".seg button").forEach((b) => {
-      b.setAttribute("aria-pressed", String(Number(b.dataset.n) === n));
+  function render(animate = false) {
+    const t = TIERS[curTier];
+    const s = t.splits[curN];
+    const slotSpec = SLOTS[curN];
+    activeSlot = Math.min(activeSlot, slotSpec.slots.length - 1);
+
+    document.querySelectorAll("#tierSeg button").forEach((b) => {
+      b.setAttribute("aria-pressed", String(b.dataset.tier === curTier));
     });
+    document.querySelectorAll(".seg button").forEach((b) => {
+      const n = Number(b.dataset.n);
+      b.setAttribute("aria-pressed", String(n === curN));
+      const badge = b.querySelector(".badge");
+      if (badge) badge.hidden = n !== t.recN;
+    });
+
     const apply = () => {
-      document.getElementById("pTitle").textContent = m.title;
-      document.getElementById("pUsd").innerHTML = `${m.usd}<span style="font-size:17px;font-weight:400;color:var(--mut)"> /人/月</span>`;
-      document.getElementById("pCny").textContent = m.cny;
-      document.getElementById("pDep").textContent = m.dep;
-      document.getElementById("pFirst").textContent = m.first;
-      document.getElementById("pHours").textContent = m.hours;
-      document.getElementById("pFit").textContent = m.fit;
-      document.getElementById("tlSub").textContent = m.sub;
-      renderSlots(m);
+      document.getElementById("kPriceLabel").textContent = t.kpiLabel;
+      document.getElementById("kPriceVal").innerHTML = `${t.kpiPrice} <small style="font-size:15px;font-weight:500">/ 月</small>`;
+      document.getElementById("kPriceSub").textContent = t.kpiPriceSub;
+      document.getElementById("kDepVal").textContent = t.kpiDep;
+      document.getElementById("kDepSub").textContent = t.kpiDepSub;
+
+      const modeLabel = curN === 2 ? "2 人日夜班" : `${curN} 人错峰`;
+      document.getElementById("pTitle").textContent = `${t.short} · ${modeLabel}分摊参考 · 每人每日 ${slotSpec.hours.replace(" / 天", "")}`;
+      document.getElementById("pUsd").innerHTML = `${s.usd}<span style="font-size:17px;font-weight:400;color:var(--mut)"> /人/月</span>`;
+      document.getElementById("pCny").textContent = s.cny;
+      document.getElementById("pDep").textContent = s.dep;
+      document.getElementById("pFirst").textContent = s.first;
+      document.getElementById("pHours").textContent = slotSpec.hours;
+      document.getElementById("pFit").textContent = s.fit;
+      document.getElementById("tlSub").textContent = slotSpec.sub;
+      document.getElementById("pFootComp").innerHTML = t.footHtml;
+      if (mailLink) {
+        mailLink.href = `mailto:${EMAIL}?subject=${encodeURIComponent(t.mailSub)}&body=${encodeURIComponent(t.mailBody)}`;
+      }
+      renderSlots(slotSpec);
     };
+
     if (!animate) {
       apply();
       return;
     }
     panel.classList.add("swapping");
+    kpiGrid.classList.add("swapping");
     setTimeout(() => {
       apply();
       panel.classList.remove("swapping");
+      kpiGrid.classList.remove("swapping");
     }, 110);
   }
+
+  document.querySelectorAll("#tierSeg button").forEach((b) => {
+    b.addEventListener("click", () => {
+      const nextTier = b.dataset.tier;
+      if (nextTier !== curTier) {
+        curTier = nextTier;
+        curN = TIERS[curTier].recN;
+        render(true);
+      }
+    });
+  });
 
   document.querySelectorAll(".seg button").forEach((b) => {
     b.addEventListener("click", () => {
       const n = Number(b.dataset.n);
-      if (n !== curN) renderMode(n, true);
+      if (n !== curN) {
+        curN = n;
+        render(true);
+      }
     });
   });
 
@@ -600,7 +678,7 @@ footer a:hover{color:var(--ink)}
     });
   });
 
-  renderMode(4, false);
+  render(false);
 })();
 </script>
 </body>
