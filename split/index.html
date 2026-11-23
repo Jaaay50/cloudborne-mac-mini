@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>新加坡 Mac mini + 5× 席位错峰合租方案 | Cloudborne</title>
+<meta name="description" content="1 台新加坡实体 Mac mini M4 搭配 1 个 Claude Team 高级席位（5×），$398/月（约 ¥2,880/月），小群错峰分时共用参考方案。">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="theme-color" content="#eaecf0">
+<link rel="icon" href="/assets/cloudborne-mark.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<style>
+:root{
+  --bg:#eaecf0; --inset:#f1f3f6; --card:#fff;
+  --ink:#182333; --ink2:#526174; --mut:#6a7789; --ink3:#8b96a5;
+  --line:rgba(22,43,69,.11); --hair:rgba(22,43,69,.07);
+  --blue:#0865d2; --blue-h:#0a71e8; --blue-bg:rgba(8,101,210,.08);
+  --green:#137a3f; --green-bg:#e4f5ea;
+  --red:#b42318; --red-bg:#fdecea;
+  --sh:0 1px 2px rgba(22,34,56,.05),0 8px 20px -10px rgba(22,34,56,.14);
+  --sh-lg:0 1px 2px rgba(22,34,56,.05),0 18px 40px -16px rgba(22,34,56,.2);
+  --font:"SF Pro Display","SF Pro Text",-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Noto Sans SC","Segoe UI","Helvetica Neue",Arial,"Microsoft YaHei",sans-serif;
+  --mono:"SF Mono",ui-monospace,Menlo,Monaco,Consolas,"Liberation Mono",monospace;
+  --ease:cubic-bezier(.22,1,.36,1);
+  --wrap:920px; --nav:56px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.55;letter-spacing:.005em;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit}
+h1,h2,h3,h4,p,ul,ol{margin:0}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+.nw{white-space:nowrap}
+
+/* ---------- nav ---------- */
+.nav{position:sticky;top:0;z-index:50;height:var(--nav);background:rgba(234,236,240,.84);backdrop-filter:saturate(180%) blur(18px);-webkit-backdrop-filter:saturate(180%) blur(18px);border-bottom:1px solid var(--line)}
+.nav .wrap{height:100%;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{display:flex;align-items:center;gap:9px;font-size:15.5px;font-weight:600;white-space:nowrap;min-width:0}
+.brand img{width:22px;height:22px;flex:none}
+.brand .sub{font-weight:400;color:var(--ink2);padding-left:9px;border-left:1px solid var(--line);overflow:hidden;text-overflow:ellipsis}
+.nav-act{display:flex;align-items:center;gap:10px;flex:none}
+
+/* ---------- buttons ---------- */
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:6px;height:42px;padding:0 22px;border-radius:999px;background:var(--blue);color:#fff;font-size:15px;font-weight:500;white-space:nowrap;border:0;cursor:pointer;transition:background .2s var(--ease),transform .18s var(--ease),box-shadow .2s var(--ease)}
+.pill:hover{background:var(--blue-h)}
+.pill:active{transform:scale(.97)}
+.pill.sm{height:32px;padding:0 14px;font-size:13px}
+.pill.alt{background:#fff;color:var(--ink);border:1px solid var(--line);box-shadow:var(--sh)}
+.pill.alt:hover{background:#f7f8fa;border-color:rgba(22,43,69,.22)}
+.pill.done{background:var(--green);color:#fff;border-color:var(--green)}
+.lnk{color:var(--blue);font-size:14.5px;white-space:nowrap;background:none;border:0;padding:0;cursor:pointer;transition:color .2s}
+.lnk:hover{text-decoration:underline}
+.lnk.done{color:var(--green)}
+
+/* ---------- hero ---------- */
+.hero{padding:52px 0 28px;text-align:center}
+.tag{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:rgba(255,255,255,.84);border:1px solid var(--line);box-shadow:var(--sh);font-size:13px;color:var(--ink2)}
+.dot{width:7px;height:7px;border-radius:50%;background:#22a65a;box-shadow:0 0 0 3px rgba(34,166,90,.18);flex:none}
+.hero h1{margin-top:20px;font-size:clamp(30px,5vw,48px);line-height:1.18;letter-spacing:-.01em}
+.hero-sub{max-width:680px;margin:14px auto 0;font-size:clamp(15px,1.8vw,17.5px);line-height:1.68;color:var(--ink2)}
+.kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px}
+.kpi-card{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--sh);padding:20px 18px;text-align:left;transition:transform .24s var(--ease),box-shadow .24s var(--ease)}
+.kpi-card:hover{transform:translateY(-2px);box-shadow:var(--sh-lg)}
+.kpi-card .k{font-size:12.5px;color:var(--mut)}
+.kpi-card .v{margin-top:6px;font-size:clamp(22px,3vw,28px);font-weight:600;line-height:1.18;font-variant-numeric:tabular-nums;color:var(--ink)}
+.kpi-card .v.blue{color:var(--blue)}
+.kpi-card .s{margin-top:6px;font-size:13px;color:var(--ink2);line-height:1.5}
+
+/* ---------- sections ---------- */
+.sec{padding:36px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:18px;flex-wrap:wrap}
+.sec-head .e{font-size:12.5px;font-weight:600;color:var(--blue);letter-spacing:.04em;text-transform:uppercase;margin-bottom:4px}
+.sec-head h2{font-size:clamp(22px,3.2vw,30px);line-height:1.25}
+.sec-head .desc{font-size:14.5px;color:var(--ink2);margin-top:4px}
+
+/* ---------- split selector ---------- */
+.seg{display:inline-flex;background:rgba(22,43,69,.07);border-radius:999px;padding:3px;gap:2px}
+.seg button{border:0;background:none;padding:7px 16px;border-radius:999px;font-size:13.5px;font-weight:500;color:var(--ink2);cursor:pointer;white-space:nowrap;transition:background .22s var(--ease),color .22s var(--ease),box-shadow .22s var(--ease),transform .16s var(--ease)}
+.seg button:hover{color:var(--ink)}
+.seg button:active{transform:scale(.97)}
+.seg button[aria-pressed="true"]{background:#fff;color:var(--ink);box-shadow:0 1px 4px rgba(22,34,56,.16)}
+.seg .badge{margin-left:5px;font-size:11px;font-weight:600;color:var(--green);background:var(--green-bg);padding:1px 6px;border-radius:999px}
+
+.panel{background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:var(--sh-lg);padding:28px;transition:opacity .22s var(--ease)}
+.split-grid{display:grid;grid-template-columns:1.05fr 1.2fr;gap:28px;align-items:center}
+.price-eyebrow{font-size:13px;color:var(--mut)}
+.price-row{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-top:6px}
+.price-main{font-size:clamp(34px,4.5vw,44px);font-weight:600;line-height:1.1;letter-spacing:-.02em;font-variant-numeric:tabular-nums;color:var(--ink)}
+.price-cny{font-size:16px;font-weight:500;color:var(--blue);background:var(--blue-bg);padding:3px 11px;border-radius:999px;font-variant-numeric:tabular-nums}
+.price-meta{margin-top:14px;display:grid;gap:8px;font-size:14px;color:var(--ink2)}
+.price-meta div{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-top:8px;border-top:1px solid var(--hair)}
+.price-meta span{flex:1 1 auto;min-width:0}
+.price-meta b{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums;text-align:right;flex:0 0 auto;white-space:nowrap}
+.price-meta .wrap-b b{flex:1 1 auto;white-space:normal}
+
+/* ---------- 24h timeline ---------- */
+.tl-box{background:var(--inset);border:1px solid var(--hair);border-radius:16px;padding:18px 18px 16px}
+.tl-head{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:13px;color:var(--ink2);margin-bottom:12px}
+.tl-head b{color:var(--ink);font-weight:600}
+.tl-bar{display:grid;gap:6px}
+.tl-slot{border:1px solid var(--line);background:#fff;border-radius:12px;padding:10px 12px;text-align:left;cursor:pointer;transition:border-color .2s var(--ease),background .2s var(--ease),transform .18s var(--ease),box-shadow .2s var(--ease)}
+.tl-slot:hover{border-color:rgba(8,101,210,.35);transform:translateY(-1px)}
+.tl-slot.active{border-color:var(--blue);background:linear-gradient(180deg,#fff,#f5f9ff);box-shadow:0 4px 12px -6px rgba(8,101,210,.3)}
+.tl-slot .top{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.tl-slot .nm{font-size:13px;font-weight:600;color:var(--ink)}
+.tl-slot .hr{font-family:var(--mono);font-size:12px;color:var(--blue)}
+.tl-slot .nt{margin-top:3px;font-size:12px;color:var(--mut)}
+.tl-foot{margin-top:12px;font-size:12.5px;color:var(--ink2);line-height:1.55}
+.panel-foot{margin-top:20px;padding-top:16px;border-top:1px solid var(--hair);font-size:13px;color:var(--mut);line-height:1.65;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.panel-foot b{color:var(--ink2);font-weight:600}
+
+/* ---------- rules grid ---------- */
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.rcard{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--sh);padding:22px 22px 20px;display:flex;flex-direction:column;transition:transform .24s var(--ease),box-shadow .24s var(--ease)}
+.rcard:hover{transform:translateY(-2px);box-shadow:var(--sh-lg)}
+.rcard .num{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--blue);background:var(--blue-bg);align-self:flex-start;padding:2px 9px;border-radius:999px}
+.rcard h3{font-size:17.5px;line-height:1.35;margin-top:12px}
+.rcard p{margin-top:8px;font-size:14.5px;color:var(--ink2);line-height:1.68}
+
+/* ---------- notice & redlines ---------- */
+.lcard{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--sh);padding:24px;display:flex;flex-direction:column}
+.lcard .chip{align-self:flex-start;font-size:12px;font-weight:600;padding:3px 10px;border-radius:999px;background:var(--inset);color:var(--ink2)}
+.lcard.warn .chip{background:var(--red-bg);color:var(--red)}
+.lcard h3{font-size:18px;margin-top:12px}
+.list{list-style:none;padding:0;margin-top:14px;display:grid;gap:10px}
+.list li{position:relative;padding-left:18px;font-size:14.5px;color:var(--ink2);line-height:1.65}
+.list li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--blue)}
+.lcard.warn .list li::before{background:var(--red)}
+.list li b{color:var(--ink);font-weight:600}
+
+/* ---------- steps ---------- */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--sh);padding:20px}
+.step .sn{width:28px;height:28px;border-radius:50%;background:var(--ink);color:#fff;font-size:13px;font-weight:600;display:grid;place-items:center}
+.step h3{font-size:16.5px;margin-top:12px}
+.step p{margin-top:7px;font-size:14px;color:var(--ink2);line-height:1.65}
+.boundary{margin-top:14px;background:rgba(255,255,255,.72);border:1px solid var(--line);border-radius:14px;padding:14px 18px;font-size:13.5px;color:var(--ink2);line-height:1.68}
+.boundary b{color:var(--ink)}
+.boundary a{color:var(--blue);font-weight:500}
+.boundary a:hover{text-decoration:underline}
+
+/* ---------- faq ---------- */
+.faq{background:var(--card);border:1px solid var(--line);border-radius:18px;box-shadow:var(--sh);overflow:hidden}
+.fq{border-bottom:1px solid var(--hair)}
+.fq:last-child{border-bottom:0}
+.fq-btn{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 22px;background:none;border:0;text-align:left;font-size:15.5px;font-weight:600;color:var(--ink);cursor:pointer;transition:background .18s}
+.fq-btn:hover{background:rgba(22,43,69,.025)}
+.fq-btn .ic{width:22px;height:22px;border-radius:50%;background:var(--inset);display:grid;place-items:center;flex:none;position:relative;transition:transform .26s var(--ease),background .2s}
+.fq-btn .ic::before,.fq-btn .ic::after{content:"";position:absolute;background:var(--ink2);border-radius:2px;transition:opacity .2s}
+.fq-btn .ic::before{width:10px;height:1.6px}
+.fq-btn .ic::after{width:1.6px;height:10px}
+.fq.open .fq-btn .ic{background:var(--blue-bg);transform:rotate(180deg)}
+.fq.open .fq-btn .ic::after{opacity:0}
+.fq.open .fq-btn .ic::before{background:var(--blue)}
+.fq-ans{display:grid;grid-template-rows:0fr;transition:grid-template-rows .26s var(--ease)}
+.fq.open .fq-ans{grid-template-rows:1fr}
+.fq-ans>div{overflow:hidden}
+.fq-ans p{padding:0 22px 18px;font-size:14.5px;color:var(--ink2);line-height:1.7}
+
+/* ---------- cta box ---------- */
+.cta-box{margin-top:8px;background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:var(--sh-lg);padding:28px;text-align:center}
+.cta-box h2{font-size:clamp(21px,3vw,26px)}
+.cta-box p{max-width:560px;margin:10px auto 0;font-size:14.5px;color:var(--ink2);line-height:1.68}
+.cta-row{margin-top:20px;display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap}
+
+/* ---------- footer ---------- */
+footer{margin-top:36px;padding:24px 0 44px;border-top:1px solid var(--line);font-size:13px;color:var(--mut)}
+footer .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer .f-links{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+footer a:hover{color:var(--ink)}
+
+/* ---------- fade swap ---------- */
+.swapping{opacity:.55}
+
+/* ---------- responsive ---------- */
+@media (max-width: 780px){
+  .kpi{grid-template-columns:1fr;gap:10px}
+  .split-grid{grid-template-columns:1fr;gap:20px}
+  .grid2,.steps{grid-template-columns:1fr}
+  .panel,.cta-box{padding:20px}
+  .sec-head{align-items:flex-start}
+}
+@media (max-width: 480px){
+  .wrap{padding:0 16px}
+  .hero{padding:36px 0 20px}
+  .brand .sub{display:none}
+  .seg{width:100%;display:grid;grid-template-columns:repeat(3,1fr)}
+  .seg button{padding:7px 6px;font-size:12.5px}
+  .seg .badge{display:none}
+  .pill{width:100%}
+  .nav-act .pill{width:auto}
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important;scroll-behavior:auto !important}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="https://mac.cloudborne.cn/">
+      <img src="/assets/cloudborne-mark.svg" alt="Cloudborne" width="22" height="22">
+      <span>Cloudborne</span>
+      <span class="sub">错峰合租方案</span>
+    </a>
+    <div class="nav-act">
+      <button type="button" class="pill sm alt js-copy-tpl">复制群发模板</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="tag"><span class="dot"></span><span>新加坡实体 Mac mini M4 · 原生直连 · 错峰共用</span></div>
+    <h1>一台独享整机，<span class="nw">几人错峰分摊</span></h1>
+    <p class="hero-sub">1 台新加坡实体 Mac mini M4（16GB · 256GB · 独立新加坡 IP）搭配 1 个高配 <b>5× Claude Team 席位</b>。全程本机原生运行，不走反代、不魔改客户端；小群自行约定错峰时段，同时仅 1 人远程使用。</p>
+
+    <div class="kpi">
+      <div class="kpi-card">
+        <div class="k">整车月付（机器 + 5× 高级席位）</div>
+        <div class="v blue">$398 <small style="font-size:15px;font-weight:500">/ 月</small></div>
+        <div class="s">约 ¥2,880/月（不含税，支持美元或等值人民币结算）</div>
+      </div>
+      <div class="kpi-card">
+        <div class="k">整车可退押金（当期总额 30%）</div>
+        <div class="v">$119</div>
+        <div class="s">约 ¥860，正常到期或退租无违规原路全额退还</div>
+      </div>
+      <div class="kpi-card">
+        <div class="k">同时在线方式</div>
+        <div class="v">1 人独占</div>
+        <div class="s">远程桌面原生操作，错峰交接，贴合 5 小时刷新周期</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="pricing">
+    <div class="sec-head">
+      <div>
+        <div class="e">Split Reference</div>
+        <h2>分摊参考与时段划分</h2>
+        <p class="desc">整机价格固定，小群可按人数自由分摊，系统仅按整单结算。</p>
+      </div>
+      <div class="seg" role="group" aria-label="选择合租人数">
+        <button type="button" data-n="4" aria-pressed="true">4 人错峰<span class="badge">推荐</span></button>
+        <button type="button" data-n="3" aria-pressed="false">3 人错峰</button>
+        <button type="button" data-n="2" aria-pressed="false">2 人日夜班</button>
+      </div>
+    </div>
+
+    <div class="panel" id="splitPanel">
+      <div class="split-grid">
+        <div>
+          <div class="price-eyebrow" id="pTitle">4 人错峰分摊参考 · 每人每日 6 小时主时段</div>
+          <div class="price-row">
+            <div class="price-main" id="pUsd">约 $100<span style="font-size:17px;font-weight:400;color:var(--mut)"> /人/月</span></div>
+            <div class="price-cny" id="pCny">约 ¥720 /人/月</div>
+          </div>
+          <div class="price-meta">
+            <div><span>人均分摊押金（可退）</span><b id="pDep">约 $30（约 ¥215）</b></div>
+            <div><span>人均首期（首月+押金）</span><b id="pFirst">约 $130（约 ¥935）</b></div>
+            <div><span>每人每日专属主时段</span><b id="pHours">6 小时 / 天</b></div>
+            <div class="wrap-b"><span>适配特点</span><b id="pFit">贴合 5 小时窗口刷新，交接不易撞额度</b></div>
+          </div>
+        </div>
+
+        <div class="tl-box">
+          <div class="tl-head">
+            <b>24 小时错峰参考排班</b>
+            <span id="tlSub">4 班 × 6 小时</span>
+          </div>
+          <div class="tl-bar" id="tlBar"></div>
+          <div class="tl-foot" id="tlFoot">点击任意班次可预览；实际起止时间可由小群按各自作息自由微调。</div>
+        </div>
+      </div>
+
+      <div class="panel-foot">
+        <span><b>整车构成：</b>M4 Mac mini（$99/月）+ Claude Team 高级席位 5×（$299/月）= <b>$398/月</b>（约 ¥2,880/月），首期含 30% 押金 $119 合计 <b>$517</b>（约 ¥3,740）。</span>
+        <span>人民币为约 7.24 参考换算，以结算当日为准。</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="convention">
+    <div class="sec-head">
+      <div>
+        <div class="e">Group Playbook</div>
+        <h2>群内错峰使用公约（可直接照抄）</h2>
+        <p class="desc">核心就一句话：主时段优先、空闲可借用、上机先说一声。</p>
+      </div>
+    </div>
+
+    <div class="grid2">
+      <article class="rcard">
+        <span class="num">01</span>
+        <h3>认领主时段，上机先报备</h3>
+        <p>小群提前各自认领固定时间段；每次连入前在群里发一句「上机」，用完断开后发一句「下机」，让同车成员清楚当前机器状态。</p>
+      </article>
+      <article class="rcard">
+        <span class="num">02</span>
+        <h3>他人时段先问，不用即可借</h3>
+        <p>想在别人时段用时，先在群里问一句有没有人在用。只要该时段归属人自己不用，其他人就可以用；多人同时想借时，由该时段归属人指定给谁用。</p>
+      </article>
+      <article class="rcard">
+        <span class="num">03</span>
+        <h3>远程实时独占，不强行挤号</h3>
+        <p>远程桌面同一时刻仅允许 1 人连接操作。未经群内确认，不得在他人正在使用时直接强连顶号，以免打断正在运行的任务。</p>
+      </article>
+      <article class="rcard">
+        <span class="num">04</span>
+        <h3>共享周限额，文明不刷量</h3>
+        <p>6 小时排班已贴合 5 小时刷新窗口，但周额度为整车共享。日常开发请按需选择模型，严禁后台挂自动化脚本或死循环跑满全车额度。</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec" id="rules">
+    <div class="sec-head">
+      <div>
+        <div class="e">Before You Start</div>
+        <h2>同机须知与整车红线</h2>
+        <p class="desc">先把边界写透，同车成员都能接受再发车。</p>
+      </div>
+    </div>
+
+    <div class="grid2">
+      <article class="lcard">
+        <span class="chip">隐私与协作须知</span>
+        <h3>整机桌面与历史记录同车可见</h3>
+        <ul class="list">
+          <li><b>环境共用：</b>所有成员共用同一台 macOS 桌面与同一个 Claude 账号，本地文件、浏览器与对话记录彼此可见。</li>
+          <li><b>保护隐私：</b>请勿在机内存放个人敏感凭证、私钥或私人资料；建议各自建独立工作目录并及时推送至私有 Git 仓库。</li>
+          <li><b>成员变更：</b>若中途有人退车或换人，由对接人联系我们即可免费重置一次远程连接密码/验证码，防旧成员继续登录。</li>
+        </ul>
+      </article>
+
+      <article class="lcard warn">
+        <span class="chip">零容忍红线 · 整车连坐</span>
+        <h3>任一成员违规，整车清退且不退押金</h3>
+        <ul class="list">
+          <li><b>仅限本机：</b>Claude Team 席位仅限在这台新加坡实体 Mac 上登录使用，严禁在本地电脑、其他 VPS 或第三方设备上登录。</li>
+          <li><b>严禁反代与导出：</b>严禁搭建 Claude Code 反代/中转、提取 OAuth/Cookie/Session、接入第三方套壳或自动化脚本刷量。</li>
+          <li><b>严禁锁机与滥用：</b>严禁在机器内登录个人 Apple ID 或开启「查找我的 Mac」激活锁，严禁挖矿、扫描、违法网络用途。</li>
+          <li><b>连坐规则：</b>机器内 24 小时运行合规巡检，任一成员触碰上述红线，将<b>立即终止整台机器与席位，已付租金与 30% 押金均不退还</b>。</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec" id="flow">
+    <div class="sec-head">
+      <div>
+        <div class="e">How To Start</div>
+        <h2>三步即可发车</h2>
+        <p class="desc">人满即开，流程简单透明。</p>
+      </div>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <div class="sn">1</div>
+        <h3>小群内部达成一致</h3>
+        <p>把本页发给有意向的朋友，各自确认分摊金额、错峰时段与同机隐私/红线条款，接受即可上车。</p>
+      </div>
+      <div class="step">
+        <div class="sn">2</div>
+        <h3>推选 1 位对接人结算</h3>
+        <p>小群自行选定 1 位对接人，按整机整单完成结算（月付 $398 + 押金 $119，支持美元或等值人民币）。</p>
+      </div>
+      <div class="step">
+        <div class="sn">3</div>
+        <h3>交付整机，按约错峰</h3>
+        <p>我们交付新加坡实体 Mac mini 远程连接信息并协助配置好 Claude Team 席位，小群按排班开始使用。</p>
+      </div>
+    </div>
+
+    <div class="boundary">
+      <b>服务边界说明：</b>Cloudborne 仅按整机整单提供新加坡物理 Mac mini、配套席位与运维保障，统一对接 1 位付款人；<b>不负责拉群凑人、内部收款拆账及车内排班纠纷协调</b>。如介意同机桌面共享或需要全天独占，请直接选用 <a href="https://mac.cloudborne.cn/">独享整机方案</a>。
+    </div>
+  </section>
+
+  <section class="sec" id="faq">
+    <div class="sec-head">
+      <div>
+        <div class="e">FAQ</div>
+        <h2>常见问题</h2>
+      </div>
+    </div>
+
+    <div class="faq" id="faqList">
+      <div class="fq open">
+        <button type="button" class="fq-btn" aria-expanded="true">
+          <span>一定要 4 个人吗？2 人、3 人或者 5 人可以吗？</span>
+          <i class="ic" aria-hidden="true"></i>
+        </button>
+        <div class="fq-ans"><div><p>人数不限，由小群自行商定和分摊即可，我们只按整机整单收费（$398/月 + $119 押金）。结合 5× 高级席位额度与 5 小时刷新周期，3–4 人错峰的性价比和体验最均衡；人数过多会明显挤压周限额。</p></div></div>
+      </div>
+      <div class="fq">
+        <button type="button" class="fq-btn" aria-expanded="false">
+          <span>原生支持 Claude Code CLI 和 Claude Desktop 吗？</span>
+          <i class="ic" aria-hidden="true"></i>
+        </button>
+        <div class="fq-ans"><div><p>全部原生支持。整台机器是真实的新加坡 Apple M4 Mac mini，直接在系统里使用官方 Claude Desktop、Claude Code CLI 和网页版，不经过任何第三方中转或修改版客户端。</p></div></div>
+      </div>
+      <div class="fq">
+        <button type="button" class="fq-btn" aria-expanded="false">
+          <span>中途有人不想用了，或者要换新成员怎么办？</span>
+          <i class="ic" aria-hidden="true"></i>
+        </button>
+        <div class="fq-ans"><div><p>成员增减与费用交接由小群内部自行处理。换人后，由统一对接人联系我们，可免费协助重置远程连接密码或验证码，确保前成员无法继续连入。</p></div></div>
+      </div>
+      <div class="fq">
+        <button type="button" class="fq-btn" aria-expanded="false">
+          <span>到期不续了，30% 押金怎么退？</span>
+          <i class="ic" aria-hidden="true"></i>
+        </button>
+        <div class="fq-ans"><div><p>在无任何违规记录、正常到期退租或取消席位的情况下，30% 押金（$119 / 约 ¥860）将按原付款渠道全额退还给统一对接人，由小群内部按原分摊比例返还各成员。</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="cta-box">
+      <h2>人齐了，随时发车</h2>
+      <p>可直接把本页链接发进小群，或一键复制下方招人与排班模板；确认发车后由对接人邮件或微信联系开通。</p>
+      <div class="cta-row">
+        <button type="button" class="pill js-copy-tpl">一键复制群发模板</button>
+        <a class="pill alt js-mail" href="mailto:contact@cloudborne.cn?subject=Cloudborne%20%E6%96%B0%E5%8A%A0%E5%9D%A1%20Mac%20mini%20%2B%205%C3%97%20%E9%AB%98%E7%BA%A7%E5%B8%AD%E4%BD%8D%E9%94%99%E5%B3%B0%E6%95%B4%E6%9C%BA%E5%8F%91%E8%BD%A6%E5%92%A8%E8%AF%A2&body=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E4%BB%AC%E5%B0%8F%E7%BE%A4%E5%B7%B2%E7%A1%AE%E8%AE%A4%E6%8E%A5%E5%8F%97%E9%94%99%E5%B3%B0%E5%90%88%E7%A7%9F%E6%96%B9%E6%A1%88%E4%B8%8E%E7%BA%A2%E7%BA%BF%E6%9D%A1%E6%AC%BE%EF%BC%8C%E7%94%B3%E8%AF%B7%E5%BC%80%E9%80%9A%201%20%E5%8F%B0%E6%96%B0%E5%8A%A0%E5%9D%A1%20M4%20Mac%20mini%20%2B%20Claude%20Team%205%C3%97%20%E9%AB%98%E7%BA%A7%E5%B8%AD%E4%BD%8D%EF%BC%88%E6%9C%88%E4%BB%98%20%24398%20%2B%2030%25%20%E5%8F%AF%E9%80%80%E6%8A%BC%E9%87%91%20%24119%EF%BC%89%E3%80%82%0A%0A%E7%BB%93%E7%AE%97%E5%B8%81%E7%A7%8D%EF%BC%88USD%20%2F%20%E4%BA%BA%E6%B0%91%E5%B8%81%EF%BC%89%EF%BC%9A%0A%E5%AF%B9%E6%8E%A5%E4%BA%BA%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F%EF%BC%9A">邮件联系发车</a>
+        <button type="button" class="lnk js-copy-email">复制邮箱 contact@cloudborne.cn</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© Cloudborne · 新加坡实体 Mac mini 整机方案</div>
+    <div class="f-links">
+      <a href="https://mac.cloudborne.cn/">独享整机主站</a>
+      <a href="https://cloudborne.cn">cloudborne.cn</a>
+      <span>仅限受邀私域分享</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const EMAIL = "contact@cloudborne.cn";
+  const MODES = {
+    4: {
+      title: "4 人错峰分摊参考 · 每人每日 6 小时主时段",
+      usd: "约 $100",
+      cny: "约 ¥720 /人/月",
+      dep: "约 $30（约 ¥215）",
+      first: "约 $130（约 ¥935）",
+      hours: "6 小时 / 天",
+      fit: "贴合 5 小时窗口刷新，交接不易撞额度",
+      sub: "4 班 × 6 小时",
+      slots: [
+        { name: "班次 A · 深夜/凌晨", time: "00:00 – 06:00", note: "适合海外时差党或夜猫子" },
+        { name: "班次 B · 上午黄金", time: "06:00 – 12:00", note: "早起开发，窗口满血开跑" },
+        { name: "班次 C · 下午主力", time: "12:00 – 18:00", note: "白天工作时段，接班即用" },
+        { name: "班次 D · 晚间主力", time: "18:00 – 24:00", note: "下班后副业/个人项目首选" }
+      ]
+    },
+    3: {
+      title: "3 人错峰分摊参考 · 每人每日 8 小时主时段",
+      usd: "约 $133",
+      cny: "约 ¥960 /人/月",
+      dep: "约 $40（约 ¥287）",
+      first: "约 $173（约 ¥1,247）",
+      hours: "8 小时 / 天",
+      fit: "时间更宽裕，周限额更从容",
+      sub: "3 班 × 8 小时",
+      slots: [
+        { name: "班次 A · 凌晨/早班", time: "00:00 – 08:00", note: "海外时差党或早鸟全段" },
+        { name: "班次 B · 日间主力", time: "08:00 – 16:00", note: "覆盖核心白天工作时段" },
+        { name: "班次 C · 傍晚/晚班", time: "16:00 – 24:00", note: "傍晚至深夜长时段专注" }
+      ]
+    },
+    2: {
+      title: "2 人日夜班分摊参考 · 每人每日 12 小时主时段",
+      usd: "$199",
+      cny: "约 ¥1,440 /人/月",
+      dep: "约 $60（约 ¥430）",
+      first: "约 $259（约 ¥1,870）",
+      hours: "12 小时 / 天",
+      fit: "几乎等同独享体验，极少冲突",
+      sub: "2 班 × 12 小时",
+      slots: [
+        { name: "白班 · 日间 12 小时", time: "09:00 – 21:00", note: "覆盖国内完整白天与晚间" },
+        { name: "夜班 · 夜间/时差 12 小时", time: "21:00 – 09:00", note: "适合欧美时差或深夜重度开发" }
+      ]
+    }
+  };
+
+  let curN = 4;
+  let activeSlot = 1;
+  const panel = document.getElementById("splitPanel");
+  const tlBar = document.getElementById("tlBar");
+  const tlFoot = document.getElementById("tlFoot");
+
+  function renderSlots(mode) {
+    tlBar.innerHTML = "";
+    mode.slots.forEach((s, idx) => {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "tl-slot" + (idx === activeSlot ? " active" : "");
+      btn.innerHTML =
+        `<div class="top"><span class="nm">${s.name}</span><span class="hr">${s.time}</span></div>` +
+        `<div class="nt">${s.note}</div>`;
+      btn.addEventListener("click", () => {
+        activeSlot = idx;
+        tlBar.querySelectorAll(".tl-slot").forEach((el, i) => el.classList.toggle("active", i === idx));
+        tlFoot.textContent = `${s.name}（${s.time}）：归属人优先使用；本人不用时，同车成员在群里问一声即可借用。`;
+      });
+      tlBar.appendChild(btn);
+    });
+    const cur = mode.slots[activeSlot] || mode.slots[0];
+    tlFoot.textContent = `${cur.name}（${cur.time}）：归属人优先使用；本人不用时，同车成员在群里问一声即可借用。`;
+  }
+
+  function renderMode(n, animate = false) {
+    curN = n;
+    activeSlot = Math.min(activeSlot, MODES[n].slots.length - 1);
+    const m = MODES[n];
+    document.querySelectorAll(".seg button").forEach((b) => {
+      b.setAttribute("aria-pressed", String(Number(b.dataset.n) === n));
+    });
+    const apply = () => {
+      document.getElementById("pTitle").textContent = m.title;
+      document.getElementById("pUsd").innerHTML = `${m.usd}<span style="font-size:17px;font-weight:400;color:var(--mut)"> /人/月</span>`;
+      document.getElementById("pCny").textContent = m.cny;
+      document.getElementById("pDep").textContent = m.dep;
+      document.getElementById("pFirst").textContent = m.first;
+      document.getElementById("pHours").textContent = m.hours;
+      document.getElementById("pFit").textContent = m.fit;
+      document.getElementById("tlSub").textContent = m.sub;
+      renderSlots(m);
+    };
+    if (!animate) {
+      apply();
+      return;
+    }
+    panel.classList.add("swapping");
+    setTimeout(() => {
+      apply();
+      panel.classList.remove("swapping");
+    }, 110);
+  }
+
+  document.querySelectorAll(".seg button").forEach((b) => {
+    b.addEventListener("click", () => {
+      const n = Number(b.dataset.n);
+      if (n !== curN) renderMode(n, true);
+    });
+  });
+
+  // One-open-at-a-time FAQ accordion
+  const fqs = Array.from(document.querySelectorAll("#faqList .fq"));
+  fqs.forEach((item) => {
+    const btn = item.querySelector(".fq-btn");
+    btn.addEventListener("click", () => {
+      const wasOpen = item.classList.contains("open");
+      fqs.forEach((other) => {
+        other.classList.remove("open");
+        other.querySelector(".fq-btn").setAttribute("aria-expanded", "false");
+      });
+      if (!wasOpen) {
+        item.classList.add("open");
+        btn.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
+
+  async function copyText(text) {
+    try {
+      await navigator.clipboard.writeText(text);
+      return true;
+    } catch {
+      const ta = document.createElement("textarea");
+      ta.value = text;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      const ok = document.execCommand("copy");
+      ta.remove();
+      return ok;
+    }
+  }
+
+  function buildGroupTemplate() {
+    const m = MODES[curN];
+    const slotsText = m.slots.map((s) => `· ${s.name}：${s.time}`).join("\n");
+    return [
+      `【新加坡实体 Mac mini + Claude 5× 错峰合租（${curN} 人档）】`,
+      `整车费用：$398/月（约 ¥2,880/月）+ 30% 可退押金 $119（约 ¥860）`,
+      `人均分摊：${m.usd}/月（${m.cny}），押金 ${m.dep}（退车无违规全退）`,
+      `排班参考（${m.sub}，可微调）：`,
+      slotsText,
+      `群内公约：`,
+      `1. 每次上机前群里说一声「上机」，用完说「下机」，远程同时仅 1 人使用；`,
+      `2. 非自己时段先问一句，归属人不用即可借用（多人想借由归属人指定）；`,
+      `3. 同机桌面与记录彼此可见，勿存私密资料；严禁反代/导凭证/外机登录/登个人 Apple ID（违规整车清退不退押金）。`,
+      `完整说明：https://mac.cloudborne.cn/split`
+    ].join("\n");
+  }
+
+  document.querySelectorAll(".js-copy-tpl").forEach((btn) => {
+    const orig = btn.textContent;
+    btn.addEventListener("click", async () => {
+      const ok = await copyText(buildGroupTemplate());
+      if (!ok) return;
+      btn.classList.add("done");
+      btn.textContent = "已复制模板 ✓";
+      setTimeout(() => {
+        btn.classList.remove("done");
+        btn.textContent = orig;
+      }, 2200);
+    });
+  });
+
+  document.querySelectorAll(".js-copy-email").forEach((btn) => {
+    const orig = btn.textContent;
+    btn.addEventListener("click", async () => {
+      const ok = await copyText(EMAIL);
+      if (!ok) return;
+      btn.classList.add("done");
+      btn.textContent = "已复制邮箱 ✓";
+      setTimeout(() => {
+        btn.classList.remove("done");
+        btn.textContent = orig;
+      }, 2200);
+    });
+  });
+
+  renderMode(4, false);
+})();
+</script>
+</body>
+</html>

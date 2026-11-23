@@ -44,6 +44,12 @@ to `contact@cloudborne.cn` (constant `EMAIL`) with prefilled inquiry templates.
   - All storefront prices are listed in USD excl. tax, with settlement accepted in USD or
     equivalent CNY. Update `meta` / `og` descriptions and `T` copy together if pricing changes.
 - Preview: open `index.html` in a browser, or `python3 -m http.server` in this folder.
+- Unlisted private time-sharing guide (`split/index.html` → `https://mac.cloudborne.cn/split`):
+  intentionally unlinked from the main storefront and marked `<meta name="robots" content="noindex, nofollow, noarchive">`.
+  Presents the reference split math for a single full Premium bundle ($398/mo, ~$2,880 CNY + 30%
+  refundable deposit $119, ~$860 CNY) across 4 / 3 / 2 time-shifted users (1 concurrent remote user
+  on the physical Mac, group self-organized with 1 designated settlement contact and joint red-line
+  enforcement). Do not link it from `index.html` or list it in `robots.txt`.
 - Deploy: public repo `Jaaay50/cloudborne-mac-mini`, GitHub Pages from `main` / root
   (`.nojekyll` is present); a push to `main` is live in about a minute at
   https://mac.cloudborne.cn/ (custom domain from the `CNAME` file; DNSPod `mac` CNAME →
