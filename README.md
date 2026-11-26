@@ -39,7 +39,8 @@ to `contact@cloudborne.cn` (constant `EMAIL`) with prefilled inquiry templates.
     rent or deposit. Cycles synchronize via `#cyc` and `#cycB`; seat tiers synchronize
     via `#tierS` and `#tierB`.
   - `#rules` documents the paired-Mac login restriction, anti-proxy/anti-sharing/anti-abuse
-    seat rules, Mac hardware/network AUP (no mining, attacks, public proxies, sub-leasing),
+    seat rules, Mac hardware/network AUP (no personal Apple ID / iCloud / App Store login
+    or Find My Mac Activation Lock, no mining, attacks, public proxies, sub-leasing),
     and the joint seat+Mac termination and forfeiture enforcement policy.
   - All storefront prices are listed in USD excl. tax, with settlement accepted in USD or
     equivalent CNY. Update `meta` / `og` descriptions and `T` copy together if pricing changes.
